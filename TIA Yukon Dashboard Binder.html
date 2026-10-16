@@ -1,0 +1,707 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>TIA Yukon Dashboard Binder</title>
+<meta name="description" content="How Yukon tourism performed this season, written for the people running the businesses.">
+<link rel="icon" href="data:image/png;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCACoATQDACIAAREBAhEB/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMAAAERAhEAPwD3+iiuP8d+O7bwjZCOILNqcy5hhJ4Uf329vbv+Zpxi5OyJlJRXNLY2te8S6T4atPtGp3SxZ+5GOXk/3V7/AMq8j174z6pdu0Wi20dlD2llAkkPvj7o+mD9a4SabVfFGrvPPJJdXcpyzseFH8gB6V1Gm+EbS2UPeH7RL6dEH4d/xrsVGnSV6mrOaisVjZcuHVl3f+f6LU5u68Q+IdYkP2jU7+5J/gErEfgo4H5VU/s3U2O/7Fdk9c+U3+FeoJbLbRhUhESdgq7RS01iYx+GJ6K4bqTSdStr6X/VHm1vrOvaO4MGoahaEfwiR1B/Doa7LQ/jHrliyx6pFFqMHdsCOQfiOD+I/GtV0SRSrqrKeoYZFYeo+FLC8BaBfs0vYoPlP1H+FL2tKfxxM6uRYuir0KnN5bfndfij2Pw34w0bxTBv065/fKMvbyfLIn4dx7jIrer5Qmt9S8O6jHKryQTxndFPExGfcH+le4fD34hx+J4hp2olItWjXII4WcDuPQ+o/Ee2dXD8q5oao4qWJbl7OquWR39FFFcx1hRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAZfiLXLfw5oV1qdzysK/KmeXc8Ko+pr5muLjUPFOvyXE7mW7uX3Mx6KP6ACvQPjTrrT6raaHE/wC6tk86UDu7dAfov/oVYvhDThb2BvXX97Pwvso/xP8ASu2ilTp+0e7ORUZY3FRw0dlq/wCvwXma+maZBpdoIIRz1dz1Y+pr03w3oMFpZxXU8avcyAOCwzsB6Ae9ef161YTpdafbzRkFXjBHtx0rllJt3Z9NjV9Ww8aVFWjtp/XUmkjSVCkiK6HgqwyDXn/inRY9MuEnthi3mz8v9xvT6V6FXK+OJ0FjbW+R5jSb8egAI/rUo4MBVnCsox2e6/rscPVZ7+1S+SyaZRcOu4JVfWdWi0myMrYaVuI0/vH/AArztnu7uea8/ePIn72SRf4BkAH2GSB+IropUXU16HbmmbRwXLGKvJ9PL/g9Pv8AJ+m3tlBqFq1vcJuRvzB9R7153dW954d1hGilaOaFhJDMnHQ8EV13h3X11KIW9wQLtB/38HqPen+KNOF9pTyqv763y6n1Hcfl/KrpydKfJLY5cwoUcywv1mh8S+/zT8+3ntoz13wX4nj8V+HYb4bVuF/d3EY/hkHX8D1H1roa+f8A4Q662meLf7Pd8W+oJ5ZB6CQZKn+Y/GvoCsa9PknZbHkYWt7Wnd7nB/EHx9d+DrqxgtbKG4+0IzsZWIxggcYrjP8Ahd+q/wDQJsv++2/xqX44g/2npBwceTJz/wACFeUV00aMJQTaOHE4mrCq4xeh6l/wu/Vf+gTZf99t/jR/wu/Vf+gTZf8Afbf415bRWv1al2MPrlf+b8Eepf8AC79V/wCgTZf99t/jXceGPG95r3gzVtcmsoYpLLzdiIxKuUjD8/nXzrXt/ge2MHwW1VypHnw3cn1+Qr/7LWNejThC6Wp0YXEValVRk9DC/wCF36t/0CbL/vp/8a6HwV8Tr/xR4ki0y4sLaGN43cvGzE8DPevDK7r4Rf8AI/2//XCX/wBBrSdCmotpGdLF1pVIpvqux9D0UVi+LtYGg+FdR1ENiSOIiL/fb5V/UivNSvoj2G0ldnnWt/GW6sdbvLSx062lt4JWjWR3bL4OCeO2az/+F36r/wBAmy/77b/GvLSSTk8mivTWGp21R4ksbWbbT/I+j/h/44PjK1u/Pto7e6tmXKIxIZWzg8+4P6V2VfOXws1n+yfG9tG7YhvQbZ/qeV/8eAH419G1x4imoT02PSwlZ1ad5boKKKKwOoKKKKACiiigAooooAKKKKACiiigAooooA+XPGN2+p+NtWmzuLXbxp9FO1f0ArvLeFbe2ihT7saBR+AxXnM3z+KpM85vTn/vuvSq7a+kIo24djGVatUa10/Fv/JBWxo3iG60gGNVEtuTkxscYPse1Y9VdQ1C3022M9w+B2UdWPoK5bX0Ppq0acoP2mx3svjlfK/c2J8z/bfgfkOa43WdYZvO1C/lzgf/AKlArz+fVtW1GWXU4N0cFkVJVTwgY4GfXPSqus65PrDRhlEcSD7gPBbua6I4WV1c+cjm2AoKcqSfMtr9f8vw0K+qalNql61xLwOiJ2Ueldn8H44bjxbd21xEssM+nyRujjIYFkyCPwrz+ve/ht4AXw/FHrN3OJb64h+RIz8kaNg9f4j09v5101XGnTaPm4Sq4nEe0lq73Z57488EXPg/Ulv7AyHTZHzFIDkwt/dY/wAj3q3oOtx6vbGKXaLlR869mHqK90vrG21Kyms7yFZreZdrow4Ir5w8Y+HZfBPicQW10HQgTW7g/OqkkYYevBHof0rnhJVo8stz06FeeXVfaw1g91/X4fcY8EraL4ijmQkNZ3QYf8BbP9K+sAQQCDkGvkS7uWvLuW4dQrSNuIHTNfWliSbC2J6mJf5CjFJ8sb7mGFcPa1FT+G+npd2Jiqt95QfqKb5Uf/PNfyp9FcZ3nyFcf8fMv++f51ueBgD450UEZH2tP51h3H/HzL/vn+dbngb/AJHnRf8Ar7T+dey/hPm18R9P+VH/AHF/KsvxOAPCOsgDA+wz/wDotq1qyvFH/Ipaz/14z/8Aotq8Y+kPlOu6+EX/ACP9v/1wl/8AQa4Wu6+EX/I/2/8A1wl/9Br16vwP0PnqH8WPqj6HryP426zsttO0WNuZGNzKPYfKv67vyr1yvmLx7rP9ueM9RulbdCknkxemxOMj6kE/jXn4aHNU9D1sbU5KTXfQ5urd5ptzYQWU06bVvIfPi913Mv8A7Ln6EVDbW8l3dQ20K7pZXEaD1JOBXr/xb8Ox2fhPRZrdfl07FoSB/AVGCfxX/wAer0JzUWl3PJp0nOMpLp/X5XPHoZXgmjmiYrJGwZWHUEHINfV2haomtaFY6lHjFzCrkDs2OR+ByPwr5Or3P4Laz9q0C70mRsvZy74wf7j8/owb86xxULw5ux04Cpy1OXuenUUUV5x7AUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB8pSf8jU/wD1+n/0OvSq81k/5Gpv+v0/+h11+ueIYdKQxRYkuiOF7L7n/Cu6vFyUUi8grQoqvUqOyVv1LWr6zb6TBukO+Vh8kQPJ/wABXnl/qFxqVyZ7h8n+FR0UegqK4uZrudpp5C8jHJY11PhDxdp3h2Rftvh2zvcHP2gj96v03ZH5AVpTpezV7XZwZjm08bL2cXyw/P1t+Wx2Pw38Lf2l8PtdSaMq+pHyoi4x9xco303N+leROjRyNG6lXUkMD1BFfS2h/EHw3roVLe/WCc8CC5/dt9Bng/gTXi3xM0f+x/HF7sXEN3i6j/4F97/x4NU0ajdRqStc5MRRjGjFxd7HIV9J/DTVP7U8CaezNmS3U2z+2zgf+O7a+bK9f+CGqYfVNJZuoW5jH/jrf+yVeJjen6GeCny1Uu56vqWoW+k6Zc392+yC3jLufYdh7npXy1r2s3Gv63dandH95O+QueEXoFHsBgV6T8ZPFPmzx+HLWT5I8S3ZB6t1VPw6/iPSvJazwtOy531NcdW5pezXQK+ubH/kH23/AFyX+Qr5Gr65sf8AkH23/XJf5CljNkPLvikWKKKK4T1T5CuP+PmX/fP863PA3/I86L/19p/OsO4/4+Zf98/zrc8Df8jzov8A19p/OvZfwnza+I+oayvFH/Ipaz/14z/+i2rVrK8Uf8ilrP8A14z/APotq8Y+kPlOu6+EX/I/2/8A1wl/9Brha7r4Rf8AI/2//XCX/wBBr16vwP0PnqH8WPqj2rxnrP8AYPhHUb9W2yrEUiP+23yr+ROfwr5br2L43azhNO0WNuubmUfmqf8As36V47WOEjaHN3OnH1Oaoo9iW1uZrK6iureQxzxOHjcdVYcg1rah4v8AEGq2T2d/qs9xbyY3RuRg4OR29RXS+A/hxH4u0q4v7m9ltY0m8qMIgbcQASefqK6v/hR1h/0Grn/vyv8AjVzq0lK0t0ZU6FeUbw2fmeKV2Pww1n+x/HFmHbbDd5tZP+Bfd/8AHgtYXiTRn8P+Ir3Sncv9nk2q5GCykZU/iCKzY5HikWSNiroQysOoI71o7Tj5MxTdOfmmfX9FZnh7VU1zw9YammP9IhVmA7N0YfgQRWnXkNNOzPooyUkmgooopDCiiigAooooAKKKKACiiigAooooA+S9Rdo9bu5EOGW5cg+hDGqbu0js7sWZjkknJJrWWCO78YC3mGYpb/Y4BxkGTBr3dPhX4OQYOks/u1zL/Rq9SVWNNK54cKM6rkovS/8AmfONFfSo+Gng9RgaLH+Msh/9moPw08HkYOix/hLIP/Zqj63DszT+z6vdf18j5qqaa6uLiOKOaeWRIhtjV3JCD0Gegr6Hl+FXg+QfLpjxn1S5k/qxrKvPgv4fmUm1u762ft86uv5EZ/WmsTTe5LwVaO2p4PW54S8RSeFteTU0j8zbHIhjzjdlTjPtu2n8K0/Gfw+v/B6x3Dzx3VjK/lrMg2kNgkBl7cA9CelchWycakdNmc7U6U9VZomu7qa+vJru5kMk8zmSRz1LE5JqGiiqStojNtt3YV9c2P8AyD7b/rkv8hXyNX1zY/8AIPtv+uS/yFceM2R6OXfFIsUVzvinxnp3hEWzajBdutxuCNBGGAIxwSSPWuc/4XT4Z/59tT/78p/8XXGoSaukejKrTi7OS+8yZvgdFJM7rr7qrMSAbQHH476vaF8H49F1yy1P+23m+zSiTy/swXdjtnccV0fhj4gaL4rvpbOxFzHOieZtnQLuGcHGCemRXUsyojO7BVUZJJwAK1lWqrRv8DCOGw8tYq/zFqpqdl/aWk3lj5nl/aYHh34zt3KRnHfrXDy/GfwxHKyLDqMgUkB1hXDe4ywNM/4XT4Z/59tT/wC/Kf8AxdZ+yn2Zt7el/MvvMf8A4UWn/Qwt/wCAf/2dbnhL4XL4V1+PVBq5uSiMnlm32ZyMddxrurG7W/sLe7SOSNJ41kVJVwygjOCOxqxVyr1HdNmccLRTUor8WedeKfhYfE/iC41WXXHh80KqxfZtwQAAYzuHufxrG/4UXH/0ML/+Ag/+Lr16ihV6kVZMcsLSk+ZrX5mR4Z0CDwzoFvpUEhlEWS0jLguxJJOPx/SteivA7n4w+J0upVQWIVXIA8k8DP1pRhOq20OdSnQik9Ed/wCMfhjb+LNZXUl1JrOUxCORRDvD4zg/eGDjj8K57/hRcf8A0MLf+Af/ANnVLwx8VPEWq+JtOsLoWZguJ1jfbEQcHjg5r2utJTrUkotmMaeHrtyS/MwPB/htvCmh/wBmG+a8RZWdHMezaDj5cZPfJ/Gt+iiueUnJ3Z1xioLlWwUUUUigooooAKKKKACiiigAooooAKKKKAPkrUXaPWrt0Yq63DlWU4IO48ipx4i1xTldZ1EH1F0/+NV9UGNXvQf+e7/+hGu/+F/gXTfEkNxqeqEywwS+UlsrbdxwCS2OccjH4160nFQ5pHgRU5VHGD1Zzml+MvGIukisNW1G5mJ+WNiZyfwbNfQ+gS6nPoNnLrESRag0eZkToD2/HGM+9T2Gl2GlQ+TYWUFrH/dhjC5+uOtW64KtSEtIxserQo1IazlcbJIkMTyyuqRopZmY4CgdSTXIXvxS8JWZZRqRuHH8METN+uMfrXVXtpDqFjcWdwpaG4jaKQA4yrDB/Q14brvwd1uymd9JeO/t85VSwSQD3B4P4H8KVGEJP33YeIqVIJOnG5U+IPxDHi6OGxsraSCwhk8zMpG+RsEAkDgAAnjJ61wdbVz4Q8R2ZIn0PUBjusDMPzAIqg+l6hFnzLG5THXdCwx+lejThGEbRPGq1JVJXnuVKKUqVJDAgjsaStDMK+ubH/kH23/XJf5Cvkavrmx/5B9t/wBcl/kK4sZsj0cu+KRk+MPDsfijw3c6cwAmx5lu5/hkHQ/j0PsTXzBNDJbTyQTIUljYo6MOVYHBBr69rw/4xeFvsWpx6/ax4guzsuABwsoHB/4EB+YPrUYWpZ8j6muPo80faLocF4d1mXw/4gstUiyTBICyj+JDww/EE17b8TvFMVj4JRLKYNJqyhImU/8ALIgFm/Igf8Cr5+q3d6ld31vaQXMzSR2kXlQg/wAK7i2P1/ID0rqqUVOSfY4qOIdKEorqVK6z4f8Ah6HW9f8AtF+yR6XYAT3UkhATA6KSeOT+gNcoqs7BVBZicAAZJNe5y+GF8L/BrUrZ1H2yaDzrk/7ZI+X8Bx+frTqz5Y+bJw9L2ktdlqzs/wDhLvDX/Qf0v/wLT/GrdhrelapI0en6lZ3UiDcywTK5A9SAa+Ta9J+Cf/I5Xn/YPf8A9GR1yywnLFu53Qx/NJR5d/M9vvtRsdMgE1/eQWsRbaHnkCAn0ye/FZ//AAl/hr/oP6X/AOBaf41xXxu/5FjT/wDr8H/oDV4ZUUsP7SN7mmIxfsZ8trn1vY6lY6nCZrC8t7qJW2l4JA4B9MjvXyddf8fk/wD10b+de2fBH/kWtR/6/P8A2Ra8Tuv+Pyf/AK6N/Ot8PDknKPocuLqe1pwna17mz4I/5HjRf+vuP+dfTV5fWmnW5uL26htoQQDJNIEXJ7ZNfMvgj/keNE/6/I/510XxX8V/23r39mWsmbGwYrweHl6Mfw6D8fWivTdScYoMJVVKnKT8j2geLPDh/wCY/pf/AIGR/wCNWbPXNI1CfyLLVbG5lwT5cNwjtj1wDXybXuvw20G28JeFJ/EerYhmuIvNZmHMcI5A+rdcf7orGph1TjzNnTRxjqz5VH8f+AelSSJDG0krqkajLMxwAPUmuSv/AIneErCUxtqgncdRbxtIP++gMH868Y8ZeOtR8WXrqXeDTlb91aqeMdi3q38u1cpVU8JdXmzOtj7O1NXPpGx+J/hK+kEY1PyHPT7RGyD/AL6IwPzrrYpY54llhkSSNxlXQ5BHqCK+Qa6jwf441Lwler5btNYM3761Y/KR3K+je/5054TT3GKlmGtqi+4+l5JEijeSR1SNAWZmOAoHUk1kf8Jf4a/6D+l/+Baf41Dquo22reAtRv7OQSW8+nTOje3ltwfcdK+Xaxo0PaXTdrHTiMT7JJpXufW0+qWFtYrfT3tvFaMoZZ3kARgeQQehzXOy/E7wdFJsbWUJHdIZGH5hcV853F9d3cMENxcyyxW6bIUdiQi+gHaq9bxwa+0zlnmL+yj6q0nxRoeuNs03U7e4kxnyw2Hx/unB/StevkGGaW3mSaGR45UIZHQ4Kkdwa+k/h54mk8UeFo7i5IN5AxgnI43MACG/EEfjmsq2H9muZPQ3w2LVV8slZnV0UUVzHafLHi6zaw8YavbEY23chX/dLEj9CKh0PxFqvhy7Nzpd28DNw69VcejKeDXc/GfRGtPEFvrEa/ur2MJIfSROP1XH5GvMq9ak1OmrngV06daVtNT2HSPjcMKmsaUc95bRv/ZG/wAa7jSviF4X1fasGqxRSH/lncfujn0+bg/gTXzNRWUsLB7aG0MdUj8Wp9fqyuoZGDKeQQcg0tfKGma/q+jOG07Ubm25ztjkO0/Vehrv9D+NGp2zLHrNrHeRdDLEPLkHvj7p/SsJ4Wa21Ounjqcvi0PcKKytA8R6X4lsftemXAlUcOhGHjPow7fyrVrmaa0Z2Jpq6Kd/pOnapEY7+xt7lCMYljDY+meleF/EvwJF4XuIr/Tg39nXLbPLY58l8ZxnuCAcfQ19AV538ZbyCHwdHauR51xcr5a98Lkk/wAh+NbUKkozSWxz4qlCVNya1R4XY2r32oW1pHy88qxL9WIH9a+uFUKoVRgAYAr55+E+iNqvjOK6Zc29gvnue27og+uef+A19D1rjJapGGXRajKQVn65o9vr2i3WmXQ/dXCFc45U9Qw9wcGtCiuNO2qPQaTVmfJOp6dcaRqdzp92m2e3kKOPp3HsetVK9J+NUEUXi20lRAry2amQj+IhmAJ/AAfhXm1evSnzwUj5+vT9nUcD0X4SeFv7X146tcx5tNPIKZHDzfwj8Ov1xXq/xB/5EHWf+uH9RVX4YQxw/D3SzGgUyB3cgfebewyfyH5Va+IP/Ig6z/1w/qK4as3Krbserh6ShQv1aufMdek/BP8A5HK8/wCwe/8A6MjrzavR/goyr4zugSAWsHA9zvjP9K7qvwP0PKofxY+qOs+N3/Isaf8A9fg/9AavDK9y+NzD/hGtOXIybzIH/AGrw2scJ/DOjH/xfke5fBH/AJFrUf8Ar8/9kWvE7r/j8n/66N/Ovbfgj/yLOo/9fn/si14ldf8AH5P/ANdG/nVQ/jS+RFX/AHen8/zC0u57G7iurZzHPE25HHVT61CTk5PWlALHABJ9BSVucp2Pw48KHxP4jUzpnT7TEtxkcN/dT8SPyBru/jZq72+lafpETbVuXaWUDuqY2j6ZOf8AgNc58I/FaaRq76Ndsq21+4Mbn+GXoAT6Hp9ce9XfjjC66tpM5B2PA6D6hgT/AOhCuWd3Xinsd9PljhZSju9zymvT/AXwug8QaUmravPNHbyk+RDCQGYA43EkHAyDxXmFfTPw7v7e/wDAmlGBlPkwiCRR1V14Of5/jWmInKELxMsHSjUqWkeceO/hZBoekyato880kMODPBMQxC5xuUgDp3B/OvLa+nfH9/b2HgbVnuGUebbtAgP8TuNoA/PP4V8xVOGqSnF8xWNowpyXJ1PU/hxq7y+B/FOkSMSsFnLPED2DIwYfTIB/E15ZXe/DaF2svFk4B2Jo8qH6kEj/ANBNcFVwSVSVvIzqSbowv5/oa/hnQZvE2v22lQSCMyklpCMhFAyTjvwOldl48+Gdt4W0OPU7G9mmVZFjmSYDv0IwPXt71n/CP/koFr/1xl/9BNenfF3/AJEC4/67xf8AoVZ1aso1YxWxrQoQlQlN7q/5HzxXsfwLkYw65GT8qtAwHud+f5CvHK9h+BX/ADH/APt3/wDalXif4TM8H/Hj8/yPYKKKK8s90xPFnh2HxR4dudNkIWRhvhkP8Eg6H+h9ia+YL2yuNOvZrO7iaK4hcpIjdQRX11XA/ET4fJ4ng/tDTwserRLjngTqP4Sex9D+B9unD1uR8r2ZxYzDuouaO6Pnyipbq1nsrmS2uoXhnjba8brgqfcVFXpHjBRXVaR8OvFGsBHi014IW5825PljHrg8n8BXonh/4MWNo6T63dm8cc+RDlI/xPU/pWc6sIbs2p0KlT4UY3wU0y//ALXvdU2ulgIDCSekjlgQB64AP0z717XUVtbQWdtHb20McMEY2pHGoVVHsK5nxF8Q/D/h1HSS6W6ux0t7chmz7nov48+1edVm6s7pHr0aaoU7SZ0Oo6jaaTYTX19MsNvCu53b+Xufavmzxd4lu/GXiM3Ajfys+VaW45IXPHA6sT1/LtT/ABT4x1fxnfIswKQBsQWcOSATwP8Aeb3/ACxXpvw3+HB0Yx6zrMY+3kZggPPkA9z/ALX8vr06KdNUVzz3OSrVeJl7Ont1Z0ngDwqPCvhyOCUD7dOfNuWHZscL9AOPrn1rqqKK45ycpOTPRpwVOKiugUUUVJZ4Z8bv+Rn0/wD68h/6G1eY17j8TfA+teJ9as7vTI4Xjjt/KbfKFIO4nv8AWuI/4VF4t/59rb/wIWvSoTiqaTZ42LpVJVm1F/d5Hrnw1/5J5pH+4/8A6MatTxTpz6t4W1OxiGZZrZ1jHq2MgfmBUPg3SbnQ/COn6beBRcQIQ4U5AJYnr+NbtcE377a7nqUo/uop9kfH5BUkEEEcEGprO9udPukurO4kgnjOVkjYqw/EV7H45+FEmpX82qaA0ayzEvNaudoZj1KnoM+h/PtXnUnw+8WRy+W2h3RbOMqAw/MHFenCrCa3PFqUKlKW3zMfUtX1HWJxNqN7PdSKMKZXLbR6D0qlXpvhr4PapeXKTa6VsrUHLRK4aV/bjIX69faq2o/B/wARJqNytjHBJaCRvJZpgCUzxkeuKFVpp8qaB0a0lztNnX/BH/kWdR/6/P8A2Ra8Suv+Pyf/AK6N/OvoX4ZeGdS8L6Hd22ppGkstz5ihH3fLtA6j6GvM7n4SeK3upmS3tmUuSD545GayhOPtZO/Y3qUpuhBKLvqc74LRZPGujI6hla7jBBGQRmrfj7wu3hbxLLbxqfsU+ZbZv9kn7v1B4/I966nwv8MPEumeKNNvrqG3SC3nWRyJgTgHPQV6R488Jr4t8PtbR7FvYT5ls7cAN3Un0I/XHpROuozVnoKlhpSpSurPofM4JUggkEcgjtXrss7/ABM+G5Vfn17SSGZP4pRjGR/vD/x5a5wfCHxYf+Xe1H/bwK3vCXgLxl4X8QQajFHamMHZPH9oH7yM9R069x7gVVSUJK6auiaMKkXaUXZ6PT+tjyYggkEYI7Vp6N4i1fw/K0mlX8tsX+8FwVb6qcg17P41+Fdtr08mo6RJHaX7/NJGw/dyn14+6ffv+teUX/gLxTp0pSXRbt8fxQJ5qn8VzVQqwqK34EVKFSjK/wCJQ1nxHrHiCRH1W/ludn3FbAVfoowBWX1rorHwH4p1CUJDol2mf4p08pR+LYr1XwV8KLfRLiPUdZkju71DujhQZjiPrz94/oP1pynCmhQpVazvv5ieFvDEnhz4W6xJdRlL29s5ppVI5RfLbap9wMn6k14TX1nrNpJf6FqFnDt824tpIk3HAyykDP514N/wqLxb/wA+1t/4ELXPQqpylKTtc68VQcYQhBXtcT4R/wDJQLX/AK4y/wDoJr074u/8iBcf9d4v/Qq5v4ffD3X/AA/4si1HUIoEt0idSVlDEkjA4Fdt8QNDvfEXhOfT9PVGuGkRgHbaCAeeamtKLrRafb8y8PCSw84ta6/kfM1ew/Ar/mP/APbv/wC1K5j/AIVF4t/59rb/AMCFr0X4XeENW8Krqp1RIkNyYvLCSBvu785x/vCtq84um0mc+EpVI1k3F/d5HoVFFFeaeyFFFFAHOeKPBOj+K4f9NhMd0owl1Fw6+x9R7H9K8d174TeItJdnso11K2HRoOHx7oefyzX0LRW1OvOGi2OathadXV6M+VoNV8ReHZPIivNRsGHWIu6D/vk1oD4jeLgu3+258f7iZ/PFfSssEU6bJokkX+66gj9apHQNGLbjpFhu9fsyZ/lW31im9ZROf6nWirRn+Z803Ov+I9dbyJtR1C73f8sRIzA/8BHH6Vt6H8LfEusMrS2v9n256yXXynHsn3vzxX0PBbQWy7YII4l9I0Cj9KlpPFJK0I2GsC5O9STZyfhT4e6P4VCzRobq/wAc3Uw5H+6Oi/z966yiiuaU5Td5M7YU401aKsFFFFSWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBiR6lqS6hNBPFaLHboJZWVmPynPTjrxTP7Yv47NNTmtoBYMQSqsfMVScBvQ9elaQ09Pt9zcs24TxrGyEcYGf8AGqI0B/KS0kv5JNPRgRblBkgHIBbqRTOyEqDfvJLb+b5/PsWBqbn+1PkX/Q+V/wBr5N3NZ954hnt0tmVLZfMtBcsJXIyePlX39Kt3WiySz3TwXzwR3QAmTyw2eMcE9OKWfQLa4ZN5JjS1+zqpHK4IIYH1GKAh9XTTl5d+zv2626/cEurypMyLbFiLL7UE/i3Zxtqr/btyuhtf7LWZy6qiQsx5JGQQeQavLpcgmE5vH88Wv2fzAgz1zu+tQR6DgmSW6aSV7iOeRhGFDbOgwOn1oCP1fr5d+/8Al/w1xsniGI3enRW6h1usF2P8APQfXIP5Veu71re/sbdUBW4ZlYnqMLniqo8PWkZzAWjP2pbknGeR/CPbk/nV25sluLy0uC5U27MwGPvZGKRE/Yacvn+Wn+XyuYqeKCbG7doVW5gb5EOcSLu25FXJ9R1A6heQWkFu6WqozCRiGfcM4HbtTJ/DVtcaclq8h3pIzpKF5G5skY9KmuNHllvbmeG/kgW5VVlVUBJAGOCenU0y/wDZ/s/je3Ttr3/qwWesC9vLaOOMCKa2M+T1BDAY/nVWfXp47ZpFiiXF29v5khOxAOhbHPNWpNFCNbPY3LWslvGYlO0OCvoQffmkGjSRWAtoL50ZmZ5XaNX8wt1yDQFsPe62+fd/oRXeo6nAbTZFZOLllRSJGI3EZz06VDf69dWF0YWjtWaONGdN5DSFjghPWtAaRGlvYQJKwWzcOpIyWwCP60y90OG9uJ53kKyOiCNgOY2UkhgfxoCMsPzWktLvvt06kF3rc1pdTWj24a4bb9kAziQHjn0wetaV3dCx0+S5mwTGmSB0J9B9TTJbATXlldSSZktQ38P3iy4P0o1CwTUYoopXIiWQO6AffA7H2z/KkZP2T5Vt3f8AX3/Mz21yYaGbw24FxHJ5UqHO2Mg8k45xjn8abc61dQQWR/0LNxuzOXYwjHQZxwT71ZTRfspn+wXLWqylTsCBgCMg9fX+lRHQHGnCyivnSJt3mgxKQ+45OB/D7Ypm0fq1/K/ntby7P1v+I97+/uLyS1sYrbdAqmZ5WO3cwyFXH86iXXZriO3htrdBeyu8bJI3yxlPvEkdambRnhlEthevauY1jkygcOFGAee+O9IdBjSC3FvcSRXEDM6z4DFi33sg9c0C/wBn/q/4+XprbzuP+3XsE1lBdRQCSeVkYxsSMBcgjNMTWWl1mWxSNdgDJFITw0igFl/DP6GpRpcrvayXF680sEjOGKAZyMYwOgqvF4btoUgdHIu4pBIbjHzOc5OR6HNAl7C/vdul9++vRCWuo6nJdXcU0NoFtf8AWFGbJyuRjIpI9Yu7xbOG0hh+1Twee5kJ2IucduTzV+PT1jnvpfMJ+14yMfdwuKqjQzFFam1u2hubeLyhLsDB19Cv1oGnQb2tt37O/wCNivPr1zbWk++2Q3lvMkTxqSVYNyCvfkVbs9Zjvr+GGAAwyWxm3H7ykMBtNNGhJ5JElw8k7zpPJKVGXK9BjsKkg0aC21mXUYSVMqFWjA4ySCT+lAP6tZ99e/Zfre34jJ7+9m1Caz0+ODNuqmV5ycZYZAAHt3qnN4ilW2tnWOCKV5Xhl89yFjZevIq/c6XK1693ZXjWssqhZf3YcPjocHvTYtDgi+x4dm+zu8jFxkyMwwSaCYugkr/rf59Lenl5lmSW7bT45bcWzzFQxyx2EY5wQM1lJrl4ujpqVxFbrFI6BQrNkAnBJrfKgqV6DGKzBoyf2Tb2HnHbC6tv29cHPSkKnKl9tdV326/1uQnxBFLPdLaNHNHBaNPuBP3gT8v8qsaNqEupWpnka3I4wIWJ2nGSGyOvIp1xpSXF1PP5hXzrU2xUL0BJOf1qTTrOaxgEMl0Z0VVVAYwu0Djt17UCfsvZu2+nfu7+XYz/AO27j7T9g+zr9v8AO2bednl9d+fTH61MdWkGn6nceWu6zleNRnhtoBGfzq39hX+1v7Q3Hd5Hk7cdt2c1RuNCeVrlI76SK2un3zRBAck9cN2zimUvYy8tPPe6/T8yO58QPb3i2ogDyywo0KA/edieCewFTNf6jNdvZ2kdt5tuimd5C23cwzhQOfxp1zoVvdTySSMwDQrGgHVCpyGB9aRtIuUl8+31Forh0VJnMQYS46HB6Ggf7i2m/nf9P6vbpcqTeJWhtbaY2pyZninQHJQr1x6+taNjqa319dxR7WihWNkdT94Muajh0SGH7JtkYmCR5GLDJkZgQSfzp+m6PBpdxdyW5IS4Kny8cJjPT86BT9hyvl3+ff8Aq346mjRRRSOUKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#001F2E;--navy-2:#06293C;--navy-3:#0E3850;
+  --teal:#025273;--teal-ink:#025273;
+  --pink:#E874A3;--pink-ink:#B23C6E;--pink-soft:#FBE7F0;
+  --bg:#F6F8F9;--surface:#FFFFFF;--surface-2:#EEF2F4;
+  --ink:#0F1D26;--ink-2:#44555F;--ink-3:#6E7E88;--line:#DDE4E8;--line-2:#EBF0F3;
+  --better:#157A4B;--worse:#B33F2B;--neutral:#657680;
+  --on-navy:#FFFFFF;--on-navy-2:#B7C8D2;--on-navy-3:#7E97A6;
+  --bar:#025273;--bar-prev:#C5D2DA;--bar-hi:#013A52;--tick:#E0548F;--tip:#0F1D26;--tip-ink:#fff;
+  --better-soft:#E2F2EA;--worse-soft:#F8E4DE;
+  --display:"Bricolage Grotesque",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --topbar:56px;--subnav:48px;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#07151E;--surface:#0C1F2A;--surface-2:#132B38;--ink:#EDF2F5;--ink-2:#B5C4CC;--ink-3:#86999F;--line:#1E3442;--line-2:#182D3A;
+  --teal-ink:#8FCBE3;--pink-ink:#F3A3C5;--pink-soft:#3A1E2C;--better:#5FCB93;--worse:#F39176;--neutral:#9FB0B9;
+  --bar:#8FCBE3;--bar-prev:#2B4756;--bar-hi:#CFEAF5;--tick:#F07AAE;--tip:#EDF2F5;--tip-ink:#0F1D26;
+  --better-soft:#123528;--worse-soft:#3A2019;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#07151E;--surface:#0C1F2A;--surface-2:#132B38;--ink:#EDF2F5;--ink-2:#B5C4CC;--ink-3:#86999F;--line:#1E3442;--line-2:#182D3A;
+  --teal-ink:#8FCBE3;--pink-ink:#F3A3C5;--pink-soft:#3A1E2C;--better:#5FCB93;--worse:#F39176;--neutral:#9FB0B9;
+  --bar:#8FCBE3;--bar-prev:#2B4756;--bar-hi:#CFEAF5;--tick:#F07AAE;--tip:#EDF2F5;--tip-ink:#0F1D26;
+  --better-soft:#123528;--worse-soft:#3A2019;color-scheme:dark}
+html{scroll-padding-top:calc(var(--subnav) + env(safe-area-inset-top,0px) + 8px);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;font-feature-settings:"cv05","ss01"}
+a{color:var(--teal-ink);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-.015em;font-weight:700}
+p{margin:0}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding-left:20px;padding-right:20px}
+@media (min-width:760px){.wrap{padding-left:32px;padding-right:32px}}
+.num{font-family:var(--display);font-variant-numeric:tabular-nums;letter-spacing:-.03em;font-weight:800}
+.sr{position:absolute;left:-9999px}
+a.sr:focus{left:16px;top:calc(8px + env(safe-area-inset-top,0px));z-index:60;background:var(--surface);color:var(--ink);padding:8px 12px;border-radius:8px}
+
+/* demo strip */
+.demo{background:var(--pink);color:var(--navy);font-size:13px;font-weight:600;text-align:center;padding:7px 16px;line-height:1.3}
+.flag{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--pink-ink);background:var(--pink-soft);border-radius:999px;padding:3px 10px 3px 8px;vertical-align:middle;white-space:nowrap;font-family:var(--body);letter-spacing:0}
+.flag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--pink)}
+
+/* top bar */
+/* the logo bar scrolls away with the page; only the section nav stays pinned */
+.top{position:relative;z-index:40;background:color-mix(in srgb,var(--surface) 86%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{min-height:var(--topbar);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 12px;padding-block:8px}
+/* edition line: three steps of opacity so season, period and date read in that order */
+.edn{order:3;flex-basis:100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;font-size:12.5px;color:var(--ink);line-height:1.4;padding-top:2px}
+.edn .e1{opacity:.8;font-weight:600}.edn .e2{opacity:.65}.edn .e3{opacity:.5}
+@media (min-width:640px){
+  .edn{order:0;flex:1 1 auto;flex-basis:auto;margin-left:6px;padding:0 0 0 16px;border-left:1px solid var(--line);font-size:13px}
+  .edn span+span::before{content:"·";margin-right:10px}
+}
+.top img{height:30px;width:auto;display:block}
+.top .acts{display:flex;gap:6px}
+.ib{width:40px;height:40px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;color:var(--ink-2)}
+.ib:hover{background:var(--surface-2);color:var(--ink)}
+.ib svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.subnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:39;background:color-mix(in srgb,var(--surface) 86%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.subnav .wrap{position:relative;height:var(--subnav);display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;gap:4px;-webkit-overflow-scrolling:touch;mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent)}
+.subnav .wrap::-webkit-scrollbar{display:none}
+.subnav a{flex:0 0 auto;font-size:14px;font-weight:600;color:var(--ink-3);padding:7px 12px;border-radius:999px;transition:background .18s,color .18s}
+.subnav a:hover{text-decoration:none;color:var(--ink)}
+.subnav a[aria-current="true"]{background:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .subnav a[aria-current="true"]{background:#fff;color:var(--navy)}}
+
+/* hero + scoreboard */
+.hero{background:var(--navy);color:var(--on-navy);padding:28px 0 0;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -20% -60% -20%;height:70%;background:radial-gradient(60% 60% at 50% 100%,rgba(232,116,163,.22),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero .ed{font-size:14px;color:var(--on-navy-2);display:flex;flex-wrap:wrap;gap:4px 14px;font-weight:500}
+.hero .ed b{color:#fff;font-weight:600}
+.hero h1{font-size:clamp(26px,5.4vw,40px);font-weight:800;margin-top:0;letter-spacing:-.025em;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--pink)}
+.hero .sub{margin-top:8px;color:var(--on-navy-2);max-width:60ch;font-size:15px;line-height:1.5}
+.hero .sub a{color:#fff;font-weight:600;border-bottom:1px solid rgba(255,255,255,.35)}
+.hero .sub a:hover{text-decoration:none;border-color:#fff}
+
+.glance{margin-top:22px;position:relative}
+.glance-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+.glance-h h2{font-size:15px;font-family:var(--body);font-weight:600;color:var(--on-navy-2);letter-spacing:0}
+.glance-h .flag{background:rgba(232,116,163,.18);color:#F8C3D8}
+/* glance: one compact list on phones (all five visible at once), five tiles on desktop */
+.tiles{display:grid;grid-template-columns:1fr;background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden}
+.tile{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:14px;row-gap:5px;padding:13px 16px;border-top:1px solid rgba(255,255,255,.08)}
+.tile:first-child{border-top:0}
+.tile .q{grid-column:1;font-size:15px;color:#fff;font-weight:600;line-height:1.3}
+.tile .v{grid-column:2;grid-row:1 / span 2;display:flex;align-items:baseline;justify-content:flex-end;gap:4px;white-space:nowrap}
+.tile .v .num{font-size:32px;line-height:1;color:#fff}
+.tile .v small{font-size:13px;color:var(--on-navy-2);font-weight:500}
+.tile .d{grid-column:1;font-size:13.5px;color:var(--on-navy-2);display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;line-height:1.3}
+.tile .d b{color:#fff;font-weight:600;font-variant-numeric:tabular-nums}
+/* tone: green = good news, red = not, grey = cuts both ways. Arrows give direction; colour gives the read. */
+.tg.tg.tg{color:var(--better)}.tb.tb.tb{color:var(--worse)}.tm.tm.tm{color:var(--neutral)}
+.hero .tg.tg.tg{color:#8FE3B8}.hero .tb.tb.tb{color:#FFB3A2}.hero .tm.tm.tm{color:#B7C8D2}
+/* national comparison: words in a pill, never an arrow (arrows only mean direction) */
+.nat{display:inline-flex;align-items:center;font-size:12.5px;font-weight:600;border-radius:999px;padding:3px 10px;line-height:1.25;white-space:nowrap;font-family:var(--body);letter-spacing:0}
+.nat.ahead{color:var(--better);background:var(--better-soft)}
+.nat.behind{color:var(--worse);background:var(--worse-soft)}
+.nat.none{color:var(--ink-3);background:transparent;box-shadow:inset 0 0 0 1px var(--line)}
+.hero .nat.ahead{color:#8FE3B8;background:rgba(95,203,147,.16)}
+.hero .nat.behind{color:#FFB3A2;background:rgba(243,145,118,.18)}
+.hero .nat.none{color:#B7C8D2;background:transparent;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.natx{font-size:13px;color:var(--ink-3)}
+.hero .natx{color:var(--on-navy-3)}
+.legend{font-size:11px;color:var(--on-navy-2);padding:16px 0 24px;line-height:1.5;display:grid;grid-template-columns:1fr;gap:10px}
+.lg{display:flex;flex-wrap:wrap;align-items:center;align-content:flex-start;gap:6px 14px;min-width:0}
+.lg>span{display:inline-flex;align-items:center;gap:6px}
+.lg .lh{flex-basis:100%;font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--on-navy-3)}
+.legend b{color:#fff;font-weight:600}
+.legend .nat{font-size:10.5px;padding:1px 7px}
+@media (min-width:760px){.legend{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 40px}}
+@media (min-width:640px) and (max-width:1023px){
+  .tile{grid-template-columns:minmax(0,1fr) 190px 150px;padding:14px 18px}
+  .tile .q{grid-column:1;grid-row:1}
+  .tile .d{grid-column:2;grid-row:1;flex-direction:column;align-items:flex-start;gap:6px}
+  .tile .v{grid-column:3;grid-row:1}
+}
+@media (min-width:1024px){
+  .tiles{grid-template-columns:repeat(5,1fr);gap:10px;background:none;border:0;border-radius:0;overflow:visible}
+  .tile{display:flex;flex-direction:column;align-items:stretch;background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 16px 14px;min-height:172px}
+  .tile:first-child{border-top:1px solid rgba(255,255,255,.08)}
+  .tile .q{font-size:14px;font-weight:500;color:var(--on-navy-2)}
+  .tile .v{margin-top:auto;padding-top:14px;justify-content:flex-start}
+  .tile .v .num{font-size:44px}
+  .tile .d{flex-direction:column;align-items:flex-start;gap:8px;margin-top:8px}
+}
+
+/* intro */
+.intro{border-bottom:1px solid var(--line);background:var(--surface)}
+.intro .wrap{padding:24px 20px;display:flex;gap:16px;align-items:flex-start}
+.intro .pf{flex:0 0 52px;height:52px;border-radius:50%;background:var(--surface-2);border:1.5px dashed var(--line)}
+.intro>.wrap>div{min-width:0}
+.intro p{color:var(--ink-2);font-size:16px}
+.intro p+p{margin-top:6px}
+.intro .by{font-size:14px;color:var(--ink);font-weight:600;margin-top:10px}
+
+/* story */
+.story{padding:44px 0 40px;border-bottom:1px solid var(--line)}
+.story .k{font-size:14px;font-weight:600;color:var(--pink-ink);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.story .k::before{content:"";width:28px;height:3px;background:var(--pink);border-radius:2px}
+.story h2{font-size:clamp(30px,7.4vw,54px);font-weight:800;margin-top:14px;max-width:20ch;letter-spacing:-.03em}
+.story .facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 28px;margin:24px 0}
+.story .facts .num{font-size:clamp(30px,7vw,44px);line-height:1;color:var(--teal-ink)}
+.story .facts span{display:block;font-size:13px;color:var(--ink-3);margin-top:6px;font-weight:500}
+.story .body{font-size:18px;line-height:1.6;max-width:62ch;color:var(--ink)}
+.story .body p+p{margin-top:12px}
+.story .who{margin-top:20px;font-size:15px;color:var(--ink-2);max-width:62ch;padding-left:14px;border-left:2px solid var(--line)}
+.story .who b{color:var(--ink);font-weight:600}
+.story .src{margin-top:16px;font-size:14px;color:var(--ink-3)}
+@media (min-width:760px){.story{padding:56px 0 52px}.story .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}.story .facts{grid-template-columns:repeat(3,auto)}}
+
+/* sections */
+.sec{padding-block:40px 8px}
+.sec-h{margin-bottom:8px;max-width:62ch}
+.sec-h h2{font-size:clamp(26px,6vw,36px);font-weight:800;letter-spacing:-.025em}
+.sec-h p{color:var(--ink-2);margin-top:8px;font-size:16px}
+.pnls{display:grid;grid-template-columns:1fr}
+.pnl{padding:26px 0 24px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.pnl:first-child{border-top:0}
+.pnl h3{font-size:21px;font-weight:700;max-width:26ch;letter-spacing:-.02em}
+.pnl .big{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pnl .big .num{font-size:clamp(40px,10vw,52px);line-height:.95;color:var(--ink)}
+.pnl .big small{font-size:14px;color:var(--ink-3);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:500;color:var(--ink-2);background:var(--surface-2);border-radius:8px;padding:6px 10px;line-height:1.2}
+.chip b{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.chips .nat{padding:6px 11px;font-size:13px}
+/* three-figure row for panels that carry more than one headline measure */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,auto));justify-content:start;gap:10px 26px}
+.stats .num{display:block;font-size:clamp(30px,8vw,40px);line-height:1;color:var(--ink)}
+.stats .sl{display:block;font-size:13px;color:var(--ink-3);font-weight:500;margin-top:6px}
+.stats .sd{display:block;font-size:13.5px;color:var(--ink);font-weight:700;margin-top:2px;font-variant-numeric:tabular-nums}
+.stats .sd span{font-weight:500;color:var(--ink-3)}
+/* horizontal bars: share or volume by category */
+.hb,.dl{display:grid;gap:12px;margin-top:2px}
+.hb-r,.dl-r{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 12px;align-items:baseline}
+.hb-l,.dl-l{font-size:14px;color:var(--ink-2);font-weight:500;min-width:0}
+.hb-v,.dl-v{font-size:14px;color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hb-v span{font-weight:500;color:var(--ink-3);margin-left:6px}
+.hb-t{grid-column:1 / -1;height:10px;border-radius:0 4px 4px 0;background:var(--line-2);overflow:hidden}
+.hb-t i{display:block;height:100%;background:var(--bar);border-radius:0 4px 4px 0}
+/* diverging bars: change only, zero in the middle */
+.dl-t{grid-column:1 / -1;height:10px;position:relative;background:linear-gradient(var(--line),var(--line)) 50% 0/1px 100% no-repeat}
+.dl-t i{position:absolute;top:0;height:100%}
+.dl-t i.p{left:50%;background:var(--better);border-radius:0 4px 4px 0}
+.dl-t i.n{right:50%;background:var(--worse);border-radius:4px 0 0 4px}
+.chart{position:relative;margin-top:2px}
+.chart svg{width:100%;height:auto;display:block;touch-action:pan-y}
+.chart rect.b{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.chart.in rect.b{transform:scaleY(1)}
+@media (prefers-reduced-motion:reduce){.chart rect.b{transform:none;transition:none}}
+.chart rect.hit{fill:transparent}
+.chart g.m.on rect.cur{fill:var(--bar-hi)}
+.tip{position:absolute;top:0;left:0;transform:translate(-50%,-110%);background:var(--tip);color:var(--tip-ink);font-size:12.5px;line-height:1.3;padding:7px 9px;border-radius:8px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .12s;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.tip.on{opacity:1}
+.tip b{font-weight:700;font-variant-numeric:tabular-nums}
+.tip s{text-decoration:none;opacity:.7}
+.cap{font-size:12.5px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px}
+.cap i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.cap i.tk{height:3px;width:16px;border-radius:2px;vertical-align:3px}
+.read{font-size:16.5px;line-height:1.55;max-width:62ch}
+.lbl{display:block;font-size:13px;font-weight:600;color:var(--ink-3);margin-bottom:3px}
+.who{font-size:15px;color:var(--ink-2);max-width:62ch;padding-left:14px;border-left:2px solid var(--line)}
+.cav{font-size:14px;color:var(--ink-2);background:var(--pink-soft);border-radius:10px;padding:10px 12px;max-width:62ch;display:flex;gap:8px;align-items:flex-start}
+.cav::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--pink);margin-top:7px}
+.meta{font-size:13px;color:var(--ink-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin-top:2px}
+.meta a{font-weight:600}
+.pl,.pr{display:flex;flex-direction:column;gap:14px;min-width:0}
+@media (min-width:760px){
+  .pnls{border-top:1px solid var(--line);margin-top:16px}
+  .pnl{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0 40px;padding:34px 0 36px;align-items:start}
+  .pnl:first-child{border-top:0}
+  .pr{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;gap:16px}
+  .pr .read,.pr .who,.pr .cav{max-width:none}
+  .pnl .big .num{font-size:52px}
+}
+@media (min-width:1024px){.pnl{gap:0 56px}.pr{padding:26px 28px 22px}}
+
+/* tipi */
+.tipi{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:14px;margin-top:16px}
+.tipi .ix .num{font-size:64px;line-height:.95;color:var(--teal-ink)}
+.tipi .ix span{display:block;font-size:13.5px;color:var(--ink-3);margin-top:6px;font-weight:500}
+.tipi p{font-size:16px;color:var(--ink-2)}
+.tipi p+p{margin-top:8px}
+@media (min-width:760px){.tipi{grid-template-columns:240px 1fr;gap:32px;align-items:center;padding:28px 32px}}
+
+/* footer */
+footer{background:var(--navy);color:var(--on-navy-2);margin-top:48px;padding:36px 0 calc(32px + env(safe-area-inset-bottom,0px));font-size:15px}
+footer .wrap{display:grid;gap:26px}
+footer h3{font-family:var(--body);font-size:14px;color:#fff;margin-bottom:10px;font-weight:600;letter-spacing:0}
+footer p{max-width:60ch}footer p+p{margin-top:8px}
+footer a{color:#fff}
+footer .lg{display:inline-block;background:#fff;border-radius:8px;padding:8px 12px;margin-bottom:14px}
+footer .lg img{height:38px;display:block}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer .fund{display:flex;align-items:center;gap:14px;margin-top:18px}
+footer .fund svg{height:44px;width:auto;color:#fff}
+footer .fund span{font-size:13px}
+footer .fine{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;font-size:13px;color:var(--on-navy-3);max-width:none}
+footer .tbc{color:#F8C3D8;font-weight:600;font-size:13px}
+@media (min-width:760px){footer .wrap{grid-template-columns:1.5fr 1fr 1fr;gap:40px}}
+
+/* to top */
+.totop{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,31,46,.3);opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;z-index:30}
+.totop.on{opacity:1;transform:none}
+.totop svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.toast{position:fixed;left:50%;bottom:calc(72px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(10px);background:var(--tip);color:var(--tip-ink);font-size:14px;padding:10px 14px;border-radius:10px;opacity:0;transition:.2s;z-index:50;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%)}
+@media print{.demo,.top,.subnav,.totop,.dots{display:none!important}body{background:#fff}.pnl,.tile,.tipi{break-inside:avoid}.tiles{display:grid;grid-template-columns:repeat(5,1fr)}}
+
+/* ===== Binder edition =====
+   The glance band stands on its own; the six sections after it are sheets in a binder.
+   Desktop: a rail of divider tabs on the sheets' left edge; the current section's tab is navy and pulls forward.
+   Phones and tablets: each sheet has a navy tab on its top edge, stepping to the right like LP dividers,
+   and the pinned strip (shown only inside the binder) is a row of folder tabs.
+   Only brand navy and quiet neutrals here, so the tabs never compete with the data colours. */
+:root{--tab-off:#DCE5EA;--tab-off-ink:#44555F;--tab-on:#001F2E;--tab-on-ink:#FFFFFF;--earw:176px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--tab-off:#183140;--tab-off-ink:#B5C4CC;--tab-on:#EDF2F5;--tab-on-ink:#001F2E}}
+:root[data-theme="dark"]{--tab-off:#183140;--tab-off-ink:#B5C4CC;--tab-on:#EDF2F5;--tab-on-ink:#001F2E}
+
+.binder{padding-bottom:48px}
+.sheet{position:relative;background:var(--surface);border-top:3px solid var(--tab-on);margin-top:20px}
+html{scroll-padding-top:calc(51px + env(safe-area-inset-top,0px))}
+.sheet.sec{padding-block:36px 30px}
+.story.sheet{border-bottom:0}
+.intro{border-bottom:0}
+footer{margin-top:0}
+@media (min-width:760px){.sheet .pr{background:var(--bg)}}
+
+/* pinned strip of folder tabs (phones and tablets) */
+.binder .subnav{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:3px solid var(--tab-on)}
+.binder .subnav .wrap{align-items:flex-end;gap:3px;mask-image:none;-webkit-mask-image:none}
+.binder .subnav a,.binder .subnav a:hover{background:var(--tab-off);color:var(--tab-off-ink);border-radius:10px 10px 0 0;padding:6px 13px 5px;font-size:13.5px;transition:padding .18s,background .18s}
+.binder .subnav a[aria-current="true"]{background:var(--tab-on);color:var(--tab-on-ink);padding-top:10px;font-weight:700}
+
+@media (min-width:1024px){
+  .binder{display:grid;grid-template-columns:58px minmax(0,1fr);max-width:1240px;margin:0 auto;padding:16px 32px 64px 0;align-items:start}
+  .binder>.bm{grid-column:2;grid-row:1;min-width:0}
+  .binder>.subnav{grid-column:1;grid-row:1;position:sticky;top:calc(28px + env(safe-area-inset-top,0px));background:none;border:0;z-index:5;margin-top:28px}
+  .binder .subnav .wrap{height:auto;flex-direction:column;align-items:flex-end;overflow:visible;padding:0;gap:0;max-width:none}
+  .binder .subnav a,.binder .subnav a:hover{writing-mode:vertical-rl;transform:rotate(180deg);width:40px;padding:16px 0;display:flex;align-items:center;border-radius:0 12px 12px 0;
+    margin-bottom:4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;transition:width .2s,background .2s}
+  .binder .subnav a:hover{width:48px}
+  .binder .subnav a[aria-current="true"]{width:56px;padding-top:16px;box-shadow:-3px 3px 10px rgba(0,31,46,.18)}
+  .sheet{border-top:0;border-left:4px solid var(--tab-on);border-radius:0 22px 22px 0;margin-top:28px;box-shadow:0 1px 2px rgba(0,31,46,.06),0 10px 30px -14px rgba(0,31,46,.2)}
+  .sheet .wrap{padding-left:44px;padding-right:44px}
+  .sheet.sec{padding-left:44px;padding-right:44px;max-width:none}
+  .totop{display:none}
+}
+@media print{.binder .subnav{display:none!important}.sheet{border:0;box-shadow:none}}
+</style>
+<a class="sr" href="#glance">Skip to the numbers</a>
+<div class="demo" role="status">Demo for review. Every figure is an illustrative placeholder, not real data.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a href="https://tiayukon.com" aria-label="Tourism Industry Association of the Yukon, home"><img src="data:image/png;base64,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" alt="TIA Yukon"></a>
+    <div class="edn"><span class="e1">Summer 2026 edition</span><span class="e2">May to September</span><span class="e3">Published [Month day, year]</span></div>
+    <div class="acts">
+      <button class="ib" id="share" aria-label="Share this edition" title="Share"><svg viewBox="0 0 24 24"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 15V3"/><path d="m7 8 5-5 5 5"/></svg></button>
+      <a class="ib" href="#" aria-label="Read the full member report" title="Full report"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="glance">
+  <div class="wrap">
+    <h1>How Yukon tourism did this summer</h1>
+    <p class="sub">A twice-yearly read for the people running Yukon tourism businesses. Every figure comes from a published source and links back to it.</p>
+
+    <div class="glance">
+      <div class="glance-h"><h2>Season at a glance</h2><span class="flag">Placeholder figures</span></div>
+      <div class="tiles" id="tiles">
+        <div class="tile"><div class="q">Visitors to the Yukon</div><div class="v"><span class="num">180</span><small>thousand</small></div><div class="d"><span><b class="tg">▲ 6%</b> on summer 2025</span><span class="nat ahead" title="Canada up 2% on the same survey">Ahead of Canada</span></div></div>
+        <div class="tile"><div class="q">Arrivals at Whitehorse airport</div><div class="v"><span class="num">95</span><small>thousand</small></div><div class="d"><span><b class="tg">▲ 4%</b> on summer 2025</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile"><div class="q">Hotel occupancy</div><div class="v"><span class="num">78</span><small>%</small></div><div class="d"><span><b class="tb">▼ 2 pts</b> on summer 2025</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile"><div class="q">Visitor card spending</div><div class="v"><span class="num">$62</span><small>million</small></div><div class="d"><span><b class="tg">▲ 9%</b> on summer 2025</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile"><div class="q">Restaurant and bar sales</div><div class="v"><span class="num">$48</span><small>million</small></div><div class="d"><span><b class="tg">▲ 3%</b> on May–Aug 2025</span><span class="nat behind" title="Canada up 5% on the same survey">Behind Canada</span></div></div>
+      </div>
+      <div class="legend">
+        <div class="lg"><span class="lh">Change on last year</span><span><b>▲ ▼</b> direction</span><span><b class="tg">Green</b> good news</span><span><b class="tb">Red</b> not</span><span><b class="tm">Grey</b> cuts both ways</span></div>
+        <div class="lg"><span class="lh">Compared with Canada</span><span><span class="nat ahead">Ahead of Canada</span> <span class="nat behind">Behind Canada</span> same Statistics Canada survey</span><span><span class="nat none">No like-for-like</span> no national figure on the same basis</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="intro">
+  <div class="wrap">
+    <div class="pf" aria-hidden="true"></div>
+    <div>
+      <p><span class="flag">Placeholder — Caroline to confirm</span></p>
+      <p style="margin-top:8px">A short welcome from the Executive Director would sit here: two or three sentences on why TIA Yukon publishes this read and how to use it alongside the full report.</p>
+      <p class="by">Caroline Anderson, Executive Director, TIA Yukon</p>
+    </div>
+  </div>
+</div>
+
+<div class="binder">
+<nav class="subnav" aria-label="Sections">
+  <div class="wrap">
+    <a href="#story" title="Biggest story">Story</a>
+    <a href="#s1" title="Who came">Who came</a>
+    <a href="#s2" title="Where they stayed">Stayed</a>
+    <a href="#s3" title="What they spent">Spent</a>
+    <a href="#s4" title="What's next">Next</a>
+    <a href="#tipi" title="Index">Index</a>
+  </div>
+</nav>
+<div class="bm">
+<section class="story sheet" id="story" style="--i:0">
+  <div class="wrap">
+    <div class="k">This season's biggest story <span class="flag">Stand-in until the data review</span></div>
+    <div class="grid">
+      <div>
+        <h2>Hotels raised rates rather than filling rooms</h2>
+        <div class="facts">
+          <div><span class="num">78%</span><span>occupancy, May to Sept</span></div>
+          <div><span class="num">$260</span><span>average room rate</span></div>
+          <div><span class="num">+14%</span><span>rate vs summer 2025</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="body">
+          <p>Hotel occupancy slipped two points from last summer while the average room rate climbed 14%. This season's hotel growth came from rate, not from more rooms sold.</p>
+          <p>Short-term rentals moved differently. Listings, occupancy and rates all rose, and rental revenue grew by about a quarter. The two accommodation markets are growing in different ways.</p>
+        </div>
+        <p class="who"><b>Who this speaks to:</b> a panel of roughly 600 hotel rooms, concentrated in Whitehorse. It does not describe smaller or seasonal properties elsewhere in the territory.</p>
+        <p class="src">Source: <a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Government of Yukon tourism indicators →</a> (opens in a new tab)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap sheet" id="s1" style="--i:1">
+  <div class="sec-h"><h2>Who came, and how they got here</h2><p>Looking back at May to September.</p></div>
+  <div class="pnls">
+    <article class="pnl">
+      <div class="pl">
+      <h3>Which markets grew and which shrank</h3>
+      <div class="big"><span class="num">180,000</span><small>visitors, May to Sept</small></div>
+      <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 6%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 41%</b></span><span class="nat ahead">Ahead of Canada</span><span class="natx">Canada ▲ 2%</span></div>
+      <div class="chart" data-type="hbar" data-rows="Canada|108|108k|10;United States|54|54k|0;Overseas|18|18k|-2" data-cap="Visitors by origin, May to Sept, with change on summer 2025"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>Growth came almost entirely from Canadian visitors, with the United States flat and overseas visitors slightly down. The Yukon's summer grew faster than the country as a whole.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Every operator. This is the broadest count on the page, covering all visitors regardless of how they arrived or where they stayed.</p>
+      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+    <article class="pnl">
+      <div class="pl">
+      <h3>How many flew in</h3>
+      <div class="big"><span class="num">95,000</span><small>passengers deplaning</small></div>
+      <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 4%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 32%</b></span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" data-this="14,19,23,23,16" data-prev="13,18,22,22,16" data-labels="May,Jun,Jul,Aug,Sep" data-unit="k passengers"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>Air arrivals grew more slowly than total visitors, 4% against 6%, so a larger share of this summer's growth came by road. September was flat on last year.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Whitehorse airport only, all passengers. It includes residents returning home and does not separate visitors by origin or purpose.</p>
+      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+    <article class="pnl">
+      <div class="pl">
+      <h3>Which routes they arrived by</h3>
+      <div class="big"><span class="num">52%</span><small>of road crossings at Beaver Creek</small></div>
+      <div class="chips"><span class="chip">all crossings vs summer 2025 <b class="tg">▲ 7%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 3×</b></span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" data-type="hbar" data-rows="Beaver Creek · Alaska Highway|52|52%|3;Fraser · South Klondike Highway|41|41%|12;Little Gold Creek · Top of the World Highway|7|7%|4" data-cap="Share of road crossings by port, May to Sept, with change on summer 2025"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>Beaver Creek still carries the most road traffic, but Fraser, on the highway up from Skagway, grew fastest and added the most crossings this summer.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Operators along the highway corridors and in communities near a port of entry. It counts people crossing at each port, not where they stop.</p>
+      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec wrap sheet" id="s2" style="--i:2">
+  <div class="sec-h"><h2>Where they stayed</h2><p>Hotels and short-term rentals, read side by side.</p></div>
+  <div class="pnls">
+    <article class="pnl">
+      <div class="pl">
+      <h3>Whether hotels filled rooms or raised rates</h3>
+      <div class="stats">
+        <div><span class="num">78%</span><span class="sl">occupancy</span><span class="sd tb">▼ 2 pts</span></div>
+        <div><span class="num">$260</span><span class="sl">average rate</span><span class="sd tm">▲ 14%</span></div>
+        <div><span class="num">$203</span><span class="sl">RevPAR</span><span class="sd tg">▲ 11%</span></div>
+      </div>
+      <div class="chips"><span class="chip">changes vs summer 2025</span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" data-this="63,81,89,87,70" data-prev="65,82,91,89,73" data-labels="May,Jun,Jul,Aug,Sep" data-unit="% occupancy" data-delta="pts"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>Occupancy slipped two points while the average rate rose 14%, so revenue per available room still grew 11%. The growth came from price, not from more guests.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>A panel of roughly 600 rooms, concentrated in Whitehorse. It does not describe smaller or seasonal properties elsewhere in the territory.</p>
+      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+    <article class="pnl">
+      <div class="pl">
+      <h3>How short-term rentals compared</h3>
+      <div class="stats">
+        <div><span class="num">71%</span><span class="sl">occupancy</span><span class="sd tg">▲ 3 pts</span></div>
+        <div><span class="num">$215</span><span class="sl">average rate</span><span class="sd tm">▲ 8%</span></div>
+        <div><span class="num">$5.4M</span><span class="sl">revenue</span><span class="sd tg">▲ 25%</span></div>
+      </div>
+      <div class="chips"><span class="chip">changes vs May–Aug 2025</span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" data-this="54,71,81,78" data-prev="51,68,78,75" data-labels="May,Jun,Jul,Aug" data-unit="% occupancy" data-delta="pts"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>Rentals grew on occupancy, rate and supply at the same time, which lifted revenue by a quarter. Hotels grew on rate alone.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Whole-home rentals only. It excludes rooms let within an occupied home, and it is the closest available read on accommodation outside the hotel sector.</p>
+      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+    <article class="pnl">
+      <div class="pl">
+      <h3>Whether rental supply is still growing</h3>
+      <div class="big"><span class="num">1,150</span><small>active listings in August</small></div>
+      <div class="chips"><span class="chip">vs August 2025 <b class="tm">▲ 11%</b></span><span class="chip">vs February 2026 <b class="tm">▲ 28%</b></span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" data-this="920,1010,1120,1150" data-prev="840,910,1000,1035" data-labels="May,Jun,Jul,Aug" data-unit="listings" data-tone="mixed"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>New listings kept arriving through the peak, and rental occupancy still rose. Demand for rentals grew at least as fast as the supply of them this summer.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Rental hosts and the communities that regulate them. A listing counts as active if it was bookable at any point in the month, whether or not it was booked.</p>
+      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec wrap sheet" id="s3" style="--i:3">
+  <div class="sec-h"><h2>What they spent</h2><p>Where visitor money showed up, and where it didn't.</p></div>
+  <div class="pnls two">
+    <article class="pnl">
+      <div class="pl">
+      <h3>What visitors spent</h3>
+      <div class="big"><span class="num">$62M</span><small>on cards, May to Sept</small></div>
+      <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 9%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 55%</b></span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" data-this="8,13,17,16,8" data-prev="7.5,12,15.5,14.5,7.5" data-labels="May,Jun,Jul,Aug,Sep" data-unit="$M"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>Spending grew faster than visitor numbers, 9% against 6%, so the average visitor spent more on cards this summer. Higher room rates are one likely part of that.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Any business that takes card payments from out-of-territory cardholders. It misses cash, and it misses anything booked and paid for before the trip.</p>
+      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+    <article class="pnl">
+      <div class="pl">
+      <h3>Whether restaurants saw it</h3>
+      <div class="big"><span class="num">$48M</span><small>restaurant and bar sales, May to Aug</small></div>
+      <div class="chips"><span class="chip">vs May–Aug 2025 <b class="tg">▲ 3%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 18%</b></span><span class="nat behind">Behind Canada</span><span class="natx">Canada ▲ 5%</span></div>
+      <div class="chart" data-this="10.5,12,13.5,12" data-prev="10.3,11.6,13,11.7" data-labels="May,Jun,Jul,Aug" data-unit="$M"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>Restaurant and bar sales grew more slowly than visitor numbers or card spending, and the Yukon trailed the national increase. Because the figure includes residents, it cannot show how much of the change came from visitors.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Food and drink businesses across the territory. The figure includes residents' spending and runs about a month behind the other panels.</p>
+      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec wrap sheet" id="s4" style="--i:4">
+  <div class="sec-h"><h2>What people are searching for</h2><p>The only forward-looking panel on the page. Search interest signals the direction of demand. It is not a projection of visitors or revenue.</p></div>
+  <div class="pnls two">
+    <article class="pnl">
+      <div class="pl">
+      <h3>Which markets are searching for the Yukon</h3>
+      <div class="big"><span class="num">▲ 12%</span><small>search interest, Sept to Oct vs last year</small></div>
+      <div class="chart" data-type="delta" data-rows="Canada|15;United States|6;Germany|-4" data-cap="Change in search interest by origin market, Sept to Oct vs last year"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>Interest in Yukon travel is running ahead of last autumn in Canada and the United States, and slightly behind in Germany. The direction is up; the size of any visitor change is not something search data can tell us.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Operators planning for the winter and next summer. Search interest is an index relative to each market's own peak, not a count of people.</p>
+      <div class="meta"><span>Data through October 2026</span><a href="https://trends.google.com" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+    <article class="pnl">
+      <div class="pl">
+      <h3>Which activities are searched for most</h3>
+      <div class="big"><span class="num" style="font-size:clamp(30px,8vw,40px)">Dog sledding</span><small>fastest-growing activity search</small></div>
+      <div class="chart" data-type="delta" data-rows="Dog sledding|22;Hiking and paddling|9;Northern lights|-11" data-cap="Change in search interest by activity, Sept to Oct vs last year"></div>
+      </div>
+      <div class="pr">
+      <p class="read"><span class="lbl">What it means</span>Dog sledding searches grew fastest and hiking and paddling rose too, while northern lights searches softened. The mix of what people look for is shifting toward active experiences.</p>
+      <p class="cav">Aurora interest tracks the solar cycle, which peaked in 2024 and 2025. Softening interest may have nothing to do with the Yukon.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Tour and activity operators. Activity searches are small samples compared with destination searches, so month-to-month moves can be noisy.</p>
+      <div class="meta"><span>Data through October 2026</span><a href="https://trends.google.com" target="_blank" rel="noopener">Source →</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec wrap sheet" id="tipi" style="--i:5">
+  <div class="sec-h"><h2>Tourism Industry Performance Index</h2><p>An annual snapshot. It sits outside the seasonal panels and states its own year. <span class="flag">Pending Caroline's agreement</span></p></div>
+  <div class="tipi">
+    <div class="ix"><span class="num">104</span><span>Index for 2025, where 2019 = 100</span></div>
+    <div>
+      <p>The index combines visitation, accommodation and spending indicators into a single annual measure of how the industry performed against the 2019 baseline. A reading above 100 means the industry was ahead of 2019 on the combined measure.</p>
+      <p>The method is being updated as retail spending data is added, so this year's figure may be restated. <a href="#" target="_blank" rel="noopener">How the index is built →</a> <span class="flag">Link and wording to confirm with Travel Yukon</span></p>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="lg" href="https://tiayukon.com" aria-label="Tourism Industry Association of the Yukon, home"><img src="data:image/png;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCACoATQDACIAAREBAhEB/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMAAAERAhEAPwD3+iiuP8d+O7bwjZCOILNqcy5hhJ4Uf329vbv+Zpxi5OyJlJRXNLY2te8S6T4atPtGp3SxZ+5GOXk/3V7/AMq8j174z6pdu0Wi20dlD2llAkkPvj7o+mD9a4SabVfFGrvPPJJdXcpyzseFH8gB6V1Gm+EbS2UPeH7RL6dEH4d/xrsVGnSV6mrOaisVjZcuHVl3f+f6LU5u68Q+IdYkP2jU7+5J/gErEfgo4H5VU/s3U2O/7Fdk9c+U3+FeoJbLbRhUhESdgq7RS01iYx+GJ6K4bqTSdStr6X/VHm1vrOvaO4MGoahaEfwiR1B/Doa7LQ/jHrliyx6pFFqMHdsCOQfiOD+I/GtV0SRSrqrKeoYZFYeo+FLC8BaBfs0vYoPlP1H+FL2tKfxxM6uRYuir0KnN5bfndfij2Pw34w0bxTBv065/fKMvbyfLIn4dx7jIrer5Qmt9S8O6jHKryQTxndFPExGfcH+le4fD34hx+J4hp2olItWjXII4WcDuPQ+o/Ee2dXD8q5oao4qWJbl7OquWR39FFFcx1hRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAZfiLXLfw5oV1qdzysK/KmeXc8Ko+pr5muLjUPFOvyXE7mW7uX3Mx6KP6ACvQPjTrrT6raaHE/wC6tk86UDu7dAfov/oVYvhDThb2BvXX97Pwvso/xP8ASu2ilTp+0e7ORUZY3FRw0dlq/wCvwXma+maZBpdoIIRz1dz1Y+pr03w3oMFpZxXU8avcyAOCwzsB6Ae9ef161YTpdafbzRkFXjBHtx0rllJt3Z9NjV9Ww8aVFWjtp/XUmkjSVCkiK6HgqwyDXn/inRY9MuEnthi3mz8v9xvT6V6FXK+OJ0FjbW+R5jSb8egAI/rUo4MBVnCsox2e6/rscPVZ7+1S+SyaZRcOu4JVfWdWi0myMrYaVuI0/vH/AArztnu7uea8/ePIn72SRf4BkAH2GSB+IropUXU16HbmmbRwXLGKvJ9PL/g9Pv8AJ+m3tlBqFq1vcJuRvzB9R7153dW954d1hGilaOaFhJDMnHQ8EV13h3X11KIW9wQLtB/38HqPen+KNOF9pTyqv763y6n1Hcfl/KrpydKfJLY5cwoUcywv1mh8S+/zT8+3ntoz13wX4nj8V+HYb4bVuF/d3EY/hkHX8D1H1roa+f8A4Q662meLf7Pd8W+oJ5ZB6CQZKn+Y/GvoCsa9PknZbHkYWt7Wnd7nB/EHx9d+DrqxgtbKG4+0IzsZWIxggcYrjP8Ahd+q/wDQJsv++2/xqX44g/2npBwceTJz/wACFeUV00aMJQTaOHE4mrCq4xeh6l/wu/Vf+gTZf99t/jR/wu/Vf+gTZf8Afbf415bRWv1al2MPrlf+b8Eepf8AC79V/wCgTZf99t/jXceGPG95r3gzVtcmsoYpLLzdiIxKuUjD8/nXzrXt/ge2MHwW1VypHnw3cn1+Qr/7LWNejThC6Wp0YXEValVRk9DC/wCF36t/0CbL/vp/8a6HwV8Tr/xR4ki0y4sLaGN43cvGzE8DPevDK7r4Rf8AI/2//XCX/wBBrSdCmotpGdLF1pVIpvqux9D0UVi+LtYGg+FdR1ENiSOIiL/fb5V/UivNSvoj2G0ldnnWt/GW6sdbvLSx062lt4JWjWR3bL4OCeO2az/+F36r/wBAmy/77b/GvLSSTk8mivTWGp21R4ksbWbbT/I+j/h/44PjK1u/Pto7e6tmXKIxIZWzg8+4P6V2VfOXws1n+yfG9tG7YhvQbZ/qeV/8eAH419G1x4imoT02PSwlZ1ad5boKKKKwOoKKKKACiiigAooooAKKKKACiiigAooooA+XPGN2+p+NtWmzuLXbxp9FO1f0ArvLeFbe2ihT7saBR+AxXnM3z+KpM85vTn/vuvSq7a+kIo24djGVatUa10/Fv/JBWxo3iG60gGNVEtuTkxscYPse1Y9VdQ1C3022M9w+B2UdWPoK5bX0Ppq0acoP2mx3svjlfK/c2J8z/bfgfkOa43WdYZvO1C/lzgf/AKlArz+fVtW1GWXU4N0cFkVJVTwgY4GfXPSqus65PrDRhlEcSD7gPBbua6I4WV1c+cjm2AoKcqSfMtr9f8vw0K+qalNql61xLwOiJ2Ueldn8H44bjxbd21xEssM+nyRujjIYFkyCPwrz+ve/ht4AXw/FHrN3OJb64h+RIz8kaNg9f4j09v5101XGnTaPm4Sq4nEe0lq73Z57488EXPg/Ulv7AyHTZHzFIDkwt/dY/wAj3q3oOtx6vbGKXaLlR869mHqK90vrG21Kyms7yFZreZdrow4Ir5w8Y+HZfBPicQW10HQgTW7g/OqkkYYevBHof0rnhJVo8stz06FeeXVfaw1g91/X4fcY8EraL4ijmQkNZ3QYf8BbP9K+sAQQCDkGvkS7uWvLuW4dQrSNuIHTNfWliSbC2J6mJf5CjFJ8sb7mGFcPa1FT+G+npd2Jiqt95QfqKb5Uf/PNfyp9FcZ3nyFcf8fMv++f51ueBgD450UEZH2tP51h3H/HzL/vn+dbngb/AJHnRf8Ar7T+dey/hPm18R9P+VH/AHF/KsvxOAPCOsgDA+wz/wDotq1qyvFH/Ipaz/14z/8Aotq8Y+kPlOu6+EX/ACP9v/1wl/8AQa4Wu6+EX/I/2/8A1wl/9Br16vwP0PnqH8WPqj6HryP426zsttO0WNuZGNzKPYfKv67vyr1yvmLx7rP9ueM9RulbdCknkxemxOMj6kE/jXn4aHNU9D1sbU5KTXfQ5urd5ptzYQWU06bVvIfPi913Mv8A7Ln6EVDbW8l3dQ20K7pZXEaD1JOBXr/xb8Ox2fhPRZrdfl07FoSB/AVGCfxX/wAer0JzUWl3PJp0nOMpLp/X5XPHoZXgmjmiYrJGwZWHUEHINfV2haomtaFY6lHjFzCrkDs2OR+ByPwr5Or3P4Laz9q0C70mRsvZy74wf7j8/owb86xxULw5ux04Cpy1OXuenUUUV5x7AUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB8pSf8jU/wD1+n/0OvSq81k/5Gpv+v0/+h11+ueIYdKQxRYkuiOF7L7n/Cu6vFyUUi8grQoqvUqOyVv1LWr6zb6TBukO+Vh8kQPJ/wABXnl/qFxqVyZ7h8n+FR0UegqK4uZrudpp5C8jHJY11PhDxdp3h2Rftvh2zvcHP2gj96v03ZH5AVpTpezV7XZwZjm08bL2cXyw/P1t+Wx2Pw38Lf2l8PtdSaMq+pHyoi4x9xco303N+leROjRyNG6lXUkMD1BFfS2h/EHw3roVLe/WCc8CC5/dt9Bng/gTXi3xM0f+x/HF7sXEN3i6j/4F97/x4NU0ajdRqStc5MRRjGjFxd7HIV9J/DTVP7U8CaezNmS3U2z+2zgf+O7a+bK9f+CGqYfVNJZuoW5jH/jrf+yVeJjen6GeCny1Uu56vqWoW+k6Zc392+yC3jLufYdh7npXy1r2s3Gv63dandH95O+QueEXoFHsBgV6T8ZPFPmzx+HLWT5I8S3ZB6t1VPw6/iPSvJazwtOy531NcdW5pezXQK+ubH/kH23/AFyX+Qr5Gr65sf8AkH23/XJf5CljNkPLvikWKKKK4T1T5CuP+PmX/fP863PA3/I86L/19p/OsO4/4+Zf98/zrc8Df8jzov8A19p/OvZfwnza+I+oayvFH/Ipaz/14z/+i2rVrK8Uf8ilrP8A14z/APotq8Y+kPlOu6+EX/I/2/8A1wl/9Brha7r4Rf8AI/2//XCX/wBBr16vwP0PnqH8WPqj2rxnrP8AYPhHUb9W2yrEUiP+23yr+ROfwr5br2L43azhNO0WNuubmUfmqf8As36V47WOEjaHN3OnH1Oaoo9iW1uZrK6iureQxzxOHjcdVYcg1rah4v8AEGq2T2d/qs9xbyY3RuRg4OR29RXS+A/hxH4u0q4v7m9ltY0m8qMIgbcQASefqK6v/hR1h/0Grn/vyv8AjVzq0lK0t0ZU6FeUbw2fmeKV2Pww1n+x/HFmHbbDd5tZP+Bfd/8AHgtYXiTRn8P+Ir3Sncv9nk2q5GCykZU/iCKzY5HikWSNiroQysOoI71o7Tj5MxTdOfmmfX9FZnh7VU1zw9YammP9IhVmA7N0YfgQRWnXkNNOzPooyUkmgooopDCiiigAooooAKKKKACiiigAooooA+S9Rdo9bu5EOGW5cg+hDGqbu0js7sWZjkknJJrWWCO78YC3mGYpb/Y4BxkGTBr3dPhX4OQYOks/u1zL/Rq9SVWNNK54cKM6rkovS/8AmfONFfSo+Gng9RgaLH+Msh/9moPw08HkYOix/hLIP/Zqj63DszT+z6vdf18j5qqaa6uLiOKOaeWRIhtjV3JCD0Gegr6Hl+FXg+QfLpjxn1S5k/qxrKvPgv4fmUm1u762ft86uv5EZ/WmsTTe5LwVaO2p4PW54S8RSeFteTU0j8zbHIhjzjdlTjPtu2n8K0/Gfw+v/B6x3Dzx3VjK/lrMg2kNgkBl7cA9CelchWycakdNmc7U6U9VZomu7qa+vJru5kMk8zmSRz1LE5JqGiiqStojNtt3YV9c2P8AyD7b/rkv8hXyNX1zY/8AIPtv+uS/yFceM2R6OXfFIsUVzvinxnp3hEWzajBdutxuCNBGGAIxwSSPWuc/4XT4Z/59tT/78p/8XXGoSaukejKrTi7OS+8yZvgdFJM7rr7qrMSAbQHH476vaF8H49F1yy1P+23m+zSiTy/swXdjtnccV0fhj4gaL4rvpbOxFzHOieZtnQLuGcHGCemRXUsyojO7BVUZJJwAK1lWqrRv8DCOGw8tYq/zFqpqdl/aWk3lj5nl/aYHh34zt3KRnHfrXDy/GfwxHKyLDqMgUkB1hXDe4ywNM/4XT4Z/59tT/wC/Kf8AxdZ+yn2Zt7el/MvvMf8A4UWn/Qwt/wCAf/2dbnhL4XL4V1+PVBq5uSiMnlm32ZyMddxrurG7W/sLe7SOSNJ41kVJVwygjOCOxqxVyr1HdNmccLRTUor8WedeKfhYfE/iC41WXXHh80KqxfZtwQAAYzuHufxrG/4UXH/0ML/+Ag/+Lr16ihV6kVZMcsLSk+ZrX5mR4Z0CDwzoFvpUEhlEWS0jLguxJJOPx/SteivA7n4w+J0upVQWIVXIA8k8DP1pRhOq20OdSnQik9Ed/wCMfhjb+LNZXUl1JrOUxCORRDvD4zg/eGDjj8K57/hRcf8A0MLf+Af/ANnVLwx8VPEWq+JtOsLoWZguJ1jfbEQcHjg5r2utJTrUkotmMaeHrtyS/MwPB/htvCmh/wBmG+a8RZWdHMezaDj5cZPfJ/Gt+iiueUnJ3Z1xioLlWwUUUUigooooAKKKKACiiigAooooAKKKKAPkrUXaPWrt0Yq63DlWU4IO48ipx4i1xTldZ1EH1F0/+NV9UGNXvQf+e7/+hGu/+F/gXTfEkNxqeqEywwS+UlsrbdxwCS2OccjH4160nFQ5pHgRU5VHGD1Zzml+MvGIukisNW1G5mJ+WNiZyfwbNfQ+gS6nPoNnLrESRag0eZkToD2/HGM+9T2Gl2GlQ+TYWUFrH/dhjC5+uOtW64KtSEtIxserQo1IazlcbJIkMTyyuqRopZmY4CgdSTXIXvxS8JWZZRqRuHH8METN+uMfrXVXtpDqFjcWdwpaG4jaKQA4yrDB/Q14brvwd1uymd9JeO/t85VSwSQD3B4P4H8KVGEJP33YeIqVIJOnG5U+IPxDHi6OGxsraSCwhk8zMpG+RsEAkDgAAnjJ61wdbVz4Q8R2ZIn0PUBjusDMPzAIqg+l6hFnzLG5THXdCwx+lejThGEbRPGq1JVJXnuVKKUqVJDAgjsaStDMK+ubH/kH23/XJf5Cvkavrmx/5B9t/wBcl/kK4sZsj0cu+KRk+MPDsfijw3c6cwAmx5lu5/hkHQ/j0PsTXzBNDJbTyQTIUljYo6MOVYHBBr69rw/4xeFvsWpx6/ax4guzsuABwsoHB/4EB+YPrUYWpZ8j6muPo80faLocF4d1mXw/4gstUiyTBICyj+JDww/EE17b8TvFMVj4JRLKYNJqyhImU/8ALIgFm/Igf8Cr5+q3d6ld31vaQXMzSR2kXlQg/wAK7i2P1/ID0rqqUVOSfY4qOIdKEorqVK6z4f8Ah6HW9f8AtF+yR6XYAT3UkhATA6KSeOT+gNcoqs7BVBZicAAZJNe5y+GF8L/BrUrZ1H2yaDzrk/7ZI+X8Bx+frTqz5Y+bJw9L2ktdlqzs/wDhLvDX/Qf0v/wLT/GrdhrelapI0en6lZ3UiDcywTK5A9SAa+Ta9J+Cf/I5Xn/YPf8A9GR1yywnLFu53Qx/NJR5d/M9vvtRsdMgE1/eQWsRbaHnkCAn0ye/FZ//AAl/hr/oP6X/AOBaf41xXxu/5FjT/wDr8H/oDV4ZUUsP7SN7mmIxfsZ8trn1vY6lY6nCZrC8t7qJW2l4JA4B9MjvXyddf8fk/wD10b+de2fBH/kWtR/6/P8A2Ra8Tuv+Pyf/AK6N/Ot8PDknKPocuLqe1pwna17mz4I/5HjRf+vuP+dfTV5fWmnW5uL26htoQQDJNIEXJ7ZNfMvgj/keNE/6/I/510XxX8V/23r39mWsmbGwYrweHl6Mfw6D8fWivTdScYoMJVVKnKT8j2geLPDh/wCY/pf/AIGR/wCNWbPXNI1CfyLLVbG5lwT5cNwjtj1wDXybXuvw20G28JeFJ/EerYhmuIvNZmHMcI5A+rdcf7orGph1TjzNnTRxjqz5VH8f+AelSSJDG0krqkajLMxwAPUmuSv/AIneErCUxtqgncdRbxtIP++gMH868Y8ZeOtR8WXrqXeDTlb91aqeMdi3q38u1cpVU8JdXmzOtj7O1NXPpGx+J/hK+kEY1PyHPT7RGyD/AL6IwPzrrYpY54llhkSSNxlXQ5BHqCK+Qa6jwf441Lwler5btNYM3761Y/KR3K+je/5054TT3GKlmGtqi+4+l5JEijeSR1SNAWZmOAoHUk1kf8Jf4a/6D+l/+Baf41Dquo22reAtRv7OQSW8+nTOje3ltwfcdK+Xaxo0PaXTdrHTiMT7JJpXufW0+qWFtYrfT3tvFaMoZZ3kARgeQQehzXOy/E7wdFJsbWUJHdIZGH5hcV853F9d3cMENxcyyxW6bIUdiQi+gHaq9bxwa+0zlnmL+yj6q0nxRoeuNs03U7e4kxnyw2Hx/unB/StevkGGaW3mSaGR45UIZHQ4Kkdwa+k/h54mk8UeFo7i5IN5AxgnI43MACG/EEfjmsq2H9muZPQ3w2LVV8slZnV0UUVzHafLHi6zaw8YavbEY23chX/dLEj9CKh0PxFqvhy7Nzpd28DNw69VcejKeDXc/GfRGtPEFvrEa/ur2MJIfSROP1XH5GvMq9ak1OmrngV06daVtNT2HSPjcMKmsaUc95bRv/ZG/wAa7jSviF4X1fasGqxRSH/lncfujn0+bg/gTXzNRWUsLB7aG0MdUj8Wp9fqyuoZGDKeQQcg0tfKGma/q+jOG07Ubm25ztjkO0/Vehrv9D+NGp2zLHrNrHeRdDLEPLkHvj7p/SsJ4Wa21Ounjqcvi0PcKKytA8R6X4lsftemXAlUcOhGHjPow7fyrVrmaa0Z2Jpq6Kd/pOnapEY7+xt7lCMYljDY+meleF/EvwJF4XuIr/Tg39nXLbPLY58l8ZxnuCAcfQ19AV538ZbyCHwdHauR51xcr5a98Lkk/wAh+NbUKkozSWxz4qlCVNya1R4XY2r32oW1pHy88qxL9WIH9a+uFUKoVRgAYAr55+E+iNqvjOK6Zc29gvnue27og+uef+A19D1rjJapGGXRajKQVn65o9vr2i3WmXQ/dXCFc45U9Qw9wcGtCiuNO2qPQaTVmfJOp6dcaRqdzp92m2e3kKOPp3HsetVK9J+NUEUXi20lRAry2amQj+IhmAJ/AAfhXm1evSnzwUj5+vT9nUcD0X4SeFv7X146tcx5tNPIKZHDzfwj8Ov1xXq/xB/5EHWf+uH9RVX4YQxw/D3SzGgUyB3cgfebewyfyH5Va+IP/Ig6z/1w/qK4as3Krbserh6ShQv1aufMdek/BP8A5HK8/wCwe/8A6MjrzavR/goyr4zugSAWsHA9zvjP9K7qvwP0PKofxY+qOs+N3/Isaf8A9fg/9AavDK9y+NzD/hGtOXIybzIH/AGrw2scJ/DOjH/xfke5fBH/AJFrUf8Ar8/9kWvE7r/j8n/66N/Ovbfgj/yLOo/9fn/si14ldf8AH5P/ANdG/nVQ/jS+RFX/AHen8/zC0u57G7iurZzHPE25HHVT61CTk5PWlALHABJ9BSVucp2Pw48KHxP4jUzpnT7TEtxkcN/dT8SPyBru/jZq72+lafpETbVuXaWUDuqY2j6ZOf8AgNc58I/FaaRq76Ndsq21+4Mbn+GXoAT6Hp9ce9XfjjC66tpM5B2PA6D6hgT/AOhCuWd3Xinsd9PljhZSju9zymvT/AXwug8QaUmravPNHbyk+RDCQGYA43EkHAyDxXmFfTPw7v7e/wDAmlGBlPkwiCRR1V14Of5/jWmInKELxMsHSjUqWkeceO/hZBoekyato880kMODPBMQxC5xuUgDp3B/OvLa+nfH9/b2HgbVnuGUebbtAgP8TuNoA/PP4V8xVOGqSnF8xWNowpyXJ1PU/hxq7y+B/FOkSMSsFnLPED2DIwYfTIB/E15ZXe/DaF2svFk4B2Jo8qH6kEj/ANBNcFVwSVSVvIzqSbowv5/oa/hnQZvE2v22lQSCMyklpCMhFAyTjvwOldl48+Gdt4W0OPU7G9mmVZFjmSYDv0IwPXt71n/CP/koFr/1xl/9BNenfF3/AJEC4/67xf8AoVZ1aso1YxWxrQoQlQlN7q/5HzxXsfwLkYw65GT8qtAwHud+f5CvHK9h+BX/ADH/APt3/wDalXif4TM8H/Hj8/yPYKKKK8s90xPFnh2HxR4dudNkIWRhvhkP8Eg6H+h9ia+YL2yuNOvZrO7iaK4hcpIjdQRX11XA/ET4fJ4ng/tDTwserRLjngTqP4Sex9D+B9unD1uR8r2ZxYzDuouaO6Pnyipbq1nsrmS2uoXhnjba8brgqfcVFXpHjBRXVaR8OvFGsBHi014IW5825PljHrg8n8BXonh/4MWNo6T63dm8cc+RDlI/xPU/pWc6sIbs2p0KlT4UY3wU0y//ALXvdU2ulgIDCSekjlgQB64AP0z717XUVtbQWdtHb20McMEY2pHGoVVHsK5nxF8Q/D/h1HSS6W6ux0t7chmz7nov48+1edVm6s7pHr0aaoU7SZ0Oo6jaaTYTX19MsNvCu53b+Xufavmzxd4lu/GXiM3Ajfys+VaW45IXPHA6sT1/LtT/ABT4x1fxnfIswKQBsQWcOSATwP8Aeb3/ACxXpvw3+HB0Yx6zrMY+3kZggPPkA9z/ALX8vr06KdNUVzz3OSrVeJl7Ont1Z0ngDwqPCvhyOCUD7dOfNuWHZscL9AOPrn1rqqKK45ycpOTPRpwVOKiugUUUVJZ4Z8bv+Rn0/wD68h/6G1eY17j8TfA+teJ9as7vTI4Xjjt/KbfKFIO4nv8AWuI/4VF4t/59rb/wIWvSoTiqaTZ42LpVJVm1F/d5Hrnw1/5J5pH+4/8A6MatTxTpz6t4W1OxiGZZrZ1jHq2MgfmBUPg3SbnQ/COn6beBRcQIQ4U5AJYnr+NbtcE377a7nqUo/uop9kfH5BUkEEEcEGprO9udPukurO4kgnjOVkjYqw/EV7H45+FEmpX82qaA0ayzEvNaudoZj1KnoM+h/PtXnUnw+8WRy+W2h3RbOMqAw/MHFenCrCa3PFqUKlKW3zMfUtX1HWJxNqN7PdSKMKZXLbR6D0qlXpvhr4PapeXKTa6VsrUHLRK4aV/bjIX69faq2o/B/wARJqNytjHBJaCRvJZpgCUzxkeuKFVpp8qaB0a0lztNnX/BH/kWdR/6/P8A2Ra8Suv+Pyf/AK6N/OvoX4ZeGdS8L6Hd22ppGkstz5ihH3fLtA6j6GvM7n4SeK3upmS3tmUuSD545GayhOPtZO/Y3qUpuhBKLvqc74LRZPGujI6hla7jBBGQRmrfj7wu3hbxLLbxqfsU+ZbZv9kn7v1B4/I966nwv8MPEumeKNNvrqG3SC3nWRyJgTgHPQV6R488Jr4t8PtbR7FvYT5ls7cAN3Un0I/XHpROuozVnoKlhpSpSurPofM4JUggkEcgjtXrss7/ABM+G5Vfn17SSGZP4pRjGR/vD/x5a5wfCHxYf+Xe1H/bwK3vCXgLxl4X8QQajFHamMHZPH9oH7yM9R069x7gVVSUJK6auiaMKkXaUXZ6PT+tjyYggkEYI7Vp6N4i1fw/K0mlX8tsX+8FwVb6qcg17P41+Fdtr08mo6RJHaX7/NJGw/dyn14+6ffv+teUX/gLxTp0pSXRbt8fxQJ5qn8VzVQqwqK34EVKFSjK/wCJQ1nxHrHiCRH1W/ludn3FbAVfoowBWX1rorHwH4p1CUJDol2mf4p08pR+LYr1XwV8KLfRLiPUdZkju71DujhQZjiPrz94/oP1pynCmhQpVazvv5ieFvDEnhz4W6xJdRlL29s5ppVI5RfLbap9wMn6k14TX1nrNpJf6FqFnDt824tpIk3HAyykDP514N/wqLxb/wA+1t/4ELXPQqpylKTtc68VQcYQhBXtcT4R/wDJQLX/AK4y/wDoJr074u/8iBcf9d4v/Qq5v4ffD3X/AA/4si1HUIoEt0idSVlDEkjA4Fdt8QNDvfEXhOfT9PVGuGkRgHbaCAeeamtKLrRafb8y8PCSw84ta6/kfM1ew/Ar/mP/APbv/wC1K5j/AIVF4t/59rb/AMCFr0X4XeENW8Krqp1RIkNyYvLCSBvu785x/vCtq84um0mc+EpVI1k3F/d5HoVFFFeaeyFFFFAHOeKPBOj+K4f9NhMd0owl1Fw6+x9R7H9K8d174TeItJdnso11K2HRoOHx7oefyzX0LRW1OvOGi2OathadXV6M+VoNV8ReHZPIivNRsGHWIu6D/vk1oD4jeLgu3+258f7iZ/PFfSssEU6bJokkX+66gj9apHQNGLbjpFhu9fsyZ/lW31im9ZROf6nWirRn+Z803Ov+I9dbyJtR1C73f8sRIzA/8BHH6Vt6H8LfEusMrS2v9n256yXXynHsn3vzxX0PBbQWy7YII4l9I0Cj9KlpPFJK0I2GsC5O9STZyfhT4e6P4VCzRobq/wAc3Uw5H+6Oi/z966yiiuaU5Td5M7YU401aKsFFFFSWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBiR6lqS6hNBPFaLHboJZWVmPynPTjrxTP7Yv47NNTmtoBYMQSqsfMVScBvQ9elaQ09Pt9zcs24TxrGyEcYGf8AGqI0B/KS0kv5JNPRgRblBkgHIBbqRTOyEqDfvJLb+b5/PsWBqbn+1PkX/Q+V/wBr5N3NZ954hnt0tmVLZfMtBcsJXIyePlX39Kt3WiySz3TwXzwR3QAmTyw2eMcE9OKWfQLa4ZN5JjS1+zqpHK4IIYH1GKAh9XTTl5d+zv2626/cEurypMyLbFiLL7UE/i3Zxtqr/btyuhtf7LWZy6qiQsx5JGQQeQavLpcgmE5vH88Wv2fzAgz1zu+tQR6DgmSW6aSV7iOeRhGFDbOgwOn1oCP1fr5d+/8Al/w1xsniGI3enRW6h1usF2P8APQfXIP5Veu71re/sbdUBW4ZlYnqMLniqo8PWkZzAWjP2pbknGeR/CPbk/nV25sluLy0uC5U27MwGPvZGKRE/Yacvn+Wn+XyuYqeKCbG7doVW5gb5EOcSLu25FXJ9R1A6heQWkFu6WqozCRiGfcM4HbtTJ/DVtcaclq8h3pIzpKF5G5skY9KmuNHllvbmeG/kgW5VVlVUBJAGOCenU0y/wDZ/s/je3Ttr3/qwWesC9vLaOOMCKa2M+T1BDAY/nVWfXp47ZpFiiXF29v5khOxAOhbHPNWpNFCNbPY3LWslvGYlO0OCvoQffmkGjSRWAtoL50ZmZ5XaNX8wt1yDQFsPe62+fd/oRXeo6nAbTZFZOLllRSJGI3EZz06VDf69dWF0YWjtWaONGdN5DSFjghPWtAaRGlvYQJKwWzcOpIyWwCP60y90OG9uJ53kKyOiCNgOY2UkhgfxoCMsPzWktLvvt06kF3rc1pdTWj24a4bb9kAziQHjn0wetaV3dCx0+S5mwTGmSB0J9B9TTJbATXlldSSZktQ38P3iy4P0o1CwTUYoopXIiWQO6AffA7H2z/KkZP2T5Vt3f8AX3/Mz21yYaGbw24FxHJ5UqHO2Mg8k45xjn8abc61dQQWR/0LNxuzOXYwjHQZxwT71ZTRfspn+wXLWqylTsCBgCMg9fX+lRHQHGnCyivnSJt3mgxKQ+45OB/D7Ypm0fq1/K/ntby7P1v+I97+/uLyS1sYrbdAqmZ5WO3cwyFXH86iXXZriO3htrdBeyu8bJI3yxlPvEkdambRnhlEthevauY1jkygcOFGAee+O9IdBjSC3FvcSRXEDM6z4DFi33sg9c0C/wBn/q/4+XprbzuP+3XsE1lBdRQCSeVkYxsSMBcgjNMTWWl1mWxSNdgDJFITw0igFl/DP6GpRpcrvayXF680sEjOGKAZyMYwOgqvF4btoUgdHIu4pBIbjHzOc5OR6HNAl7C/vdul9++vRCWuo6nJdXcU0NoFtf8AWFGbJyuRjIpI9Yu7xbOG0hh+1Twee5kJ2IucduTzV+PT1jnvpfMJ+14yMfdwuKqjQzFFam1u2hubeLyhLsDB19Cv1oGnQb2tt37O/wCNivPr1zbWk++2Q3lvMkTxqSVYNyCvfkVbs9Zjvr+GGAAwyWxm3H7ykMBtNNGhJ5JElw8k7zpPJKVGXK9BjsKkg0aC21mXUYSVMqFWjA4ySCT+lAP6tZ99e/Zfre34jJ7+9m1Caz0+ODNuqmV5ycZYZAAHt3qnN4ilW2tnWOCKV5Xhl89yFjZevIq/c6XK1693ZXjWssqhZf3YcPjocHvTYtDgi+x4dm+zu8jFxkyMwwSaCYugkr/rf59Lenl5lmSW7bT45bcWzzFQxyx2EY5wQM1lJrl4ujpqVxFbrFI6BQrNkAnBJrfKgqV6DGKzBoyf2Tb2HnHbC6tv29cHPSkKnKl9tdV326/1uQnxBFLPdLaNHNHBaNPuBP3gT8v8qsaNqEupWpnka3I4wIWJ2nGSGyOvIp1xpSXF1PP5hXzrU2xUL0BJOf1qTTrOaxgEMl0Z0VVVAYwu0Djt17UCfsvZu2+nfu7+XYz/AO27j7T9g+zr9v8AO2bednl9d+fTH61MdWkGn6nceWu6zleNRnhtoBGfzq39hX+1v7Q3Hd5Hk7cdt2c1RuNCeVrlI76SK2un3zRBAck9cN2zimUvYy8tPPe6/T8yO58QPb3i2ogDyywo0KA/edieCewFTNf6jNdvZ2kdt5tuimd5C23cwzhQOfxp1zoVvdTySSMwDQrGgHVCpyGB9aRtIuUl8+31Forh0VJnMQYS46HB6Ggf7i2m/nf9P6vbpcqTeJWhtbaY2pyZninQHJQr1x6+taNjqa319dxR7WihWNkdT94Muajh0SGH7JtkYmCR5GLDJkZgQSfzp+m6PBpdxdyW5IS4Kny8cJjPT86BT9hyvl3+ff8Aq346mjRRRSOUKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==" alt="TIA Yukon"></a>
+      <p>The member-driven voice of the Yukon's tourism industry.</p>
+      <p><span class="tbc">Land acknowledgement — approved wording to confirm with Caroline.</span> TIA Yukon's acknowledgement, copied exactly from tiayukon.com, would appear here.</p>
+      <div class="fund"><svg fill="currentColor" aria-label="Government of Yukon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 343.08 174.75"> <path d="M311.96,82.78c7.41,0,11.49,4.82,11.49,13.58v36.62h18.37v-42.53c0-15.23-8.31-24.32-22.23-24.32-9.7,0-15.14,5.32-19.18,10.52l-.29,.38v-9.67h-18.37v65.62h18.37v-36.62c0-8.63,4.32-13.58,11.85-13.58"/> <path d="M256.81,100.53c.09,4.66-1.54,9.2-4.58,12.74-3.24,3.56-7.87,5.53-12.69,5.39-4.81,.05-9.42-1.95-12.67-5.51-3.16-3.53-4.89-8.12-4.84-12.87v-.24c-.1-4.66,1.53-9.2,4.58-12.74,3.24-3.56,7.87-5.53,12.68-5.39,4.82-.05,9.43,1.95,12.68,5.51,3.16,3.53,4.89,8.12,4.84,12.86v.25Zm-17.26-34.41c-9.48-.13-18.63,3.46-25.49,10-6.52,6.33-10.19,15.05-10.15,24.14v.25c-.05,9.04,3.59,17.7,10.08,23.99,14.37,13.23,36.5,13.18,50.8-.12,6.53-6.33,10.2-15.06,10.15-24.15v-.24c.05-9.04-3.58-17.7-10.07-23.99-6.82-6.48-15.91-10.03-25.32-9.89"/> <polygon points="187.72 132.97 208.74 132.97 182.88 93.13 182.97 93.03 207.79 67.35 185.86 67.35 163.72 91.6 163.72 45.36 145.35 45.36 145.35 132.97 163.72 132.97 163.72 113.02 163.77 112.97 170.43 105.93 187.72 132.97"/> <path d="M98.06,134.2c9.7,0,15.15-5.32,19.18-10.52l.3-.38v9.67h18.36V67.35h-18.38v36.63c0,8.61-4.31,13.61-11.84,13.61s-11.48-4.82-11.48-13.57v-36.67h-18.37v42.53c0,15.23,8.31,24.32,22.22,24.32"/> <polygon points="63.4 47.18 42.4 80.97 42.26 80.74 21.75 47.18 0 47.18 32.96 98.19 32.96 132.97 51.58 132.97 51.58 97.82 51.6 97.78 84.54 47.18 63.4 47.18"/> <polygon points="239.4 0 232.83 21.09 218.59 4.22 220.58 26.21 200.97 16.08 211.24 35.63 189.23 33.78 206.2 47.92 185.17 54.61 203.23 60.24 218.77 43.64 225.12 50.43 239.57 34.99 254.01 50.43 260.37 43.64 275.75 60.07 294.01 54.24 272.93 47.68 289.79 33.43 267.8 35.44 277.94 15.82 258.38 26.08 260.23 4.07 246.11 21.04 239.4 0" fill="#f2a900"/> <path d="M341.75,151.87h-16.41v22.7h16.57v-2.33h-14v-8h12.4v-2.33h-12.4v-7.76h13.86l-.02-2.29Zm-20.4,0h-16.32v22.7h2.56v-9.9h12.3v-2.33h-12.3v-8.12h13.76v-2.36Zm-24.55,22.7h2.56v-22.7h-2.56v22.7Zm-19.31,0h15.34v-2.36h-12.8v-20.34h-2.54v22.7Zm-16.72-4.51l-14.28-18.19h-2.4v22.7h2.4v-18.61l14.72,18.61h2v-22.7h-2.5l.06,18.19Zm-26.63-3.79h-10.37l5.19-11.59,5.18,11.59Zm-3.93-14.57h-2.4l-10.37,22.86h2.63l2.69-6h12.36l2.67,6h2.71l-10.29-22.86Zm-18.81,12.65v10.22h2.56v-22.7h-2.56v10.09h-13.14v-10.09h-2.55v22.7h2.55v-10.22h13.14Zm-27.12-10.13h7.62v-2.36h-17.85v2.36h7.62v20.34h2.6l.02-20.34Zm-24.46,4.52c0,3-2.43,4.7-5.84,4.7h-7v-9.22h7c3.67,0,5.81,1.69,5.81,4.52m3.42,15.83l-7-9.28c3.57-.65,6.17-2.85,6.17-6.65,0-4.09-3.21-6.78-8.21-6.78h-9.77v22.7h2.56v-8.83h6.49l6.59,8.83h3.17Zm-23.13-22.7h-16.42v22.7h16.58v-2.33h-14v-8h12.4v-2.33h-12.4v-7.76h13.86l-.02-2.29Zm-21.22,19.62v-9h-9.37v2.3h6.91v5.65c-1.87,1.47-4.18,2.26-6.56,2.27-5.51,0-9-4-9-9.48,0-5.09,3.6-9.34,8.64-9.34,2.55-.08,5.04,.85,6.91,2.59l1.65-2c-2.33-2.06-5.36-3.13-8.47-3-6.81,0-11.38,5.51-11.38,11.78s4.4,11.71,11.55,11.71c3.36,0,6.6-1.24,9.11-3.47m-26.76-12.75c0,3-2.43,4.7-5.84,4.7h-7v-9.22h7c3.67,0,5.81,1.69,5.81,4.52m3.5,15.82l-7-9.28c3.57-.65,6.16-2.85,6.16-6.65,0-4.09-3.2-6.78-8.2-6.78h-9.77v22.7h2.56v-8.83h6.49l6.56,8.83h3.2Zm-28.71-8.3h-10.4l5.19-11.59,5.21,11.59Zm-3.93-14.57h-2.4l-10.4,22.86h2.63l2.69-6h12.36l2.67,6h2.76l-10.31-22.86Zm-29.96,22.86h15.35v-2.36h-12.79v-20.34h-2.56v22.7Z"/> </svg><span>Funded by the Government of Yukon<br><span class="tbc">Placement and reversed-logo treatment to confirm</span></span></div>
+    </div>
+    <div>
+      <h3>More from TIA Yukon</h3>
+      <ul>
+        <li><a href="#">Read the full member report →</a></li>
+        <li><a href="https://tiayukon.com" target="_blank" rel="noopener">Industry Update newsletter →</a></li>
+        <li><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Government of Yukon tourism indicators →</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>#3-1109 Front Street<br>Whitehorse, Yukon Y1A 5G4</p>
+      <p><a href="tel:+18676683331">(867) 668-3331</a><br><a href="mailto:info@tiayukon.com">info@tiayukon.com</a></p>
+    </div>
+    <p class="fine">Every figure on this dashboard comes from published sources: the Government of Yukon tourism indicators, Statistics Canada and Google Trends. It is a twice-yearly snapshot, not a live monitor, and each panel states the month its data runs to. It describes trends and context; it does not recommend actions, and it does not describe any individual business.</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></button>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fmt = function(v){ return v >= 100 ? Math.round(v).toLocaleString('en-CA') : (Math.round(v*10)/10).toLocaleString('en-CA'); };
+
+  /* charts
+     monthly (default): this season's bars (teal), a pink tick for the same month last year, change printed above each bar
+     hbar:  rows "label|value|display|change%" — bar length is the value, change sits beside it
+     delta: rows "label|change%" — diverging bars from a zero line
+     data-tone="mixed" marks an indicator where up is neither good nor bad news: its changes stay grey */
+  var arrow = function(d){ return d > 0 ? '▲ ' : d < 0 ? '▼ ' : ''; };
+  var chg = function(d, unit){ return d === 0 ? 'No change' : arrow(d) + Math.abs(d) + unit; };
+  var tone = function(d, mixed){ return (mixed || d === 0) ? 'tm' : d > 0 ? 'tg' : 'tb'; };
+  var toneVar = { tg:'var(--better)', tb:'var(--worse)', tm:'var(--neutral)' };
+
+  function drawList(el, type){
+    var rows = el.dataset.rows.split(';').map(function(r){ return r.split('|'); }), mixed = el.dataset.tone === 'mixed', h = '';
+    if (type === 'hbar'){
+      var mx = Math.max.apply(null, rows.map(function(r){ return +r[1]; }));
+      h += '<div class="hb" role="list">';
+      rows.forEach(function(r){
+        var d = +r[3];
+        h += '<div class="hb-r" role="listitem"><span class="hb-l">'+r[0]+'</span><span class="hb-v">'+r[2]+'<span class="'+tone(d,mixed)+'">'+chg(d,'%')+'</span></span><span class="hb-t" aria-hidden="true"><i style="width:'+(r[1]/mx*100).toFixed(1)+'%"></i></span></div>';
+      });
+    } else {
+      var ma = Math.max.apply(null, rows.map(function(r){ return Math.abs(+r[1]); }));
+      h += '<div class="dl" role="list">';
+      rows.forEach(function(r){
+        var v = +r[1], t = tone(v,mixed);
+        h += '<div class="dl-r" role="listitem"><span class="dl-l">'+r[0]+'</span><span class="dl-v '+t+'">'+chg(v,'%')+'</span><span class="dl-t" aria-hidden="true"><i class="'+(v<0?'n':'p')+'" style="width:'+(Math.abs(v)/ma*50).toFixed(1)+'%;'+(mixed?'background:var(--neutral)':'')+'"></i></span></div>';
+      });
+    }
+    el.innerHTML = h + '</div><div class="cap"><span>'+(el.dataset.cap||'')+'</span></div>';
+  }
+
+  function drawMonthly(el){
+    var a = el.dataset['this'].split(',').map(Number), p = el.dataset.prev.split(',').map(Number), L = el.dataset.labels.split(','), unit = el.dataset.unit || '', pts = el.dataset.delta === 'pts', mixed = el.dataset.tone === 'mixed';
+    var W = Math.max(280, Math.round(el.clientWidth || 320)), H = W > 420 ? 160 : 136, n = a.length, pad = 6, top = 22, base = H - 28, max = Math.max.apply(null, a.concat(p)) * 1.04;
+    var gw = (W-pad*2)/n, bw = Math.min(gw*.46, 44);
+    var dOf = function(i){ return pts ? Math.round(a[i]-p[i]) : (p[i] ? Math.round((a[i]-p[i])/p[i]*100) : 0); };
+    var dTxt = function(d){ return (d>0?'+':d<0?'−':'')+Math.abs(d)+(pts?' pts':'%'); };
+    var y = function(v){ return base - v/max*(base-top); };
+    var s = '<svg viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="Monthly values this season, with the same month last year marked in pink on each bar">';
+    for (var i=0;i<n;i++){
+      var cx = pad+i*gw+gw/2, x0 = cx-bw/2, ya = y(a[i]), yp = y(p[i]), d = dOf(i);
+      s += '<g class="m" data-i="'+i+'">';
+      s += '<rect class="hit" x="'+(pad+i*gw).toFixed(1)+'" y="0" width="'+gw.toFixed(1)+'" height="'+H+'"/>';
+      s += '<rect class="b cur" x="'+x0.toFixed(1)+'" y="'+ya.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+(base-ya).toFixed(1)+'" rx="4" fill="var(--bar)" style="transition-delay:'+(i*60)+'ms"/>';
+      s += '<line x1="'+(x0-5).toFixed(1)+'" x2="'+(x0+bw+5).toFixed(1)+'" y1="'+yp.toFixed(1)+'" y2="'+yp.toFixed(1)+'" stroke="var(--tick)" stroke-width="3" stroke-linecap="round"/>';
+      s += '<text x="'+cx.toFixed(1)+'" y="'+(Math.min(ya,yp)-8).toFixed(1)+'" text-anchor="middle" font-size="12" font-weight="700" fill="'+toneVar[tone(d,mixed)]+'" font-family="Inter,sans-serif">'+dTxt(d)+'</text>';
+      s += '<text x="'+cx.toFixed(1)+'" y="'+(H-8)+'" text-anchor="middle" font-size="12" font-weight="500" fill="var(--ink-3)" font-family="Inter,sans-serif">'+L[i]+'</text></g>';
+    }
+    s += '<line x1="'+pad+'" y1="'+base+'" x2="'+(W-pad)+'" y2="'+base+'" stroke="var(--line)"/></svg>';
+    s += '<div class="tip" aria-hidden="true"></div>';
+    s += '<div class="cap"><span><i style="background:var(--bar)"></i>This season</span><span><i class="tk" style="background:var(--tick)"></i>Same month last year</span></div>';
+    el.innerHTML = s; el._w = W;
+    var svg = el.querySelector('svg'), tip = el.querySelector('.tip'), groups = el.querySelectorAll('g.m'), cur = -1;
+    function show(i){
+      if (i===cur) return; cur = i;
+      groups.forEach(function(g,j){ g.classList.toggle('on', j===i); });
+      if (i<0){ tip.classList.remove('on'); return; }
+      var r = groups[i].querySelector('.cur').getBoundingClientRect(), er = el.getBoundingClientRect(), d = dOf(i);
+      tip.innerHTML = '<b>'+fmt(a[i])+'</b> '+unit+' <s>· '+L[i]+'</s><br><s>Last year '+fmt(p[i])+'</s> <b>'+chg(d, pts?' pts':'%')+'</b>';
+      tip.style.left = (r.left - er.left + r.width/2) + 'px';
+      tip.style.top = (r.top - er.top - 20) + 'px';
+      tip.classList.add('on');
+    }
+    function pick(ev){
+      var rect = svg.getBoundingClientRect(), x = (ev.clientX - rect.left) / rect.width * W;
+      show(Math.min(n-1, Math.max(0, Math.floor((x-pad)/gw))));
+    }
+    svg.addEventListener('pointermove', pick);
+    svg.addEventListener('pointerdown', pick);
+    svg.addEventListener('pointerleave', function(){ show(-1); });
+  }
+
+  var charts = document.querySelectorAll('.chart');
+  charts.forEach(function(el){ var t = el.dataset.type || 'monthly'; if (t === 'monthly') drawMonthly(el); else drawList(el, t); });
+  var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){
+    charts.forEach(function(el){ if (!el.dataset.type && Math.abs(el.clientWidth - el._w) > 8) drawMonthly(el); });
+  }, 150); });
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); }, {threshold:.35});
+  charts.forEach(function(c){ io.observe(c); });
+  setTimeout(function(){ charts.forEach(function(c){ if (c.getBoundingClientRect().top < window.innerHeight) c.classList.add('in'); }); }, 400);
+
+  /* section nav highlight */
+  var links = document.querySelectorAll('.subnav a'), secs = [].map.call(links, function(l){ return document.querySelector(l.getAttribute('href')); });
+  var strip = document.querySelector('.subnav .wrap'), lastIdx = -1, ticking = false;
+  function nav(){
+    ticking = false;
+    var bar = document.querySelector('.subnav'), y = window.scrollY + (window.matchMedia('(min-width:1024px)').matches ? Math.max(88, window.innerHeight * .3) : bar.offsetHeight + 8), idx = -1;
+    secs.forEach(function(s,i){ if (s && s.offsetTop <= y) idx = i; });
+    document.getElementById('totop').classList.toggle('on', window.scrollY > 900);
+    if (idx === lastIdx) return;
+    if (idx < 0){ lastIdx = idx; links.forEach(function(l){ l.removeAttribute('aria-current'); }); return; }
+    lastIdx = idx;
+    links.forEach(function(l,i){ if (i===idx) l.setAttribute('aria-current','true'); else l.removeAttribute('aria-current'); });
+    /* move the pill strip horizontally only; never touch page scroll */
+    var l = links[idx], target = l.offsetLeft - (strip.clientWidth - l.offsetWidth) / 2;
+    if (strip.scrollTo) strip.scrollTo({left: target, behavior: reduce ? 'auto' : 'smooth'}); else strip.scrollLeft = target;
+  }
+  window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(nav); } }, {passive:true}); nav();
+  document.getElementById('totop').addEventListener('click', function(){ window.scrollTo({top:0, behavior: reduce?'auto':'smooth'}); });
+
+  /* share */
+  var toast = document.getElementById('toast');
+  function say(m){ toast.textContent = m; toast.classList.add('on'); setTimeout(function(){ toast.classList.remove('on'); }, 1800); }
+  document.getElementById('share').addEventListener('click', function(){
+    var data = {title: document.title, text: 'Hotels raised rates rather than filling rooms — TIA Yukon Tourism Intelligence Dashboard, Summer 2026', url: location.href};
+    if (navigator.share) navigator.share(data).catch(function(){});
+    else if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(function(){ say('Link copied'); }, function(){ say('Copy the address bar link'); });
+  });
+})();
+</script>
+
+</body></html>
