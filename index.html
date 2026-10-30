@@ -216,6 +216,10 @@ a.sr:focus{left:16px;top:calc(8px + env(safe-area-inset-top,0px));z-index:60;bac
 .who{font-size:15px;color:var(--ink-2);max-width:62ch;padding-left:14px;border-left:2px solid var(--line)}
 .cav{font-size:14px;color:var(--ink-2);background:var(--pink-soft);border-radius:10px;padding:10px 12px;max-width:62ch;display:flex;gap:8px;align-items:flex-start}
 .cav::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--pink);margin-top:7px}
+.insight{font-size:15px;color:var(--ink);background:linear-gradient(135deg,rgba(2,82,115,.08),rgba(2,82,115,.04));border-left:3px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 14px 12px 14px;max-width:62ch;margin-top:4px}
+.insight b,.insight strong{color:var(--teal-ink);font-weight:700}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .insight{background:linear-gradient(135deg,rgba(143,203,227,.1),rgba(143,203,227,.05))}}
+:root[data-theme="dark"] .insight{background:linear-gradient(135deg,rgba(143,203,227,.1),rgba(143,203,227,.05))}
 .meta{font-size:13px;color:var(--ink-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin-top:2px}
 .meta a{font-weight:600}
 .pl,.pr{display:flex;flex-direction:column;gap:14px;min-width:0}
@@ -224,7 +228,7 @@ a.sr:focus{left:16px;top:calc(8px + env(safe-area-inset-top,0px));z-index:60;bac
   .pnl{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0 40px;padding:34px 0 36px;align-items:start}
   .pnl:first-child{border-top:0}
   .pr{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;gap:16px}
-  .pr .read,.pr .who,.pr .cav{max-width:none}
+  .pr .read,.pr .who,.pr .cav,.pr .insight{max-width:none}
   .pnl .big .num{font-size:52px}
 }
 @media (min-width:1024px){.pnl{gap:0 56px}.pr{padding:26px 28px 22px}}
@@ -381,7 +385,7 @@ footer{margin-top:0}
           <p>Hotel occupancy slipped two points from last summer while the average room rate climbed 14%. This season's hotel growth came from rate, not from more rooms sold.</p>
           <p>Short-term rentals moved differently. Listings, occupancy and rates all rose, and rental revenue grew by about a quarter. The two accommodation markets are growing in different ways.</p>
         </div>
-        <p class="who"><b>Why it matters:</b> When hotels grow through pricing and rentals grow through volume, it changes the competitive picture. Understanding how your sector is evolving can help you make sense of your own results and think about what comes next.</p>
+        <p class="insight"><b>Why it matters:</b> When hotels grow through pricing and rentals grow through volume, it changes the competitive picture. Understanding how your sector is evolving can help you make sense of your own results and think about what comes next.</p>
         <p class="src">Source: <a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Government of Yukon tourism indicators →</a> (opens in a new tab)</p>
       </div>
     </div>
@@ -400,7 +404,7 @@ footer{margin-top:0}
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Growth came almost entirely from Canadian visitors, with the United States flat and overseas visitors slightly down. The Yukon's summer grew faster than the country as a whole.</p>
-      <p class="read"><span class="lbl">Why it matters</span>Knowing where your visitors come from helps you understand what's driving your business. If you're seeing more Canadians, that tracks with the territory-wide trend. If your mix looks different, it may point to something specific about your location, offering, or marketing.</p>
+      <p class="insight"><b>Why it matters:</b> Knowing where your visitors come from helps you understand what's driving your business. If you're seeing more Canadians, that tracks with the territory-wide trend. If your mix looks different, it may point to something specific about your location, offering, or marketing.</p>
       <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
@@ -413,7 +417,7 @@ footer{margin-top:0}
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Air arrivals grew more slowly than total visitors, 4% against 6%, so a larger share of this summer's growth came by road. September was flat on last year.</p>
-      <p class="read"><span class="lbl">Why it matters</span>The split between air and road arrivals shapes how visitors move through the territory. Road travellers tend to stay longer and visit more communities. Air arrivals are often concentrated in Whitehorse. If your business is off the highway, the growth in road traffic could be working in your favour.</p>
+      <p class="insight"><b>Why it matters:</b> The split between air and road arrivals shapes how visitors move through the territory. Road travellers tend to stay longer and visit more communities. Air arrivals are often concentrated in Whitehorse. If your business is off the highway, the growth in road traffic could be working in your favour.</p>
       <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
@@ -426,7 +430,7 @@ footer{margin-top:0}
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Beaver Creek still carries the most road traffic, but Fraser, on the highway up from Skagway, grew fastest and added the most crossings this summer.</p>
-      <p class="read"><span class="lbl">Why it matters</span>Visitors entering through Fraser often arrive via Alaska cruise ships, while Beaver Creek traffic is predominantly self-drive from Alaska. Understanding which corridors are growing can help you think about where potential visitors are coming from and what they might be looking for.</p>
+      <p class="insight"><b>Why it matters:</b> Visitors entering through Fraser often arrive via Alaska cruise ships, while Beaver Creek traffic is predominantly self-drive from Alaska. Understanding which corridors are growing can help you think about where potential visitors are coming from and what they might be looking for.</p>
       <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
@@ -449,7 +453,7 @@ footer{margin-top:0}
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Occupancy slipped two points while the average rate rose 14%, so revenue per available room still grew 11%. The growth came from price, not from more guests.</p>
-      <p class="read"><span class="lbl">Why it matters</span>When rates rise faster than demand, it can signal a shift in what the market will bear. Accommodation operators outside this data set can use these trends as a reference point when thinking about their own pricing and occupancy patterns.</p>
+      <p class="insight"><b>Why it matters:</b> When rates rise faster than demand, it can signal a shift in what the market will bear. Accommodation operators outside this data set can use these trends as a reference point when thinking about their own pricing and occupancy patterns.</p>
       <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
@@ -466,7 +470,7 @@ footer{margin-top:0}
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Rentals grew on occupancy, rate and supply at the same time, which lifted revenue by a quarter. Hotels grew on rate alone.</p>
-      <p class="read"><span class="lbl">Why it matters</span>The rental sector is expanding and filling beds at the same time. For traditional accommodation operators, this reflects a changing competitive landscape. For rental hosts, strong occupancy alongside growing supply suggests demand is keeping pace with new listings.</p>
+      <p class="insight"><b>Why it matters:</b> The rental sector is expanding and filling beds at the same time. For traditional accommodation operators, this reflects a changing competitive landscape. For rental hosts, strong occupancy alongside growing supply suggests demand is keeping pace with new listings.</p>
       <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
@@ -479,7 +483,7 @@ footer{margin-top:0}
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>New listings kept arriving through the peak, and rental occupancy still rose. Demand for rentals grew at least as fast as the supply of them this summer.</p>
-      <p class="read"><span class="lbl">Why it matters</span>A growing supply that still fills is a sign of healthy demand. For all accommodation providers, watching how supply and occupancy move together can help you gauge whether the market is tightening or loosening in your area.</p>
+      <p class="insight"><b>Why it matters:</b> A growing supply that still fills is a sign of healthy demand. For all accommodation providers, watching how supply and occupancy move together can help you gauge whether the market is tightening or loosening in your area.</p>
       <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
@@ -498,7 +502,7 @@ footer{margin-top:0}
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Spending grew faster than visitor numbers, 9% against 6%, so the average visitor spent more on cards this summer. Higher room rates are one likely part of that.</p>
-      <p class="read"><span class="lbl">Why it matters</span>Higher spending per visitor can benefit operators even when visitor numbers are flat. If your revenue isn't tracking with this trend, it may be worth considering whether your pricing, upsells, or on-site spending opportunities are capturing your share.</p>
+      <p class="insight"><b>Why it matters:</b> Higher spending per visitor can benefit operators even when visitor numbers are flat. If your revenue isn't tracking with this trend, it may be worth considering whether your pricing, upsells, or on-site spending opportunities are capturing your share.</p>
       <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
@@ -511,7 +515,7 @@ footer{margin-top:0}
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Restaurant and bar sales grew more slowly than visitor numbers or card spending, and the Yukon trailed the national increase. Because the figure includes residents, it cannot show how much of the change came from visitors.</p>
-      <p class="read"><span class="lbl">Why it matters</span>If visitor spending grew but restaurant sales lagged, the gap may point to where visitors are choosing to spend their money. For food and beverage operators, understanding these territory-wide trends can help frame how your own season compared.</p>
+      <p class="insight"><b>Why it matters:</b> If visitor spending grew but restaurant sales lagged, the gap may point to where visitors are choosing to spend their money. For food and beverage operators, understanding these territory-wide trends can help frame how your own season compared.</p>
       <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
@@ -529,7 +533,7 @@ footer{margin-top:0}
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Interest in Yukon travel is running ahead of last autumn in Canada and the United States, and slightly behind in Germany. The direction is up; the size of any visitor change is not something search data can tell us.</p>
-      <p class="read"><span class="lbl">Why it matters</span>Search trends are an early signal, not a guarantee. Rising interest in your key markets suggests the demand pipeline is building. If you're marketing to those markets, the environment looks favourable heading into the next season.</p>
+      <p class="insight"><b>Why it matters:</b> Search trends are an early signal, not a guarantee. Rising interest in your key markets suggests the demand pipeline is building. If you're marketing to those markets, the environment looks favourable heading into the next season.</p>
       <div class="meta"><span>Data through October 2026</span><a href="https://trends.google.com" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
@@ -542,7 +546,7 @@ footer{margin-top:0}
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Dog sledding searches grew fastest and hiking and paddling rose too, while northern lights searches softened. The mix of what people look for is shifting toward active experiences.</p>
       <p class="cav">Aurora interest tracks the solar cycle, which peaked in 2024 and 2025. Softening interest may have nothing to do with the Yukon.</p>
-      <p class="read"><span class="lbl">Why it matters</span>Shifts in what travellers are searching for can signal changing preferences. If your offerings align with rising search categories, demand may be moving your way. If not, it could be a prompt to consider how you position your experiences.</p>
+      <p class="insight"><b>Why it matters:</b> Shifts in what travellers are searching for can signal changing preferences. If your offerings align with rising search categories, demand may be moving your way. If not, it could be a prompt to consider how you position your experiences.</p>
       <div class="meta"><span>Data through October 2026</span><a href="https://trends.google.com" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
