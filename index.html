@@ -327,13 +327,13 @@ footer{margin-top:0}
     <p class="sub">A twice-yearly read for the people running Yukon tourism businesses. Every figure comes from a published source and links back to it.</p>
 
     <div class="glance">
-      <div class="glance-h"><h2>Season at a glance</h2><span class="flag">Placeholder figures</span></div>
+      <div class="glance-h"><h2>Season at a glance</h2><span class="flag" id="data-status">Loading data...</span></div>
       <div class="tiles" id="tiles">
-        <div class="tile"><div class="q">Visitors to the Yukon</div><div class="v"><span class="num">180</span><small>thousand</small></div><div class="d"><span><b class="tg">▲ 6%</b> on summer 2025</span><span class="nat ahead" title="Canada up 2% on the same survey">Ahead of Canada</span></div></div>
-        <div class="tile"><div class="q">Arrivals at Whitehorse airport</div><div class="v"><span class="num">95</span><small>thousand</small></div><div class="d"><span><b class="tg">▲ 4%</b> on summer 2025</span><span class="nat none">No like-for-like</span></div></div>
-        <div class="tile"><div class="q">Hotel occupancy</div><div class="v"><span class="num">78</span><small>%</small></div><div class="d"><span><b class="tb">▼ 2 pts</b> on summer 2025</span><span class="nat none">No like-for-like</span></div></div>
-        <div class="tile"><div class="q">Visitor card spending</div><div class="v"><span class="num">$62</span><small>million</small></div><div class="d"><span><b class="tg">▲ 9%</b> on summer 2025</span><span class="nat none">No like-for-like</span></div></div>
-        <div class="tile"><div class="q">Restaurant and bar sales</div><div class="v"><span class="num">$48</span><small>million</small></div><div class="d"><span><b class="tg">▲ 3%</b> on May–Aug 2025</span><span class="nat behind" title="Canada up 5% on the same survey">Behind Canada</span></div></div>
+        <div class="tile" id="tile-visitors"><div class="q">Visitors to the Yukon</div><div class="v"><span class="num" id="val-visitors">—</span><small>thousand</small></div><div class="d"><span id="chg-visitors">Loading...</span><span class="nat none" id="nat-visitors"></span></div></div>
+        <div class="tile" id="tile-arrivals"><div class="q">Arrivals at Whitehorse airport</div><div class="v"><span class="num" id="val-arrivals">—</span><small>thousand</small></div><div class="d"><span id="chg-arrivals">Loading...</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile" id="tile-occupancy"><div class="q">Hotel occupancy</div><div class="v"><span class="num" id="val-occupancy">—</span><small>%</small></div><div class="d"><span id="chg-occupancy">Loading...</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile" id="tile-spending"><div class="q">Visitor card spending</div><div class="v"><span class="num" id="val-spending">—</span><small>million</small></div><div class="d"><span id="chg-spending">Loading...</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile" id="tile-restaurant"><div class="q">Restaurant and bar sales</div><div class="v"><span class="num" id="val-restaurant">—</span><small>million</small></div><div class="d"><span id="chg-restaurant">Loading...</span><span class="nat none" id="nat-restaurant"></span></div></div>
       </div>
       <div class="legend">
         <div class="lg"><span class="lh">Change on last year</span><span><b>▲ ▼</b> direction</span><span><b class="tg">Green</b> good news</span><span><b class="tb">Red</b> not</span><span><b class="tm">Grey</b> cuts both ways</span></div>
@@ -370,7 +370,7 @@ footer{margin-top:0}
 <div class="bm">
 <section class="story sheet" id="story" style="--i:0">
   <div class="wrap">
-    <div class="k">This season's biggest story <span class="flag">Stand-in until the data review</span></div>
+    <div class="k">This season's story</div>
     <div class="grid">
       <div>
         <h2>Hotels raised rates rather than filling rooms</h2>
@@ -413,7 +413,7 @@ footer{margin-top:0}
       <h3>How many flew in</h3>
       <div class="big"><span class="num">95,000</span><small>passengers deplaning</small></div>
       <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 4%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 32%</b></span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" data-this="14,19,23,23,16" data-prev="13,18,22,22,16" data-labels="May,Jun,Jul,Aug,Sep" data-unit="k passengers"></div>
+      <div class="chart" id="chart-arrivals" data-this="14,19,23,23,16" data-prev="13,18,22,22,16" data-labels="May,Jun,Jul,Aug,Sep" data-unit="k passengers"></div>
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Air arrivals grew more slowly than total visitors, 4% against 6%, so a larger share of this summer's growth came by road. September was flat on last year.</p>
@@ -445,11 +445,11 @@ footer{margin-top:0}
       <h3>Whether hotels filled rooms or raised rates</h3>
       <div class="stats">
         <div><span class="num">78%</span><span class="sl">occupancy</span><span class="sd tb">▼ 2 pts</span></div>
-        <div><span class="num">$260</span><span class="sl">average rate</span><span class="sd tm">▲ 14%</span></div>
-        <div><span class="num">$203</span><span class="sl">RevPAR</span><span class="sd tg">▲ 11%</span></div>
+        <div><span class="num" id="stat-hotel-adr">$260</span><span class="sl">average rate</span><span class="sd tm">▲ 14%</span></div>
+        <div><span class="num" id="stat-hotel-revpar">$203</span><span class="sl">RevPAR</span><span class="sd tg">▲ 11%</span></div>
       </div>
       <div class="chips"><span class="chip">changes vs summer 2025</span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" data-this="63,81,89,87,70" data-prev="65,82,91,89,73" data-labels="May,Jun,Jul,Aug,Sep" data-unit="% occupancy" data-delta="pts"></div>
+      <div class="chart" id="chart-hotel-occ" data-this="63,81,89,87,70" data-prev="65,82,91,89,73" data-labels="May,Jun,Jul,Aug,Sep" data-unit="% occupancy" data-delta="pts"></div>
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Occupancy slipped two points while the average rate rose 14%, so revenue per available room still grew 11%. The growth came from price, not from more guests.</p>
@@ -466,7 +466,7 @@ footer{margin-top:0}
         <div><span class="num">$5.4M</span><span class="sl">revenue</span><span class="sd tg">▲ 25%</span></div>
       </div>
       <div class="chips"><span class="chip">changes vs May–Aug 2025</span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" data-this="54,71,81,78" data-prev="51,68,78,75" data-labels="May,Jun,Jul,Aug" data-unit="% occupancy" data-delta="pts"></div>
+      <div class="chart" id="chart-str-occ" data-this="54,71,81,78" data-prev="51,68,78,75" data-labels="May,Jun,Jul,Aug" data-unit="% occupancy" data-delta="pts"></div>
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Rentals grew on occupancy, rate and supply at the same time, which lifted revenue by a quarter. Hotels grew on rate alone.</p>
@@ -479,7 +479,7 @@ footer{margin-top:0}
       <h3>Whether rental supply is still growing</h3>
       <div class="big"><span class="num">1,150</span><small>active listings in August</small></div>
       <div class="chips"><span class="chip">vs August 2025 <b class="tm">▲ 11%</b></span><span class="chip">vs February 2026 <b class="tm">▲ 28%</b></span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" data-this="920,1010,1120,1150" data-prev="840,910,1000,1035" data-labels="May,Jun,Jul,Aug" data-unit="listings" data-tone="mixed"></div>
+      <div class="chart" id="chart-str-listings" data-this="920,1010,1120,1150" data-prev="840,910,1000,1035" data-labels="May,Jun,Jul,Aug" data-unit="listings" data-tone="mixed"></div>
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>New listings kept arriving through the peak, and rental occupancy still rose. Demand for rentals grew at least as fast as the supply of them this summer.</p>
@@ -498,7 +498,7 @@ footer{margin-top:0}
       <h3>What visitors spent</h3>
       <div class="big"><span class="num">$62M</span><small>on cards, May to Sept</small></div>
       <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 9%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 55%</b></span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" data-this="8,13,17,16,8" data-prev="7.5,12,15.5,14.5,7.5" data-labels="May,Jun,Jul,Aug,Sep" data-unit="$M"></div>
+      <div class="chart" id="chart-spending" data-this="8,13,17,16,8" data-prev="7.5,12,15.5,14.5,7.5" data-labels="May,Jun,Jul,Aug,Sep" data-unit="$M"></div>
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Spending grew faster than visitor numbers, 9% against 6%, so the average visitor spent more on cards this summer. Higher room rates are one likely part of that.</p>
@@ -511,7 +511,7 @@ footer{margin-top:0}
       <h3>Whether restaurants saw it</h3>
       <div class="big"><span class="num">$48M</span><small>restaurant and bar sales, May to Aug</small></div>
       <div class="chips"><span class="chip">vs May–Aug 2025 <b class="tg">▲ 3%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 18%</b></span><span class="nat behind">Behind Canada</span><span class="natx">Canada ▲ 5%</span></div>
-      <div class="chart" data-this="10.5,12,13.5,12" data-prev="10.3,11.6,13,11.7" data-labels="May,Jun,Jul,Aug" data-unit="$M"></div>
+      <div class="chart" id="chart-restaurant" data-this="10.5,12,13.5,12" data-prev="10.3,11.6,13,11.7" data-labels="May,Jun,Jul,Aug" data-unit="$M"></div>
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Restaurant and bar sales grew more slowly than visitor numbers or card spending, and the Yukon trailed the national increase. Because the figure includes residents, it cannot show how much of the change came from visitors.</p>
@@ -597,6 +597,242 @@ footer{margin-top:0}
 
 <script>
 (function(){
+
+  /* === Live Data Loader === */
+  var DATA_BASE = 'https://open-data-static-files.service.yukon.ca/tourism-indicators/data/';
+  
+  async function fetchCSV(filename) {
+    try {
+      var response = await fetch(DATA_BASE + filename + '?' + Date.now());
+      var text = await response.text();
+      return text.split('\n').filter(r => r.trim()).map(r => r.replace(/"/g, '').split(','));
+    } catch (e) {
+      console.error('Error loading ' + filename, e);
+      return null;
+    }
+  }
+  
+  function getLatestRow(rows, dateCol) {
+    if (!rows || rows.length < 2) return null;
+    var data = rows.slice(1).filter(r => r.length > dateCol && r[dateCol]);
+    return data[data.length - 1];
+  }
+  
+  function formatNum(n) {
+    return Math.round(n).toLocaleString('en-CA');
+  }
+  
+  function formatChange(val, unit, isPositiveGood) {
+    var arrow = val > 0 ? '▲' : val < 0 ? '▼' : '';
+    var tone = (isPositiveGood === undefined) ? 'tm' : (val > 0 === isPositiveGood) ? 'tg' : (val === 0) ? 'tm' : 'tb';
+    var display = Math.abs(Math.round(val * 10) / 10);
+    return '<b class="' + tone + '">' + arrow + ' ' + display + unit + '</b>';
+  }
+  
+  async function loadDashboardData() {
+    var status = document.getElementById('data-status');
+    
+    try {
+      // Fetch all data in parallel
+      var [visitors, arrivals, occupancy, spending, restaurant] = await Promise.all([
+        fetchCSV('vw_tc_vis_estimates_summary_2026.csv'),
+        fetchCSV('vw_kpi_air_arrivals_ytd_summary.csv'),
+        fetchCSV('vw_kpi_cbre_occupancy_rate_ytd_summary.csv'),
+        fetchCSV('vw_kpi_moneris_total_spending_ytd_summary.csv'),
+        fetchCSV('vw_kpi_economic_restaurant_spending.csv')
+      ]);
+      
+      // Update Visitors tile (annual estimates)
+      if (visitors) {
+        var latestVis = getLatestRow(visitors, 0);
+        if (latestVis) {
+          var visVal = Math.round(parseFloat(latestVis[1]) / 1000);
+          var visChg = parseFloat(latestVis[2]);
+          document.getElementById('val-visitors').textContent = visVal;
+          document.getElementById('chg-visitors').innerHTML = formatChange(visChg, '%', true) + ' on ' + (parseInt(latestVis[0]) - 1);
+        }
+      }
+      
+      // Update Air Arrivals tile (YTD)
+      if (arrivals) {
+        var latestArr = getLatestRow(arrivals, 0);
+        if (latestArr) {
+          var arrVal = Math.round(parseFloat(latestArr[6]) / 1000);
+          var arrChg = parseFloat(latestArr[8]);
+          var arrDate = new Date(latestArr[0]);
+          var arrMonth = arrDate.toLocaleString('en-CA', { month: 'short' });
+          document.getElementById('val-arrivals').textContent = arrVal;
+          document.getElementById('chg-arrivals').innerHTML = formatChange(arrChg, '%', true) + ' YTD thru ' + arrMonth;
+        }
+      }
+      
+      // Update Hotel Occupancy tile (YTD)
+      if (occupancy) {
+        var latestOcc = getLatestRow(occupancy, 0);
+        if (latestOcc) {
+          var occVal = Math.round(parseFloat(latestOcc[6]) * 10) / 10;
+          var occChg = parseFloat(latestOcc[8]);
+          var occDate = new Date(latestOcc[0]);
+          var occMonth = occDate.toLocaleString('en-CA', { month: 'short' });
+          document.getElementById('val-occupancy').textContent = Math.round(occVal);
+          document.getElementById('chg-occupancy').innerHTML = formatChange(occChg, ' pts', true) + ' YTD thru ' + occMonth;
+        }
+      }
+      
+      // Update Visitor Spending tile (YTD)
+      if (spending) {
+        var latestSpend = getLatestRow(spending, 0);
+        if (latestSpend) {
+          var spendVal = Math.round(parseFloat(latestSpend[6]) / 1000000);
+          var spendChg = parseFloat(latestSpend[8]) || 0;
+          var spendDate = new Date(latestSpend[0]);
+          var spendMonth = spendDate.toLocaleString('en-CA', { month: 'short' });
+          document.getElementById('val-spending').textContent = '$' + spendVal;
+          document.getElementById('chg-spending').innerHTML = formatChange(spendChg, '%', true) + ' YTD thru ' + spendMonth;
+        }
+      }
+      
+      // Update Restaurant Sales tile (YTD)
+      if (restaurant) {
+        var latestRest = getLatestRow(restaurant, 0);
+        if (latestRest) {
+          var restVal = Math.round(parseFloat(latestRest[6]) / 1000000);
+          var restChg = parseFloat(latestRest[8]);
+          var restDate = new Date(latestRest[0]);
+          var restMonth = restDate.toLocaleString('en-CA', { month: 'short' });
+          document.getElementById('val-restaurant').textContent = '$' + restVal;
+          document.getElementById('chg-restaurant').innerHTML = formatChange(restChg, '%', true) + ' YTD thru ' + restMonth;
+        }
+      }
+      
+      // Update status
+      if (status) {
+        status.textContent = 'Live data';
+        status.style.background = 'rgba(95,203,147,.18)';
+        status.style.color = '#8FE3B8';
+      }
+      
+    } catch (e) {
+      console.error('Dashboard data load error:', e);
+      if (status) status.textContent = 'Data unavailable';
+    }
+  }
+
+  /* === Chart Data Loader === */
+  async function loadChartData() {
+    try {
+      // Fetch monthly data for charts
+      var [arrivals, hotelOcc, strOcc, strAdr, spending, restaurant] = await Promise.all([
+        fetchCSV('vw_kpi_air_arrivals_ytd_summary.csv'),
+        fetchCSV('vw_kpi_cbre_occupancy_rate_ytd_summary.csv'),
+        fetchCSV('vw_kpi_str_occupancy_ytd_summary.csv'),
+        fetchCSV('vw_kpi_str_adr_ytd_summary.csv'),
+        fetchCSV('vw_kpi_moneris_total_spending_ytd_summary.csv'),
+        fetchCSV('vw_kpi_economic_restaurant_spending.csv')
+      ]);
+      
+      function getMonthlyData(rows, months, year, valueCol, prevValueCol) {
+        if (!rows || rows.length < 2) return null;
+        var monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        var data = rows.slice(1).filter(function(r) {
+          var rowYear = parseInt(r[1]);
+          var rowMonth = parseInt(r[2]);
+          return rowYear === year && months.includes(rowMonth);
+        });
+        var prevData = rows.slice(1).filter(function(r) {
+          var rowYear = parseInt(r[1]);
+          var rowMonth = parseInt(r[2]);
+          return rowYear === (year - 1) && months.includes(rowMonth);
+        });
+        
+        var thisVals = [], prevVals = [], labels = [];
+        months.forEach(function(m) {
+          var row = data.find(function(r) { return parseInt(r[2]) === m; });
+          var prevRow = prevData.find(function(r) { return parseInt(r[2]) === m; });
+          if (row) {
+            thisVals.push(parseFloat(row[valueCol]) || 0);
+            labels.push(monthNames[m-1]);
+          }
+          if (prevRow) {
+            prevVals.push(parseFloat(prevRow[prevValueCol || valueCol]) || 0);
+          }
+        });
+        return { thisData: thisVals, prevData: prevVals, labels: labels };
+      }
+      
+      // Update Air Arrivals chart (May-Sep 2026)
+      var arrChart = document.getElementById('chart-arrivals');
+      if (arrChart && arrivals) {
+        var arrData = getMonthlyData(arrivals, [5,6,7,8,9], 2026, 3, 4);
+        if (arrData && arrData.thisData.length > 0) {
+          arrChart.dataset.this = arrData.thisData.map(function(v) { return Math.round(v/1000); }).join(',');
+          arrChart.dataset.prev = arrData.prevData.map(function(v) { return Math.round(v/1000); }).join(',');
+          arrChart.dataset.labels = arrData.labels.join(',');
+        }
+      }
+      
+      // Update Hotel Occupancy chart (May-Sep 2026)
+      var hotelChart = document.getElementById('chart-hotel-occ');
+      if (hotelChart && hotelOcc) {
+        var hotelData = getMonthlyData(hotelOcc, [5,6,7,8,9], 2026, 3, 4);
+        if (hotelData && hotelData.thisData.length > 0) {
+          hotelChart.dataset.this = hotelData.thisData.map(function(v) { return Math.round(v); }).join(',');
+          hotelChart.dataset.prev = hotelData.prevData.map(function(v) { return Math.round(v); }).join(',');
+          hotelChart.dataset.labels = hotelData.labels.join(',');
+        }
+      }
+      
+      // Update STR Occupancy chart (May-Aug 2026)
+      var strOccChart = document.getElementById('chart-str-occ');
+      if (strOccChart && strOcc) {
+        var strOccData = getMonthlyData(strOcc, [5,6,7,8], 2026, 3, 4);
+        if (strOccData && strOccData.thisData.length > 0) {
+          strOccChart.dataset.this = strOccData.thisData.map(function(v) { return Math.round(v); }).join(',');
+          strOccChart.dataset.prev = strOccData.prevData.map(function(v) { return Math.round(v); }).join(',');
+          strOccChart.dataset.labels = strOccData.labels.join(',');
+        }
+      }
+      
+      // Update Visitor Spending chart (May-Sep 2026)
+      var spendChart = document.getElementById('chart-spending');
+      if (spendChart && spending) {
+        var spendData = getMonthlyData(spending, [5,6,7,8,9], 2026, 3, 4);
+        if (spendData && spendData.thisData.length > 0) {
+          spendChart.dataset.this = spendData.thisData.map(function(v) { return Math.round(v/1000000); }).join(',');
+          spendChart.dataset.prev = spendData.prevData.map(function(v) { return Math.round(v/1000000); }).join(',');
+          spendChart.dataset.labels = spendData.labels.join(',');
+        }
+      }
+      
+      // Update Restaurant Sales chart (May-Aug 2026)
+      var restChart = document.getElementById('chart-restaurant');
+      if (restChart && restaurant) {
+        var restData = getMonthlyData(restaurant, [5,6,7,8], 2026, 3, 4);
+        if (restData && restData.thisData.length > 0) {
+          restChart.dataset.this = restData.thisData.map(function(v) { return (v/1000000).toFixed(1); }).join(',');
+          restChart.dataset.prev = restData.prevData.map(function(v) { return (v/1000000).toFixed(1); }).join(',');
+          restChart.dataset.labels = restData.labels.join(',');
+        }
+      }
+    } catch (e) {
+      console.error('Chart data load error:', e);
+    }
+  }
+  
+  // Load all data on page ready
+  async function initDashboard() {
+    await loadDashboardData();
+    // Charts need to be drawn first with placeholder data, then updated
+    setTimeout(loadChartData, 500);
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDashboard);
+  } else {
+    initDashboard();
+  }
+
+
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fmt = function(v){ return v >= 100 ? Math.round(v).toLocaleString('en-CA') : (Math.round(v*10)/10).toLocaleString('en-CA'); };
 
