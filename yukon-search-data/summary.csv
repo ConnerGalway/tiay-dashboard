@@ -1,0 +1,41 @@
+pull,series,location,category,window,avg_2026,avg_2025,pct_change,zero_weeks_2026,zero_weeks_2025,signal
+1,Yukon (topic),Canada,Travel,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,60.62,67.43,-10.1,0,0,OK
+1,Yukon (topic),United States,Travel,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,57.0,59.71,-4.5,0,0,OK
+1,Yukon (topic),Germany,Travel,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,12.5,0.0,not reliable,7,7,LOW SIGNAL
+1,Yukon (topic),Germany,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,39.62,46.57,-14.9,0,0,OK
+1,Yukon (topic),Mexico,Travel,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,no data,no data,not reliable,no data,no data,LOW SIGNAL
+1,Yukon (topic),Mexico,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,14.38,27.71,not reliable,4,2,LOW SIGNAL
+1,Yukon (topic),Brazil,Travel,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.0,0.0,not reliable,8,7,LOW SIGNAL
+1,Yukon (topic),Brazil,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,8.12,5.0,not reliable,5,5,LOW SIGNAL
+1,Yukon (topic),Taiwan,Travel,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,no data,no data,not reliable,no data,no data,LOW SIGNAL
+1,Yukon (topic),Taiwan,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,8.88,13.57,not reliable,5,4,LOW SIGNAL
+1,Yukon (topic),Japan,Travel,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.0,0.0,not reliable,8,7,LOW SIGNAL
+1,Yukon (topic),Japan,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,12.88,40.14,not reliable,4,0,LOW SIGNAL
+1,Yukon (topic),Australia,Travel,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,1.0,0.0,not reliable,7,7,LOW SIGNAL
+1,Yukon (topic),Australia,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,19.12,31.29,-38.9,0,0,OK
+1,Yukon (topic),United Kingdom,Travel,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,13.88,0.0,not reliable,6,7,LOW SIGNAL
+1,Yukon (topic),United Kingdom,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,32.62,29.57,10.3,0,0,OK
+2,yukon northern lights + yukon aurora,Worldwide,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,37.88,56.57,-33.0,0,0,OK
+2,yukon dog sledding + yukon dog sled,Worldwide,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.25,2.71,not reliable,7,6,LOW SIGNAL
+2,yukon hiking + yukon hikes,Worldwide,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,15.5,18.86,not reliable,3,1,LOW SIGNAL
+2,yukon canoeing + yukon canoe + yukon paddling,Worldwide,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.38,0.0,not reliable,7,7,LOW SIGNAL
+2,yukon hot springs,Worldwide,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.25,5.0,not reliable,7,5,LOW SIGNAL
+2,yukon northern lights + yukon aurora,Canada,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,16.5,36.71,not reliable,5,3,LOW SIGNAL
+2,yukon dog sledding + yukon dog sled,Canada,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.0,0.0,not reliable,8,7,LOW SIGNAL
+2,yukon hiking + yukon hikes,Canada,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,7.5,0.0,not reliable,6,7,LOW SIGNAL
+2,yukon canoeing + yukon canoe + yukon paddling,Canada,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.5,0.0,not reliable,7,7,LOW SIGNAL
+2,yukon hot springs,Canada,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.0,0.0,not reliable,8,7,LOW SIGNAL
+2,yukon northern lights + yukon aurora,United States,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.75,7.43,not reliable,7,6,LOW SIGNAL
+2,yukon dog sledding + yukon dog sled,United States,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.25,7.14,not reliable,7,6,LOW SIGNAL
+2,yukon hiking + yukon hikes,United States,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.0,0.0,not reliable,8,7,LOW SIGNAL
+2,yukon canoeing + yukon canoe + yukon paddling,United States,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.0,0.0,not reliable,8,7,LOW SIGNAL
+2,yukon hot springs,United States,All categories,1 Sept-31 Oct 2026 vs 1 Sept-31 Oct 2025,0.0,0.0,not reliable,8,7,LOW SIGNAL
+3,yukon northern lights + yukon aurora,Worldwide,All categories,1 Apr-30 Jun 2026 vs 1 Apr-30 Jun 2025,58.83,24.92,136.1,0,0,OK
+3,yukon dog sledding + yukon dog sled,Worldwide,All categories,1 Apr-30 Jun 2026 vs 1 Apr-30 Jun 2025,2.25,0.0,not reliable,10,12,LOW SIGNAL
+3,yukon hiking + yukon hikes,Worldwide,All categories,1 Apr-30 Jun 2026 vs 1 Apr-30 Jun 2025,49.5,7.83,not reliable,0,7,LOW SIGNAL
+3,yukon canoeing + yukon canoe + yukon paddling,Worldwide,All categories,1 Apr-30 Jun 2026 vs 1 Apr-30 Jun 2025,10.83,5.17,not reliable,5,9,LOW SIGNAL
+3,yukon hot springs,Worldwide,All categories,1 Apr-30 Jun 2026 vs 1 Apr-30 Jun 2025,11.08,3.25,not reliable,4,10,LOW SIGNAL
+3,Yukon (topic),Canada,Travel,1 Apr-30 Jun 2026 vs 1 Apr-30 Jun 2025,72.33,75.33,-4.0,0,0,OK
+3,Yukon (topic),United States,Travel,1 Apr-30 Jun 2026 vs 1 Apr-30 Jun 2025,59.25,54.92,7.9,0,0,OK
+3,Yukon (topic),Germany,Travel,1 Apr-30 Jun 2026 vs 1 Apr-30 Jun 2025,no data,no data,not reliable,no data,no data,LOW SIGNAL
+3,Yukon (topic),Germany,All categories,1 Apr-30 Jun 2026 vs 1 Apr-30 Jun 2025,45.33,42.0,7.9,0,0,OK

@@ -1,0 +1,383 @@
+{
+  "source": "Google Trends",
+  "retrieved": "2026-11-12",
+  "window": "1 Sept–31 Oct 2026 vs 1 Sept–31 Oct 2025",
+  "markets": [
+    {
+      "country": "Canada",
+      "avg_2026": 60.62,
+      "avg_2025": 67.43,
+      "pct_change": -10.1,
+      "signal": "OK",
+      "category": "Travel"
+    },
+    {
+      "country": "United States",
+      "avg_2026": 57.0,
+      "avg_2025": 59.71,
+      "pct_change": -4.5,
+      "signal": "OK",
+      "category": "Travel"
+    },
+    {
+      "country": "Germany",
+      "avg_2026": 12.5,
+      "avg_2025": 0.0,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "Travel"
+    },
+    {
+      "country": "Mexico",
+      "avg_2026": null,
+      "avg_2025": null,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "Travel"
+    },
+    {
+      "country": "Brazil",
+      "avg_2026": 0.0,
+      "avg_2025": 0.0,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "Travel"
+    },
+    {
+      "country": "Taiwan",
+      "avg_2026": null,
+      "avg_2025": null,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "Travel"
+    },
+    {
+      "country": "Japan",
+      "avg_2026": 0.0,
+      "avg_2025": 0.0,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "Travel"
+    },
+    {
+      "country": "Australia",
+      "avg_2026": 1.0,
+      "avg_2025": 0.0,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "Travel"
+    },
+    {
+      "country": "United Kingdom",
+      "avg_2026": 13.88,
+      "avg_2025": 0.0,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "Travel"
+    }
+  ],
+  "markets_all_categories_rerun": [
+    {
+      "country": "Germany",
+      "avg_2026": 39.62,
+      "avg_2025": 46.57,
+      "pct_change": -14.9,
+      "signal": "OK",
+      "category": "All categories"
+    },
+    {
+      "country": "Mexico",
+      "avg_2026": 14.38,
+      "avg_2025": 27.71,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "All categories"
+    },
+    {
+      "country": "Brazil",
+      "avg_2026": 8.12,
+      "avg_2025": 5.0,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "All categories"
+    },
+    {
+      "country": "Taiwan",
+      "avg_2026": 8.88,
+      "avg_2025": 13.57,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "All categories"
+    },
+    {
+      "country": "Japan",
+      "avg_2026": 12.88,
+      "avg_2025": 40.14,
+      "pct_change": null,
+      "signal": "LOW SIGNAL",
+      "category": "All categories"
+    },
+    {
+      "country": "Australia",
+      "avg_2026": 19.12,
+      "avg_2025": 31.29,
+      "pct_change": -38.9,
+      "signal": "OK",
+      "category": "All categories"
+    },
+    {
+      "country": "United Kingdom",
+      "avg_2026": 32.62,
+      "avg_2025": 29.57,
+      "pct_change": 10.3,
+      "signal": "OK",
+      "category": "All categories"
+    }
+  ],
+  "region_rank_2026": [
+    "Canada",
+    "United States",
+    "United Kingdom",
+    "Australia",
+    "Germany",
+    "France"
+  ],
+  "region_rank_2025": [
+    "Canada",
+    "United States",
+    "Spain",
+    "Germany",
+    "Australia",
+    "United Kingdom",
+    "France",
+    "Mexico"
+  ],
+  "activities": [
+    {
+      "label": "Northern lights",
+      "terms": "yukon northern lights + yukon aurora",
+      "rank_2026": 1,
+      "avg_2026": 37.88,
+      "avg_2025": 56.57,
+      "pct_change": -33.0,
+      "signal": "OK"
+    },
+    {
+      "label": "Dog sledding",
+      "terms": "yukon dog sledding + yukon dog sled",
+      "rank_2026": 4,
+      "avg_2026": 0.25,
+      "avg_2025": 2.71,
+      "pct_change": null,
+      "signal": "LOW SIGNAL"
+    },
+    {
+      "label": "Hiking",
+      "terms": "yukon hiking + yukon hikes",
+      "rank_2026": 2,
+      "avg_2026": 15.5,
+      "avg_2025": 18.86,
+      "pct_change": null,
+      "signal": "LOW SIGNAL"
+    },
+    {
+      "label": "Canoeing/paddling",
+      "terms": "yukon canoeing + yukon canoe + yukon paddling",
+      "rank_2026": 3,
+      "avg_2026": 0.38,
+      "avg_2025": 0.0,
+      "pct_change": null,
+      "signal": "LOW SIGNAL"
+    },
+    {
+      "label": "Hot springs",
+      "terms": "yukon hot springs",
+      "rank_2026": 4,
+      "avg_2026": 0.25,
+      "avg_2025": 5.0,
+      "pct_change": null,
+      "signal": "LOW SIGNAL"
+    }
+  ],
+  "activities_by_location": {
+    "Canada": [
+      {
+        "label": "Northern lights",
+        "terms": "yukon northern lights + yukon aurora",
+        "rank_2026": 1,
+        "avg_2026": 16.5,
+        "avg_2025": 36.71,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Dog sledding",
+        "terms": "yukon dog sledding + yukon dog sled",
+        "rank_2026": 4,
+        "avg_2026": 0.0,
+        "avg_2025": 0.0,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Hiking",
+        "terms": "yukon hiking + yukon hikes",
+        "rank_2026": 2,
+        "avg_2026": 7.5,
+        "avg_2025": 0.0,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Canoeing/paddling",
+        "terms": "yukon canoeing + yukon canoe + yukon paddling",
+        "rank_2026": 3,
+        "avg_2026": 0.5,
+        "avg_2025": 0.0,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Hot springs",
+        "terms": "yukon hot springs",
+        "rank_2026": 4,
+        "avg_2026": 0.0,
+        "avg_2025": 0.0,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      }
+    ],
+    "United States": [
+      {
+        "label": "Northern lights",
+        "terms": "yukon northern lights + yukon aurora",
+        "rank_2026": 1,
+        "avg_2026": 0.75,
+        "avg_2025": 7.43,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Dog sledding",
+        "terms": "yukon dog sledding + yukon dog sled",
+        "rank_2026": 2,
+        "avg_2026": 0.25,
+        "avg_2025": 7.14,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Hiking",
+        "terms": "yukon hiking + yukon hikes",
+        "rank_2026": 3,
+        "avg_2026": 0.0,
+        "avg_2025": 0.0,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Canoeing/paddling",
+        "terms": "yukon canoeing + yukon canoe + yukon paddling",
+        "rank_2026": 3,
+        "avg_2026": 0.0,
+        "avg_2025": 0.0,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Hot springs",
+        "terms": "yukon hot springs",
+        "rank_2026": 3,
+        "avg_2026": 0.0,
+        "avg_2025": 0.0,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      }
+    ]
+  },
+  "booking_window": {
+    "window": "1 Apr–30 Jun 2026 vs 2025",
+    "markets": [
+      {
+        "country": "Canada",
+        "avg_2026": 72.33,
+        "avg_2025": 75.33,
+        "pct_change": -4.0,
+        "signal": "OK",
+        "category": "Travel"
+      },
+      {
+        "country": "United States",
+        "avg_2026": 59.25,
+        "avg_2025": 54.92,
+        "pct_change": 7.9,
+        "signal": "OK",
+        "category": "Travel"
+      },
+      {
+        "country": "Germany",
+        "avg_2026": null,
+        "avg_2025": null,
+        "pct_change": null,
+        "signal": "LOW SIGNAL",
+        "category": "Travel"
+      },
+      {
+        "country": "Germany",
+        "avg_2026": 45.33,
+        "avg_2025": 42.0,
+        "pct_change": 7.9,
+        "signal": "OK",
+        "category": "All categories"
+      }
+    ],
+    "activities": [
+      {
+        "label": "Northern lights",
+        "terms": "yukon northern lights + yukon aurora",
+        "rank_2026": 1,
+        "avg_2026": 58.83,
+        "avg_2025": 24.92,
+        "pct_change": 136.1,
+        "signal": "OK"
+      },
+      {
+        "label": "Dog sledding",
+        "terms": "yukon dog sledding + yukon dog sled",
+        "rank_2026": 5,
+        "avg_2026": 2.25,
+        "avg_2025": 0.0,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Hiking",
+        "terms": "yukon hiking + yukon hikes",
+        "rank_2026": 2,
+        "avg_2026": 49.5,
+        "avg_2025": 7.83,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Canoeing/paddling",
+        "terms": "yukon canoeing + yukon canoe + yukon paddling",
+        "rank_2026": 4,
+        "avg_2026": 10.83,
+        "avg_2025": 5.17,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      },
+      {
+        "label": "Hot springs",
+        "terms": "yukon hot springs",
+        "rank_2026": 3,
+        "avg_2026": 11.08,
+        "avg_2025": 3.25,
+        "pct_change": null,
+        "signal": "LOW SIGNAL"
+      }
+    ]
+  },
+  "notes": "China not available in Google Trends (skipped). Region ranks list only countries Trends returned a value for (6 in 2026, 8 in 2025). 2025 windows contain 7 complete weeks, 2026 autumn window 8. See notes.md."
+}
