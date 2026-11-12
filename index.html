@@ -164,14 +164,15 @@ a.sr:focus{left:16px;top:calc(8px + env(safe-area-inset-top,0px));z-index:60;bac
 .story .k::before{content:"";width:28px;height:3px;background:var(--pink);border-radius:2px}
 .story h2{font-size:clamp(30px,7.4vw,54px);font-weight:800;margin-top:14px;max-width:20ch;letter-spacing:-.03em}
 .story .facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 28px;margin:24px 0}
-.story .facts .num{font-size:clamp(30px,7vw,44px);line-height:1;color:var(--teal-ink)}
+.story .facts .num{font-size:clamp(21px,6.2vw,44px);line-height:1;color:var(--teal-ink);white-space:nowrap}
+@media (max-width:479px){.story .facts{gap:12px 16px}}
 .story .facts span{display:block;font-size:13px;color:var(--ink-3);margin-top:6px;font-weight:500}
 .story .body{font-size:18px;line-height:1.6;max-width:62ch;color:var(--ink)}
 .story .body p+p{margin-top:12px}
 .story .who{margin-top:20px;font-size:15px;color:var(--ink-2);max-width:62ch;padding-left:14px;border-left:2px solid var(--line)}
 .story .who b{color:var(--ink);font-weight:600}
 .story .src{margin-top:16px;font-size:14px;color:var(--ink-3)}
-@media (min-width:760px){.story{padding:56px 0 52px}.story .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}.story .facts{grid-template-columns:repeat(3,auto)}}
+@media (min-width:760px){.story{padding:56px 0 52px}.story .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:start}.story .facts{display:flex;flex-wrap:wrap;gap:16px 28px}.story .facts>div{max-width:150px}.story .facts .num{font-size:clamp(24px,2.7vw,36px)}}
 
 /* sections */
 .sec{padding-block:40px 8px}
@@ -235,6 +236,8 @@ a.sr:focus{left:16px;top:calc(8px + env(safe-area-inset-top,0px));z-index:60;bac
 .rk-l{font-size:17px;font-weight:600;color:var(--ink);min-width:0;line-height:1.3}
 .rk-l small{display:block;font-size:12.5px;font-weight:500;color:var(--ink-3)}
 .rk-v{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.illus{margin:-4px 0 0}
+.illus .flag{white-space:normal}
 .cav{font-size:14px;color:var(--ink-2);background:var(--pink-soft);border-radius:10px;padding:10px 12px;max-width:62ch;display:flex;gap:8px;align-items:flex-start}
 .cav::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--pink);margin-top:7px}
 .meta{font-size:13px;color:var(--ink-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin-top:2px}
@@ -324,7 +327,7 @@ footer{margin-top:0}
 @media print{.binder .subnav{display:none!important}.sheet{border:0;box-shadow:none}}
 </style>
 <a class="sr" href="#glance">Skip to the numbers</a>
-<div class="demo" role="status">Work in progress for board review. Figures are indicative and will be confirmed before publication.</div>
+<div class="demo" role="status">Work in progress for board review. Government of Yukon figures as published 8 November 2026. Search figures are illustrative.</div>
 
 <header class="top">
   <div class="wrap">
@@ -344,17 +347,17 @@ footer{margin-top:0}
     <p class="sub">A twice-yearly read for the people running Yukon tourism businesses. Every figure comes from a published source and links back to it.</p>
 
     <div class="glance">
-      <div class="glance-h"><h2>Season at a glance</h2><span class="flag">Indicative figures</span></div>
+      <div class="glance-h"><h2>Season at a glance</h2><span class="flag">As published 8 Nov 2026</span></div>
       <div class="tiles" id="tiles">
-        <div class="tile"><div class="q">Border crossings</div><div class="v"><span class="num">+7</span><small>%</small></div><div class="d"><span><b class="tg">▲ 7%</b> on summer 2025, all ports</span><span class="nat none">No like-for-like</span></div></div>
-        <div class="tile"><div class="q">Arrivals at Whitehorse airport</div><div class="v"><span class="num">95</span><small>thousand</small></div><div class="d"><span><b class="tg">▲ 4%</b> on summer 2025</span><span class="nat none">No like-for-like</span></div></div>
-        <div class="tile"><div class="q">Hotel occupancy</div><div class="v"><span class="num">78</span><small>%</small></div><div class="d"><span><b class="tb">▼ 2 pts</b> on summer 2025</span><span class="nat none">No like-for-like</span></div></div>
-        <div class="tile"><div class="q">Visitor card spending</div><div class="v"><span class="num">$62</span><small>million</small></div><div class="d"><span><b class="tg">▲ 9%</b> on summer 2025</span><span class="nat none">No like-for-like</span></div></div>
-        <div class="tile"><div class="q">Restaurant and bar sales</div><div class="v"><span class="num">$48</span><small>million</small></div><div class="d"><span><b class="tg">▲ 3%</b> on May–Aug 2025</span><span class="nat behind" title="Canada up 5% on the same survey">Behind Canada</span></div></div>
+        <div class="tile"><div class="q">Visitors to the Yukon</div><div class="v"><span class="num">511.3</span><small>thousand</small></div><div class="d"><span><b class="tg">▲ 3.7%</b> on May–Aug 2025</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile"><div class="q">Arrivals at Whitehorse airport</div><div class="v"><span class="num">135.6</span><small>thousand</small></div><div class="d"><span><b class="tg">▲ 9.9%</b> on May–Sept 2025</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile"><div class="q">Hotel occupancy</div><div class="v"><span class="num">77.0</span><small>%</small></div><div class="d"><span><b class="tg">▲ 2.5 pts</b> on May–Aug 2025</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile"><div class="q">Card spending in the Yukon</div><div class="v"><span class="num">$280.7</span><small>million</small></div><div class="d"><span><b class="tg">▲ 20.5%</b> on May–Sept 2025</span><span class="nat none">No like-for-like</span></div></div>
+        <div class="tile"><div class="q">Restaurant and bar sales</div><div class="v"><span class="num">$47.7</span><small>million</small></div><div class="d"><span><b class="tg">▲ 5.4%</b> on May–Aug 2025</span><span class="nat none">National figure to confirm</span></div></div>
       </div>
       <div class="legend">
         <div class="lg"><span class="lh">Change on last year</span><span><b>▲ ▼</b> direction</span><span><b class="tg">Green</b> good news</span><span><b class="tb">Red</b> not</span><span><b class="tm">Grey</b> cuts both ways</span></div>
-        <div class="lg"><span class="lh">Compared with Canada</span><span><span class="nat ahead">Ahead of Canada</span> <span class="nat behind">Behind Canada</span> same Statistics Canada survey</span><span><span class="nat none">No like-for-like</span> no national figure on the same basis</span></div>
+        <div class="lg"><span class="lh">Compared with Canada</span><span><span class="nat none">No like-for-like</span> no national figure on the same basis</span><span><span class="nat none">National figure to confirm</span> same-survey figure still to be added</span></div>
       </div>
     </div>
   </div>
@@ -390,19 +393,19 @@ footer{margin-top:0}
     <div class="k">This season's story</div>
     <div class="grid">
       <div>
-        <h2>Visitors spent more in the Yukon this summer</h2>
+        <h2>More visitors flew to the Yukon this summer, and spending grew faster than visitor numbers</h2>
         <div class="facts">
-          <div><span class="num">+4%</span><span>airport arrivals vs summer 2025</span></div>
-          <div><span class="num">+9%</span><span>visitor card spending vs summer 2025</span></div>
-          <div><span class="num">+7%</span><span>border crossings vs summer 2025</span></div>
+          <div><span class="num">▲ 9.9%</span><span>arrivals at Whitehorse airport</span></div>
+          <div><span class="num">▲ 3.7%</span><span>estimated visitors</span></div>
+          <div><span class="num">▲ 20.5%</span><span>card spending in the Yukon</span></div>
         </div>
       </div>
       <div>
         <div class="body">
-          <p>Air arrivals at Whitehorse grew 4% on last summer, compared with 7% for road crossings.</p>
-          <p>Visitor card spending rose 9%, ahead of the growth in arrivals, so the average visitor spent more than last year. Search interest this fall points the same way, with hiking, paddling and dog sledding gaining ground alongside the northern lights.</p>
+          <p>Arrivals at Whitehorse airport rose 9.9% on last summer, with July and August both setting records. Visitors arriving by air grew about 12%, against about 3% for those arriving by vehicle, so air travel accounted for half of the summer's growth in visitors. More of this year's visitors flew in to make the Yukon the trip.</p>
+          <p>Card spending in the Yukon rose 20.5% from May to September, well ahead of the 3.7% rise in estimated visitors. Hotel and short-term rental revenue grew too, with both fuller than last summer.</p>
         </div>
-        <p class="who"><b>What this does and doesn't show:</b> These are territory-wide figures for May to September. They say nothing about length of stay or about who the visitors were beyond where they came from, and one summer's movement is not a trend.</p>
+        <p class="who"><b>What this does and doesn't show:</b> These are territory-wide figures. Card spending covers all card transactions in the Yukon, residents included, and is an estimate scaled from one payment processor. The figures say nothing about length of stay, and one summer's movement is not a trend.</p>
         <p class="src">Source: <a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Government of Yukon tourism indicators →</a> (opens in a new tab)</p>
       </div>
     </div>
@@ -410,129 +413,131 @@ footer{margin-top:0}
 </section>
 
 <section class="sec wrap sheet" id="s1" style="--i:1">
-  <div class="sec-h"><h2>Who came, and how they got here</h2><p>Air arrivals at Whitehorse rose 4% on last summer and road border crossings rose 7%.</p></div>
+  <div class="sec-h"><h2>Who came, and how they got here</h2><p>Air arrivals grew three times as fast as road arrivals this summer.</p></div>
   <div class="pnls">
     <article class="pnl">
       <div class="pl">
       <h3>Which markets grew and which shrank</h3>
-      <div class="big"><span class="num pend">Summer 2026 estimates not yet published</span></div>
-      <div class="chips"><span class="chip">Summer 2025 <b>170,000</b> visitors, May to Sept 2025</span></div>
+      <div class="big"><span class="num">511,300</span><small>visitors, May to Aug</small></div>
+      <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 3.7%</b></span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" data-type="rank" data-rows="Rest of Canada|14.2|219,900 visitors;United States|9.2|171,300 visitors;Overseas|24.1|106,700 visitors;Yukoners|7.0|73,200 visitors" data-cap="By origin, May to Sept, with change on May to Sept 2025"></div>
+      <p class="cav">Origin figures come from a separate Government of Yukon estimate series and do not sum to the total above.</p>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>Visitor estimates by country of residence for summer 2026 have not been published yet. The figure shown is last summer's total, for reference.</p>
+      <p class="read"><span class="lbl">What it means</span>Visitors rose from every market this summer. Travellers from the rest of Canada added the most visitors, and overseas markets grew fastest.</p>
       <p class="who"><span class="lbl">Who it speaks to</span>Estimated visitors to the whole territory by country of residence. It does not break down by region or community.</p>
-      <div class="meta"><span>Data through September 2025</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      <div class="meta"><span>Data through August 2026 (by origin, September 2026)</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/visitor-estimates.html" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
     <article class="pnl">
       <div class="pl">
       <h3>How many flew in</h3>
-      <div class="big"><span class="num">95,000</span><small>passengers deplaning</small></div>
-      <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 4%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 32%</b></span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" id="chart-arrivals" data-this="14,19,23,23,16" data-prev="13,18,22,22,16" data-labels="May,Jun,Jul,Aug,Sep" data-unit="k passengers"></div>
+      <div class="big"><span class="num">135,600</span><small>passengers deplaning, May to Sept</small></div>
+      <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 9.9%</b></span><span class="chip">monthly average vs winter 2025–26 <b class="tm">▲ 51%</b></span><span class="natx">27,100 vs 17,900 a month</span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" id="chart-arrivals" data-this="20.594,26.590,31.987,32.420,24.029" data-prev="18.980,23.827,28.342,28.329,23.966" data-labels="May,Jun,Jul,Aug,Sep" data-unit="k passengers"></div>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>Air arrivals at Whitehorse grew 4% on last summer, compared with 7% for road crossings. September was flat on last year.</p>
+      <p class="read"><span class="lbl">What it means</span>Air arrivals grew faster than any other way of reaching the Yukon. July (32,000) and August (32,400) were the two busiest months on record at Whitehorse airport; September was level with last year.</p>
       <p class="who"><span class="lbl">Who it speaks to</span>Passengers getting off at Whitehorse airport, residents and visitors together. It does not show where they came from or why they travelled.</p>
-      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/air-arrivals.html" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
     <article class="pnl">
       <div class="pl">
       <h3>Which routes they arrived by</h3>
-      <div class="big"><span class="num">52%</span><small>of road crossings at Beaver Creek</small></div>
-      <div class="chips"><span class="chip">all crossings vs summer 2025 <b class="tg">▲ 7%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 3×</b></span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" data-type="hbar" data-rows="Beaver Creek · Alaska Highway|52|52%|3;Fraser · South Klondike Highway|41|41%|12;Little Gold Creek · Top of the World Highway|7|7%|4" data-cap="Share of road crossings by port, May to Sept, with change on summer 2025"></div>
+      <div class="big"><span class="num">82%</span><small>of border crossings at Fraser</small></div>
+      <div class="chips"><span class="chip">all crossings vs summer 2025 <b class="tg">▲ 1.9%</b></span><span class="natx">340,400 of 415,400, May to Aug</span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" data-type="hbar" data-rows="Fraser · South Klondike Highway|82|82%|3.1;Beaver Creek · Alaska Highway|9.6|10%|-4.5;Pleasant Camp · Haines Road|5|5%|3.1;Little Gold Creek · Top of the World Highway|1.8|2%|7.6" data-cap="Share of border crossings by port, May to Aug, with change on summer 2025"></div>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>Beaver Creek still carries the most road traffic, but Fraser, on the highway up from Skagway, grew fastest and added the most crossings this summer.</p>
-      <p class="who"><span class="lbl">Who it speaks to</span>Vehicles and travellers entering at Yukon border crossings. It does not cover travel within the territory.</p>
-      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      <p class="read"><span class="lbl">What it means</span>Fraser, on the highway up from Skagway, carries most crossings and added the most this summer. Crossings at Beaver Creek on the Alaska Highway fell.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Vehicles and travellers entering at Yukon border crossings. It does not cover travel within the territory. Many Fraser crossings are day trips from Skagway cruise ships, and some travellers at Fraser and Pleasant Camp continue into British Columbia without entering the Yukon.</p>
+      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/border-crossings.html" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
   </div>
 </section>
 
 <section class="sec wrap sheet" id="s2" style="--i:2">
-  <div class="sec-h"><h2>Where they stayed</h2><p>Rooms cost more this summer across both hotels and short-term rentals.</p></div>
+  <div class="sec-h"><h2>Where they stayed</h2><p>Hotels and rentals were both fuller than last summer, and hotel rates rose 14%.</p></div>
   <div class="pnls">
     <article class="pnl">
       <div class="pl">
       <h3>Whether hotels filled rooms or raised rates</h3>
       <div class="stats">
-        <div><span class="num">78%</span><span class="sl">occupancy</span><span class="sd tb">▼ 2 pts</span></div>
-        <div><span class="num" id="stat-hotel-adr">$260</span><span class="sl">average rate</span><span class="sd tm">▲ 14%</span></div>
-        <div><span class="num" id="stat-hotel-revpar">$203</span><span class="sl">RevPAR</span><span class="sd tg">▲ 11%</span></div>
+        <div><span class="num">77.0%</span><span class="sl">occupancy</span><span class="sd tg">▲ 2.5 pts</span></div>
+        <div><span class="num">$256</span><span class="sl">average rate</span><span class="sd tm">▲ 14.1%</span></div>
+        <div><span class="num">$198</span><span class="sl">RevPAR</span><span class="sd tg">▲ 18.4%</span></div>
       </div>
-      <div class="chips"><span class="chip">changes vs summer 2025</span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" id="chart-hotel-occ" data-this="63,81,89,87,70" data-prev="65,82,91,89,73" data-labels="May,Jun,Jul,Aug,Sep" data-unit="% occupancy" data-delta="pts"></div>
+      <div class="chips"><span class="chip">changes vs May–Aug 2025</span><span class="chip">occupancy, monthly average vs winter 2025–26 <b>77.0% vs 48.0%</b></span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" id="chart-hotel-occ" data-this="53.4,80.6,87.4,86.5" data-prev="54.3,79.7,87.2,76.7" data-labels="May,Jun,Jul,Aug" data-unit="% occupancy" data-delta="pts"></div>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>Occupancy slipped two points while the average rate rose 14%, so revenue per available room still grew 11%. The growth came from price, not from more guests.</p>
+      <p class="read"><span class="lbl">What it means</span>Hotels filled more rooms and charged more for them. August did most of the lifting on occupancy, at 86.5% against 76.7% a year earlier.</p>
       <p class="who"><span class="lbl">Who it speaks to</span>A panel of roughly 600 rooms, concentrated in Whitehorse. It does not describe smaller or seasonal properties elsewhere in the territory.</p>
-      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/hotel-stats.html" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
     <article class="pnl">
       <div class="pl">
       <h3>How short-term rentals compared</h3>
       <div class="stats">
-        <div><span class="num">71%</span><span class="sl">occupancy</span><span class="sd tg">▲ 3 pts</span></div>
-        <div><span class="num">$215</span><span class="sl">average rate</span><span class="sd tm">▲ 8%</span></div>
-        <div><span class="num">$5.4M</span><span class="sl">revenue</span><span class="sd tg">▲ 25%</span></div>
+        <div><span class="num">73.6%</span><span class="sl">occupancy</span><span class="sd tg">▲ 4.6 pts</span></div>
+        <div><span class="num">$219</span><span class="sl">average rate</span><span class="sd tm">▲ 2.4%</span></div>
+        <div><span class="num">$5.40M</span><span class="sl">revenue</span><span class="sd tg">▲ 23.2%</span></div>
       </div>
-      <div class="chips"><span class="chip">changes vs May–Aug 2025</span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" id="chart-str-occ" data-this="54,71,81,78" data-prev="51,68,78,75" data-labels="May,Jun,Jul,Aug" data-unit="% occupancy" data-delta="pts"></div>
+      <div class="chips"><span class="chip">changes vs May–Aug 2025</span><span class="chip">occupancy, monthly average vs winter 2025–26 <b>73.6% vs 54.5%</b></span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" id="chart-str-occ" data-this="61.9,77.6,75.9,79.0" data-prev="59.9,73.6,71.4,70.8" data-labels="May,Jun,Jul,Aug" data-unit="% occupancy" data-delta="pts"></div>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>Rentals grew on occupancy, rate and supply at the same time, which lifted revenue by a quarter. Hotels grew on rate alone.</p>
+      <p class="read"><span class="lbl">What it means</span>Rental revenue grew by almost a quarter, driven by more listings and higher occupancy rather than price.</p>
       <p class="who"><span class="lbl">Who it speaks to</span>Whole-home rentals listed on the major platforms. It excludes rooms let within an occupied home.</p>
-      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/str-stats.html" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
     <article class="pnl">
       <div class="pl">
       <h3>Whether rental supply is still growing</h3>
-      <div class="big"><span class="num">1,150</span><small>active listings in August</small></div>
-      <div class="chips"><span class="chip">vs August 2025 <b class="tm">▲ 11%</b></span><span class="chip">vs February 2026 <b class="tm">▲ 28%</b></span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" id="chart-str-listings" data-this="920,1010,1120,1150" data-prev="840,910,1000,1035" data-labels="May,Jun,Jul,Aug" data-unit="listings" data-tone="mixed"></div>
+      <div class="big"><span class="num">372</span><small>active listings in August</small></div>
+      <div class="chips"><span class="chip">vs August 2025 <b class="tm">▲ 13.1%</b></span><span class="chip">vs February 2026 <b class="tm">▲ 52%</b></span><span class="natx">372 in Aug vs 244 in Feb</span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" id="chart-str-listings" data-this="290,338,363,372" data-prev="235,305,318,329" data-labels="May,Jun,Jul,Aug" data-unit="listings" data-tone="mixed"></div>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>New listings kept arriving through the peak, and rental occupancy still rose. Demand for rentals grew at least as fast as the supply of them this summer.</p>
+      <p class="read"><span class="lbl">What it means</span>Supply grew by an eighth and occupancy still rose, so demand for rentals grew faster than the number of them.</p>
       <p class="who"><span class="lbl">Who it speaks to</span>Active whole-home listings across the territory. It does not show how many nights each was available.</p>
-      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/str-stats.html" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
   </div>
 </section>
 
 <section class="sec wrap sheet" id="s3" style="--i:3">
-  <div class="sec-h"><h2>What they spent</h2><p>Card spending grew faster than arrivals by air or road, but restaurants trailed the national pace.</p></div>
+  <div class="sec-h"><h2>What they spent</h2><p>Card spending in the Yukon rose 20.5% on last summer, and restaurant and bar sales rose 5.4%.</p></div>
   <div class="pnls two">
     <article class="pnl">
       <div class="pl">
-      <h3>What visitors spent</h3>
-      <div class="big"><span class="num">$62M</span><small>on cards, May to Sept</small></div>
-      <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 9%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 55%</b></span><span class="nat none">No like-for-like</span></div>
-      <div class="chart" id="chart-spending" data-this="8,13,17,16,8" data-prev="7.5,12,15.5,14.5,7.5" data-labels="May,Jun,Jul,Aug,Sep" data-unit="$M"></div>
+      <h3>What was spent on cards</h3>
+      <div class="big"><span class="num">$280.7M</span><small>on cards, May to Sept</small></div>
+      <div class="chips"><span class="chip">vs summer 2025 <b class="tg">▲ 20.5%</b></span><span class="chip">monthly average vs winter 2025–26 <b class="tm">▲ 93%</b></span><span class="natx">$56.1M vs $29.1M a month</span><span class="nat none">No like-for-like</span></div>
+      <div class="chart" id="chart-spending" data-this="44.963,62.041,69.360,68.736,35.601" data-prev="44.720,46.211,50.594,50.198,41.169" data-labels="May,Jun,Jul,Aug,Sep" data-unit="$M"></div>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>Card spending rose 9% on last summer, ahead of the growth in arrivals by air (4%) and by road (7%), so the average visitor spent more than last year. Higher room rates are one likely part of that.</p>
-      <p class="who"><span class="lbl">Who it speaks to</span>Card transactions by cardholders from outside the Yukon. Cash and resident spending are not included.</p>
-      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      <p class="read"><span class="lbl">What it means</span>Card spending rose far faster than visitor numbers. Growth was concentrated in June, July and August, each up more than a third on last year; May was level and September was down 13.5%.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>All credit and debit card spending in the Yukon, residents and visitors together, estimated from Moneris transactions. Cash is not included.</p>
+      <div class="meta"><span>Data through September 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/visitor-spending.html" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
     <article class="pnl">
       <div class="pl">
       <h3>Whether restaurants saw it</h3>
-      <div class="big"><span class="num">$48M</span><small>restaurant and bar sales, May to Aug</small></div>
-      <div class="chips"><span class="chip">vs May–Aug 2025 <b class="tg">▲ 3%</b></span><span class="chip">vs winter 2025–26 <b class="tm">▲ 18%</b></span><span class="nat behind">Behind Canada</span><span class="natx">Canada ▲ 5%</span></div>
-      <div class="chart" id="chart-restaurant" data-this="10.5,12,13.5,12" data-prev="10.3,11.6,13,11.7" data-labels="May,Jun,Jul,Aug" data-unit="$M"></div>
+      <div class="big"><span class="num">$47.7M</span><small>restaurant and bar sales, May to Aug</small></div>
+      <div class="chips"><span class="chip">vs May–Aug 2025 <b class="tg">▲ 5.4%</b></span><span class="chip">monthly average vs winter 2025–26 <b class="tm">▲ 26%</b></span><span class="natx">$11.9M vs $9.4M a month</span><span class="nat none">National figure to confirm</span></div>
+      <div class="chart" id="chart-restaurant" data-this="11.622,11.658,12.236,12.175" data-prev="10.610,11.234,11.549,11.837" data-labels="May,Jun,Jul,Aug" data-unit="$M"></div>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>Restaurant and bar sales grew more slowly than arrivals or card spending, and the Yukon trailed the national increase. Because the figure includes residents, it cannot show how much of the change came from visitors.</p>
+      <p class="read"><span class="lbl">What it means</span>Restaurant and bar sales grew faster than visitor numbers but far more slowly than card spending overall. The figure includes residents and is not adjusted for inflation.</p>
       <p class="who"><span class="lbl">Who it speaks to</span>All restaurant and bar sales in the Yukon, residents included. It is not a visitor-only figure.</p>
-      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/" target="_blank" rel="noopener">Source →</a></div>
+      <div class="meta"><span>Data through August 2026</span><a href="https://open-data-static-files.service.yukon.ca/tourism-indicators/restaurant-sales.html" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
   </div>
@@ -544,7 +549,8 @@ footer{margin-top:0}
     <article class="pnl">
       <div class="pl">
       <h3>Interest is broadening beyond the northern lights</h3>
-      <div class="chart" data-type="rank" data-rows="Northern lights|-11;Dog sledding|22;Hiking and paddling|9" data-cap="Activities ranked by search volume, Sept to Oct 2026, with change vs last autumn"></div>
+      <p class="illus"><span class="flag">Illustrative figures. Search data to be added.</span></p>
+      <div class="chart" data-type="rank" data-src="activities" data-cap="Activities ranked by search volume, Sept to Oct 2026, with change vs last autumn"></div>
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Northern lights remain the most-searched Yukon experience by a wide margin. Dog sledding, hiking and paddling all grew on last autumn while northern lights searches eased, so a larger share of winter interest is now in active experiences.</p>
@@ -556,7 +562,8 @@ footer{margin-top:0}
     <article class="pnl">
       <div class="pl">
       <h3>Canada and the US are searching more; Germany is steady</h3>
-      <div class="chart" data-type="rank" data-rows="Canada|15;United States|6;Germany|-4" data-cap="Top three countries ranked by search interest, Sept to Oct 2026, with change vs last autumn"></div>
+      <p class="illus"><span class="flag">Illustrative figures. Search data to be added.</span></p>
+      <div class="chart" data-type="rank" data-src="markets" data-cap="Top three countries ranked by search interest, Sept to Oct 2026, with change vs last autumn"></div>
       </div>
       <div class="pr">
       <p class="read"><span class="lbl">What it means</span>Interest from Canada and the United States ran ahead of last autumn. Germany eased slightly but remains the Yukon's third-largest source of search interest.</p>
@@ -570,10 +577,10 @@ footer{margin-top:0}
 <section class="sec wrap sheet" id="tipi" style="--i:5">
   <div class="sec-h"><h2>Tourism Industry Performance Index</h2><p>An annual snapshot. It sits outside the seasonal panels and states its own year. <span class="flag">Pending Caroline's agreement</span></p></div>
   <div class="tipi">
-    <div class="ix"><span class="num">104</span><span>Index for 2025, where 2019 = 100</span></div>
+    <div class="ix"><span class="num">137.1</span><span>Index for 2025, where 2018 = 100</span><span>Up 0.3% on 2024 and about 26% above 2019</span></div>
     <div>
-      <p>The index combines visitation, accommodation and spending indicators into a single annual measure of how the industry performed against the 2019 baseline. A reading above 100 means the industry was ahead of 2019 on the combined measure.</p>
-      <p>The method is being updated as retail spending data is added, so this year's figure may be restated. <a href="#" target="_blank" rel="noopener">How the index is built →</a> <span class="flag">Link and wording to confirm with Travel Yukon</span></p>
+      <p>The index combines hotel revenue per room, short-term rental revenue, restaurant sales, retail sales, airport arrivals and highway traffic into a single annual measure. Revenue measures are adjusted for inflation.</p>
+      <p>It is a trend indicator, not a measure of total revenue or visitor numbers. <a href="#" target="_blank" rel="noopener">How the index is built →</a> <span class="flag">Link and wording to confirm with Travel Yukon</span></p>
     </div>
   </div>
 </section>
@@ -609,6 +616,7 @@ footer{margin-top:0}
 <button class="totop" id="totop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></button>
 <div class="toast" id="toast" role="status"></div>
 
+<script src="data/search.js"></script>
 <script>
 (function(){
 
@@ -627,12 +635,20 @@ footer{margin-top:0}
   var toneVar = { tg:'var(--better)', tb:'var(--worse)', tm:'var(--neutral)' };
 
   function drawList(el, type){
-    var rows = el.dataset.rows.split(';').map(function(r){ return r.split('|'); }), mixed = el.dataset.tone === 'mixed', h = '';
+    var rows, src = el.dataset.src;
+    if (src){
+      /* rows come from data/search.js */
+      var sd = window.TIAY_SEARCH || {};
+      rows = (sd[src] || []).map(function(r){ return [r.label, r.change_pct, r.note || '']; });
+      if (sd.illustrative === false){ var fl = el.parentNode.querySelector('.illus'); if (fl) fl.remove(); }
+      if (!rows.length){ el.innerHTML = ''; return; }
+    } else rows = el.dataset.rows.split(';').map(function(r){ return r.split('|'); });
+    var mixed = el.dataset.tone === 'mixed', h = '';
     if (type === 'rank'){
       h += '<ol class="rk">';
       rows.forEach(function(r, i){
         var v = +r[1];
-        h += '<li class="rk-r"><span class="rk-n" aria-hidden="true">'+(i+1)+'</span><span class="rk-l">'+r[0]+(r[2] ? '<small>'+r[2]+'</small>' : '')+'</span><span class="rk-v '+tone(v,mixed)+'">'+chg(v,'%')+'</span></li>';
+        h += '<li class="rk-r"><span class="rk-n" aria-hidden="true">'+(i+1)+'</span><span class="rk-l">'+r[0]+(r[2] ? '<small>'+r[2]+'</small>' : '')+'</span><span class="rk-v '+tone(v,mixed)+'">'+(v === 0 ? 'No change' : arrow(v)+String(r[1]).replace(/^-/,'')+'%')+'</span></li>';
       });
       el.innerHTML = h + '</ol><div class="cap"><span>'+(el.dataset.cap||'')+'</span></div>';
       return;
@@ -728,7 +744,7 @@ footer{margin-top:0}
   var toast = document.getElementById('toast');
   function say(m){ toast.textContent = m; toast.classList.add('on'); setTimeout(function(){ toast.classList.remove('on'); }, 1800); }
   document.getElementById('share').addEventListener('click', function(){
-    var data = {title: document.title, text: 'Visitors spent more in the Yukon this summer — TIA Yukon Tourism Intelligence Dashboard, Summer 2026', url: location.href};
+    var data = {title: document.title, text: 'More visitors flew to the Yukon this summer, and spending grew faster than visitor numbers — TIA Yukon Tourism Intelligence Dashboard, Summer 2026', url: location.href};
     if (navigator.share) navigator.share(data).catch(function(){});
     else if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(function(){ say('Link copied'); }, function(){ say('Copy the address bar link'); });
   });
