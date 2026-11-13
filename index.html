@@ -228,7 +228,7 @@ a.sr:focus{left:16px;top:calc(8px + env(safe-area-inset-top,0px));z-index:60;bac
 .who{font-size:15px;color:var(--ink-2);max-width:62ch;padding-left:14px;border-left:2px solid var(--line)}
 .who .lbl{color:var(--ink-3)}
 .pnl .big .num.pend{font-size:clamp(24px,6.4vw,32px);line-height:1.1;letter-spacing:-.02em;max-width:16ch}
-/* ranked list: position first, then name, then change on last autumn (legend colours and arrows) */
+/* ranked list: position first, then name, then change on last year where there is one (legend colours and arrows) */
 .rk{list-style:none;margin:2px 0 0;padding:0;display:grid}
 .rk-r{display:grid;grid-template-columns:30px minmax(0,1fr) auto;align-items:baseline;gap:4px 10px;padding:13px 0;border-top:1px solid var(--line)}
 .rk-r:first-child{border-top:0;padding-top:4px}
@@ -236,8 +236,6 @@ a.sr:focus{left:16px;top:calc(8px + env(safe-area-inset-top,0px));z-index:60;bac
 .rk-l{font-size:17px;font-weight:600;color:var(--ink);min-width:0;line-height:1.3}
 .rk-l small{display:block;font-size:12.5px;font-weight:500;color:var(--ink-3)}
 .rk-v{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
-.illus{margin:-4px 0 0}
-.illus .flag{white-space:normal}
 .cav{font-size:14px;color:var(--ink-2);background:var(--pink-soft);border-radius:10px;padding:10px 12px;max-width:62ch;display:flex;gap:8px;align-items:flex-start}
 .cav::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--pink);margin-top:7px}
 .meta{font-size:13px;color:var(--ink-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin-top:2px}
@@ -383,7 +381,7 @@ footer{margin-top:0}
     <a href="#s1" title="Who came">Who came</a>
     <a href="#s2" title="Where they stayed">Stayed</a>
     <a href="#s3" title="What they spent">Spent</a>
-    <a href="#s4" title="Looking ahead">Ahead</a>
+    <a href="#s4" title="Search interest">Search</a>
     <a href="#tipi" title="Index">Index</a>
   </div>
 </nav>
@@ -544,32 +542,31 @@ footer{margin-top:0}
 </section>
 
 <section class="sec wrap sheet" id="s4" style="--i:4">
-  <div class="sec-h"><h2>Looking ahead: what people searched for this fall</h2><p>The panels above cover the summer just finished. This section looks at search interest in September and October, when people are planning winter trips. It shows direction, not volume, and it is not a forecast.</p></div>
-  <p class="cav">Google Trends reports an index, not search counts, and each series is scaled to its own peak. The most recent week in the data (25 to 31 October 2026) looks anomalous in the source.</p>
+  <div class="sec-h"><h2>What people searched for before and during summer</h2><p>Context for the summer results above: search interest in the Yukon in the lead-up to summer 2026 (1 April to 30 June) and during it (1 July to 31 August), each compared with the same weeks in 2025. Search interest is a signal of attention, not a count of visitors.</p></div>
+  <p class="cav">Google Trends reports an index, not search counts.</p>
   <div class="pnls two">
     <article class="pnl">
       <div class="pl">
-      <h3>Northern lights is the most-searched activity, and searches were down on last autumn</h3>
-      <p class="illus"><span class="flag">Illustrative figures. Search data to be added.</span></p>
-      <div class="chart" data-type="rank" data-src="activities" data-cap="Five Yukon activities by worldwide search interest, 1 Sept to 31 Oct 2026, with change vs the same weeks in 2025"></div>
+      <h3>Canadians searched more during summer than last year; Americans searched less</h3>
+      <div class="chart" data-type="delta" data-src="market_changes" data-cap="Change in Yukon travel searches vs the same weeks in 2025. Before summer is 1 April to 30 June; summer is 1 July to 31 August."></div>
+      <div class="chart" data-type="rank" data-src="market_ranks" data-cap="Where Yukon travel searches were most common, 1 April to 31 August 2026 (Canada = 100). Index values of 1 to 3 are effectively tied."></div>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>Northern lights was the most-searched of the five Yukon activities tracked, and its searches were 33% lower than last autumn. Hiking was second, and searches for dog sledding, paddling and hot springs were too few to measure, so there is no reliable read on any activity other than the northern lights.</p>
-      <p class="cav">Aurora interest tracks the solar cycle, which peaked in 2024 and 2025. Softening interest may have nothing to do with the Yukon.</p>
-      <p class="who"><span class="lbl">Who it speaks to</span>Google searches worldwide for five Yukon activities: northern lights, hiking, dog sledding, canoeing and paddling, and hot springs. It shows relative interest, not bookings.</p>
-      <div class="meta"><span>Data through October 2026</span><a href="https://trends.google.com" target="_blank" rel="noopener">Source →</a></div>
+      <p class="read"><span class="lbl">What it means</span>Canadians searched slightly less than last year while planning (down 3.6%) and more during the summer itself (up 8.3%); Americans searched more while planning (up 8.0%) and less during the summer (down 16.0%). Yukon travel searches were far more common in Canada than anywhere else, with the United States a distant second and overseas markets very small; search is a signal of interest and cannot tell us visitor numbers.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Google searches about travel to the Yukon, by country. The index shows how common these searches are within each country, not how many there were, and the year-over-year changes cover Canada and the United States only.</p>
+      <div class="meta"><span>Data through August 2026</span><a href="https://trends.google.com" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
     <article class="pnl">
       <div class="pl">
-      <h3>Canada and the US searched less than last autumn; overseas interest is too small to measure</h3>
-      <p class="illus"><span class="flag">Illustrative figures. Search data to be added.</span></p>
-      <div class="chart" data-type="rank" data-src="markets" data-cap="Countries by Google Trends index for Yukon travel searches, 1 Sept to 31 Oct 2026 (highest country = 100). Positions below the United States are effectively tied. Change vs the same weeks in 2025."></div>
+      <h3>Northern lights was the most-searched Yukon activity, even in summer</h3>
+      <div class="chart" data-type="rank" data-src="activities_summer" data-cap="Most-searched Yukon activities in summer, 1 July to 31 August 2026"></div>
+      <div class="chart" data-type="rank" data-src="activities_before" data-cap="Most-searched Yukon activities before summer, 1 April to 30 June 2026"></div>
       </div>
       <div class="pr">
-      <p class="read"><span class="lbl">What it means</span>Travel searches about the Yukon were below last autumn in both markets that can be measured, down 10.1% in Canada and 4.5% in the United States; overseas markets search too little for Google Trends to measure travel interest. Search is an early signal and cannot tell us visitor numbers.</p>
-      <p class="who"><span class="lbl">Who it speaks to</span>Relative search interest in travel to the Yukon by country. The index shows how common these searches are within each country, not how many there were, so it cannot size the number of visitors.</p>
-      <div class="meta"><span>Data through October 2026</span><a href="https://trends.google.com" target="_blank" rel="noopener">Source →</a></div>
+      <p class="read"><span class="lbl">What it means</span>Northern lights was the most-searched of the five Yukon activities compared, even in summer, ahead of hiking and then canoeing and paddling. The top two were the same before summer.</p>
+      <p class="who"><span class="lbl">Who it speaks to</span>Google searches worldwide for Yukon activities, ranked against each other for 2026. It shows what was searched most, not bookings, and it does not show change on last year.</p>
+      <div class="meta"><span>Data through August 2026</span><a href="https://trends.google.com" target="_blank" rel="noopener">Source →</a></div>
       </div>
     </article>
   </div>
@@ -639,19 +636,17 @@ footer{margin-top:0}
     var rows, src = el.dataset.src;
     if (src){
       /* rows come from data/search.js */
-      var sd = window.TIAY_SEARCH || {};
-      rows = (sd[src] || []).map(function(r){ return [r.label, r.change_pct, r.note || '', r.ranked === false]; });
-      if (sd.illustrative === false){ var fl = el.parentNode.querySelector('.illus'); if (fl) fl.remove(); }
+      rows = ((window.TIAY_SEARCH || {})[src] || []).map(function(r){ return [r.label, r.change_pct, r.note || '', r.rank]; });
       if (!rows.length){ el.innerHTML = ''; return; }
     } else rows = el.dataset.rows.split(';').map(function(r){ return r.split('|'); });
     var mixed = el.dataset.tone === 'mixed', h = '';
+    var one = function(x){ return src ? Math.abs(+x).toFixed(1) : String(x).replace(/^-/,''); };
     if (type === 'rank'){
       h += '<ol class="rk">';
-      var rk = 0;
-      rows.forEach(function(r){
+      rows.forEach(function(r, i){
         var none = r[1] === null || r[1] === undefined || r[1] === '', v = +r[1];
-        var val = none ? '' : '<span class="rk-v '+tone(v,mixed)+'">'+(v === 0 ? 'No change' : arrow(v)+String(r[1]).replace(/^-/,'')+'%')+'</span>';
-        h += '<li class="rk-r"><span class="rk-n" aria-hidden="true">'+(r[3] ? '–' : ++rk)+'</span><span class="rk-l">'+r[0]+(r[2] ? '<small>'+r[2]+'</small>' : '')+'</span>'+val+'</li>';
+        var val = none ? '' : '<span class="rk-v '+tone(v,mixed)+'">'+(v === 0 ? 'No change' : arrow(v)+one(r[1])+'%')+'</span>';
+        h += '<li class="rk-r"><span class="rk-n" aria-hidden="true">'+(r[3] || (i+1))+'</span><span class="rk-l">'+r[0]+(r[2] ? '<small>'+r[2]+'</small>' : '')+'</span>'+val+'</li>';
       });
       el.innerHTML = h + '</ol><div class="cap"><span>'+(el.dataset.cap||'')+'</span></div>';
       return;
@@ -668,7 +663,7 @@ footer{margin-top:0}
       h += '<div class="dl" role="list">';
       rows.forEach(function(r){
         var v = +r[1], t = tone(v,mixed);
-        h += '<div class="dl-r" role="listitem"><span class="dl-l">'+r[0]+'</span><span class="dl-v '+t+'">'+chg(v,'%')+'</span><span class="dl-t" aria-hidden="true"><i class="'+(v<0?'n':'p')+'" style="width:'+(Math.abs(v)/ma*50).toFixed(1)+'%;'+(mixed?'background:var(--neutral)':'')+'"></i></span></div>';
+        h += '<div class="dl-r" role="listitem"><span class="dl-l">'+r[0]+'</span><span class="dl-v '+t+'">'+(src && v !== 0 ? arrow(v)+one(v)+'%' : chg(v,'%'))+'</span><span class="dl-t" aria-hidden="true"><i class="'+(v<0?'n':'p')+'" style="width:'+(Math.abs(v)/ma*50).toFixed(1)+'%;'+(mixed?'background:var(--neutral)':'')+'"></i></span></div>';
       });
     }
     el.innerHTML = h + '</div><div class="cap"><span>'+(el.dataset.cap||'')+'</span></div>';

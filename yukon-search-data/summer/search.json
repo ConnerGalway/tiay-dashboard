@@ -1,0 +1,211 @@
+{
+  "source": "Google Trends",
+  "retrieved": "2026-11-12",
+  "periods": {
+    "before_summer": "1 Apr-30 Jun",
+    "summer": "1 Jul-31 Aug",
+    "comparison": "2026 vs the same weeks in 2025"
+  },
+  "markets_year_over_year": [
+    {
+      "country": "Canada",
+      "category": "Travel",
+      "before_summer": {
+        "avg_2026": 67.08,
+        "avg_2025": 69.58,
+        "pct_change": -3.6,
+        "signal": "OK"
+      },
+      "summer": {
+        "avg_2026": 89.88,
+        "avg_2025": 83.0,
+        "pct_change": 8.3,
+        "signal": "OK"
+      }
+    },
+    {
+      "country": "United States",
+      "category": "Travel",
+      "before_summer": {
+        "avg_2026": 58.83,
+        "avg_2025": 54.5,
+        "pct_change": 8.0,
+        "signal": "OK"
+      },
+      "summer": {
+        "avg_2026": 62.88,
+        "avg_2025": 74.88,
+        "pct_change": -16.0,
+        "signal": "OK"
+      }
+    }
+  ],
+  "markets_rank_apr_aug_2026": {
+    "basis": "Google Trends interest by region, Yukon topic, Travel category, Worldwide, 1 Apr-31 Aug 2026. Index is relative to Canada = 100.",
+    "target_markets": [
+      {
+        "rank": 1,
+        "country": "Canada",
+        "index": "100"
+      },
+      {
+        "rank": 2,
+        "country": "United States",
+        "index": "6"
+      },
+      {
+        "rank": 3,
+        "country": "Australia",
+        "index": "3"
+      },
+      {
+        "rank": 4,
+        "country": "United Kingdom",
+        "index": "2",
+        "tied": true
+      },
+      {
+        "rank": 4,
+        "country": "Taiwan",
+        "index": "2",
+        "tied": true
+      },
+      {
+        "rank": 6,
+        "country": "Germany",
+        "index": "1"
+      },
+      {
+        "rank": 7,
+        "country": "Mexico",
+        "index": "<1"
+      }
+    ],
+    "excluded_target_markets": {
+      "Japan": "no value returned for 2026",
+      "Brazil": "no value returned for 2026",
+      "China": "not available in Google Trends"
+    },
+    "all_countries_returned": [
+      {
+        "country": "Canada",
+        "index": "100"
+      },
+      {
+        "country": "St. Helena",
+        "index": "13"
+      },
+      {
+        "country": "United States",
+        "index": "6"
+      },
+      {
+        "country": "New Zealand",
+        "index": "5"
+      },
+      {
+        "country": "Switzerland",
+        "index": "3"
+      },
+      {
+        "country": "Australia",
+        "index": "3"
+      },
+      {
+        "country": "Netherlands",
+        "index": "3"
+      },
+      {
+        "country": "United Kingdom",
+        "index": "2"
+      },
+      {
+        "country": "Poland",
+        "index": "2"
+      },
+      {
+        "country": "Taiwan",
+        "index": "2"
+      },
+      {
+        "country": "Germany",
+        "index": "1"
+      },
+      {
+        "country": "Argentina",
+        "index": "1"
+      },
+      {
+        "country": "Italy",
+        "index": "1"
+      },
+      {
+        "country": "France",
+        "index": "1"
+      },
+      {
+        "country": "Spain",
+        "index": "1"
+      },
+      {
+        "country": "Mexico",
+        "index": "<1"
+      },
+      {
+        "country": "India",
+        "index": "<1"
+      }
+    ],
+    "caution": "St. Helena (13) is a very small population and should not be shown. Values of 1 to 3 are effectively tied."
+  },
+  "activities_rank_summer_2026": [
+    {
+      "label": "Northern lights",
+      "terms": "yukon northern lights + yukon aurora",
+      "avg_2026": 44.12,
+      "zero_weeks_2026": 0,
+      "weeks_2026": 8,
+      "rank_2026": 1
+    },
+    {
+      "label": "Hiking",
+      "terms": "yukon hiking + yukon hikes",
+      "avg_2026": 29.88,
+      "zero_weeks_2026": 0,
+      "weeks_2026": 8,
+      "rank_2026": 2
+    },
+    {
+      "label": "Canoeing/paddling",
+      "terms": "yukon canoeing + yukon canoe + yukon paddling",
+      "avg_2026": 16.5,
+      "zero_weeks_2026": 2,
+      "weeks_2026": 8,
+      "rank_2026": 3
+    }
+  ],
+  "activities_rank_before_summer_2026": [
+    {
+      "label": "Northern lights",
+      "terms": "yukon northern lights + yukon aurora",
+      "avg_2026": 59.42,
+      "zero_weeks_2026": 0,
+      "weeks_2026": 12,
+      "rank_2026": 1
+    },
+    {
+      "label": "Hiking",
+      "terms": "yukon hiking + yukon hikes",
+      "avg_2026": 49.83,
+      "zero_weeks_2026": 0,
+      "weeks_2026": 12,
+      "rank_2026": 2
+    }
+  ],
+  "activities_excluded": {
+    "Hot springs": "zero in 5 of 8 summer weeks and 4 of 12 spring weeks in 2026",
+    "Dog sledding": "zero in 7 of 8 summer weeks and 10 of 12 spring weeks in 2026",
+    "Canoeing/paddling (before summer only)": "zero in 5 of 12 spring weeks in 2026"
+  },
+  "not_for_display": "Activity year-over-year changes and All-categories market changes are in summary.csv but should not be shown. See notes.md."
+}

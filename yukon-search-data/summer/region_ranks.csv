@@ -1,0 +1,47 @@
+period,country,rank_2026,index_2026,rank_2025,index_2025
+AprAug,Canada,1,100,1,100
+AprAug,St. Helena,2,13,,
+AprAug,United States,3,6,2,6
+AprAug,New Zealand,4,5,3,5
+AprAug,Switzerland,5,3,4,5
+AprAug,Australia,6,3,5,5
+AprAug,Netherlands,7,3,9,2
+AprAug,United Kingdom,8,2,10,2
+AprAug,Poland,9,2,7,2
+AprAug,Taiwan,10,2,12,1
+AprAug,Germany,11,1,8,2
+AprAug,Argentina,12,1,,
+AprAug,Italy,13,1,15,1
+AprAug,France,14,1,11,2
+AprAug,Spain,15,1,13,1
+AprAug,Mexico,16,<1,17,<1
+AprAug,India,17,<1,20,<1
+AprAug,Russia,,,6,2
+AprAug,Philippines,,,14,1
+AprAug,Vietnam,,,16,<1
+AprAug,Japan,,,18,<1
+AprAug,Brazil,,,19,<1
+AprJun,Canada,1,100,1,100
+AprJun,St. Helena,2,12,,
+AprJun,United States,3,7,2,5
+AprJun,Netherlands,4,5,,
+AprJun,Australia,5,4,3,5
+AprJun,Poland,6,2,8,2
+AprJun,United Kingdom,7,2,6,2
+AprJun,France,8,1,7,2
+AprJun,Spain,9,1,10,2
+AprJun,Germany,10,1,9,2
+AprJun,Mexico,11,1,,
+AprJun,India,12,<1,12,<1
+AprJun,Russia,,,4,5
+AprJun,Colombia,,,5,2
+AprJun,Italy,,,11,1
+JulAug,Canada,1,100,1,100
+JulAug,United States,2,5,2,7
+JulAug,Netherlands,3,3,,
+JulAug,Italy,4,3,,
+JulAug,Australia,5,2,3,3
+JulAug,Germany,6,2,7,1
+JulAug,United Kingdom,7,1,5,2
+JulAug,France,8,1,6,2
+JulAug,Poland,,,4,2

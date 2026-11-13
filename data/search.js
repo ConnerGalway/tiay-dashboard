@@ -1,38 +1,46 @@
-/* Search-interest figures for the two "Looking ahead" panels.
-   Source: yukon-search-data/ (Google Trends, retrieved 12 November 2026).
+/* Search-interest figures for the two search panels (section 4).
+   Source: yukon-search-data/summer/ (Google Trends, retrieved 12 November 2026).
    Edit the values below; no markup changes are needed.
 
-   illustrative  true  = the pink "Illustrative figures. Search data to be added." label shows on both panels
-                 false = the label is removed
-   activities    rows in rank order, most searched first
-   markets       rows in rank order, highest Google Trends index first
+   market_changes     change vs the same weeks in 2025, one row per market and period
+                      (search.json: markets_year_over_year; verify in summary.csv, Travel rows)
+   market_ranks       countries in rank order by Google Trends index, Canada = 100
+                      (search.json: markets_rank_apr_aug_2026.target_markets; verify in region_ranks.csv, AprAug)
+   activities_summer  activities in rank order, 1 July to 31 August 2026
+                      (search.json: activities_rank_summer_2026)
+   activities_before  activities in rank order, 1 April to 30 June 2026
+                      (search.json: activities_rank_before_summer_2026)
 
    Each row:
      label       text shown for the row
-     change_pct  change vs the same weeks last year, in percent (negative = down, 0 = no change);
-                 null = no reliable change, so nothing is shown
+     change_pct  optional; change in percent (negative = down). Shown to one decimal place.
      note        optional small line under the label
-     ranked      optional; false = the row gets no rank number (tied, or too few searches to rank)
-
-   Where each value comes from:
-     markets, index in note   yukon-search-data/region_ranks.csv, index_2026
-     markets, change_pct      yukon-search-data/summary.csv, pull 1, Travel category
-     activities, order        yukon-search-data/summary.csv, pull 2, Worldwide, avg_2026
-     activities, change_pct   yukon-search-data/summary.csv, pull 2, Worldwide
+     rank        optional; text shown as the rank (for example "4=" for a tie).
+                 Left out, rows are numbered 1, 2, 3 in order.
 */
 window.TIAY_SEARCH = {
-  "illustrative": false,
-  "activities": [
-    { "label": "Northern lights", "change_pct": -33.0 },
-    { "label": "Hiking", "change_pct": null, "note": "Change not reliable" },
-    { "label": "Dog sledding, canoeing and paddling, hot springs", "change_pct": null, "note": "Too few searches to rank", "ranked": false }
+  "market_changes": [
+    { "label": "Canada · before summer",        "change_pct": -3.6 },
+    { "label": "Canada · summer",               "change_pct": 8.3 },
+    { "label": "United States · before summer", "change_pct": 8.0 },
+    { "label": "United States · summer",        "change_pct": -16.0 }
   ],
-  "markets": [
-    { "label": "Canada",         "change_pct": -10.1, "note": "Index 100" },
-    { "label": "United States",  "change_pct": -4.5,  "note": "Index 6" },
-    { "label": "United Kingdom", "change_pct": null,  "note": "Index 3 · too few searches to measure", "ranked": false },
-    { "label": "Australia",      "change_pct": null,  "note": "Index 3 · too few searches to measure", "ranked": false },
-    { "label": "Germany",        "change_pct": null,  "note": "Index 3 · too few searches to measure", "ranked": false },
-    { "label": "France",         "change_pct": null,  "note": "Index 1 · change not measured", "ranked": false }
+  "market_ranks": [
+    { "rank": "1",  "label": "Canada",         "note": "Index 100" },
+    { "rank": "2",  "label": "United States",  "note": "Index 6" },
+    { "rank": "3",  "label": "Australia",      "note": "Index 3" },
+    { "rank": "4=", "label": "United Kingdom", "note": "Index 2" },
+    { "rank": "4=", "label": "Taiwan",         "note": "Index 2" },
+    { "rank": "6",  "label": "Germany",        "note": "Index 1" },
+    { "rank": "7",  "label": "Mexico",         "note": "Index under 1" }
+  ],
+  "activities_summer": [
+    { "label": "Northern lights" },
+    { "label": "Hiking" },
+    { "label": "Canoeing and paddling" }
+  ],
+  "activities_before": [
+    { "label": "Northern lights" },
+    { "label": "Hiking" }
   ]
 };
