@@ -7,10 +7,8 @@
    market_ranks       countries in rank order by Google Trends index, Canada = 100; the note puts
                       each country's index value into words
                       (search.json: markets_rank_apr_aug_2026.target_markets; verify in region_ranks.csv, AprAug)
-   activities_summer  activities in rank order, 1 July to 31 August 2026
-                      (search.json: activities_rank_summer_2026)
-   activities_before  activities in rank order, 1 April to 30 June 2026
-                      (search.json: activities_rank_before_summer_2026)
+   activities_summer  the five activities in rank order, 1 July to 31 August 2026
+                      (summary.csv: activity rows, Worldwide, during, ordered by avg_2026)
 
    Each row:
      label       text shown for the row
@@ -38,10 +36,8 @@ window.TIAY_SEARCH = {
   "activities_summer": [
     { "label": "Northern lights" },
     { "label": "Hiking" },
-    { "label": "Canoeing and paddling" }
-  ],
-  "activities_before": [
-    { "label": "Northern lights" },
-    { "label": "Hiking" }
+    { "label": "Canoeing and paddling" },
+    { "label": "Hot springs" },
+    { "label": "Dog sledding" }
   ]
 };
