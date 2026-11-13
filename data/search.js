@@ -4,7 +4,8 @@
 
    market_changes     change vs the same weeks in 2025, one row per market and period
                       (search.json: markets_year_over_year; verify in summary.csv, Travel rows)
-   market_ranks       countries in rank order by Google Trends index, Canada = 100
+   market_ranks       countries in rank order by Google Trends index, Canada = 100; the note puts
+                      each country's index value into words
                       (search.json: markets_rank_apr_aug_2026.target_markets; verify in region_ranks.csv, AprAug)
    activities_summer  activities in rank order, 1 July to 31 August 2026
                       (search.json: activities_rank_summer_2026)
@@ -26,13 +27,13 @@ window.TIAY_SEARCH = {
     { "label": "United States · summer",        "change_pct": -16.0 }
   ],
   "market_ranks": [
-    { "rank": "1",  "label": "Canada",         "note": "Index 100" },
-    { "rank": "2",  "label": "United States",  "note": "Index 6" },
-    { "rank": "3",  "label": "Australia",      "note": "Index 3" },
-    { "rank": "4=", "label": "United Kingdom", "note": "Index 2" },
-    { "rank": "4=", "label": "Taiwan",         "note": "Index 2" },
-    { "rank": "6",  "label": "Germany",        "note": "Index 1" },
-    { "rank": "7",  "label": "Mexico",         "note": "Index under 1" }
+    { "rank": "1",  "label": "Canada",         "note": "Most common here; the benchmark, set at 100" },
+    { "rank": "2",  "label": "United States",  "note": "6 for every 100 in Canada" },
+    { "rank": "3",  "label": "Australia",      "note": "3 for every 100 in Canada" },
+    { "rank": "4=", "label": "United Kingdom", "note": "2 for every 100 in Canada" },
+    { "rank": "4=", "label": "Taiwan",         "note": "2 for every 100 in Canada" },
+    { "rank": "6",  "label": "Germany",        "note": "1 for every 100 in Canada" },
+    { "rank": "7",  "label": "Mexico",         "note": "Fewer than 1 for every 100 in Canada" }
   ],
   "activities_summer": [
     { "label": "Northern lights" },
